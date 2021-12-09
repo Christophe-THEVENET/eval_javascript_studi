@@ -15,7 +15,7 @@
 
 
 
-  <!-------------------FORMAT DESKTOP-------------------------- -->
+  <!--------------------------------FORMAT DESKTOP------------------------------ -->
 
 
   <main class="wrapper-desktop container-xl min-vh-100">
@@ -99,10 +99,10 @@
   </main>
 
 
-  <!------------------------------------------FORMAT MOBILE-------------------------------------- -->
+  <!----------------------------------FORMAT MOBILE------------------------------ -->
 
 
-  <section class="wrapper-mobile container-xl min-vh-100">
+  <section class="wrapper-mobile container-xl">
 
     <!-------------- title------------- -->
 
@@ -133,76 +133,86 @@
       </div>
     </div>
 
-    <!-------------player 1---------- -->
 
+    <!-------------------player 1----------------- -->
     <div class="players-row p-1 pt-3 mt-2  row bg-info">
-      <div class="col-md-5">
+      <div class="col">
         <h2>player 1</h2>
         <p>4</p>
+      </div>
+    </div>
+
+    <!-------------- level bar--p1----------- -->
+
+    <div class="level-bar-row p-1  row bg-info ">
+      <div class="col-md-5">
+        <div class="progress mt-3">
+          <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="level-bar-row p-1  row bg-info ">
+
+      <div class="col">
         <img class="img-player1 img-fluid" src="./img/street_fighter.jpg" alt="">
       </div>
 
-
-      <!-------------- level bar--p1----------- -->
-
-      <div class="level-bar-row p-1  row bg-info ">
-
-        <div class="col-md-5">
-          <div class="progress mt-3">
-            <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
+    </div>
+    <!--------------score----------- -->
+    <div class="level-bar-row p-1  row bg-info ">
+      <div class="col d-flex">
+        <div class="d-flex justify-content-center align-items-center">
+          <button type="button" class="btn btn-light m-1">45</button>
         </div>
-
-        <!--------------score----------- -->
+        <div class="col-md-1 d-flex justify-content-center align-items-center">
+          <button type="button" class="btn btn-light m-1">4</button>
+        </div>
+      </div>
+      <!-------------action buttons----------- -->
+      <div class="col-md-2 d-flex flex-column justify-content-center align-items-center">
+        <button type="button" class="btn btn-light m-1">DES</button>
         <div class="d-flex">
-          <div class="col-md-1 d-flex justify-content-center align-items-center">
-            <button type="button" class="btn btn-light m-1">45</button>
-          </div>
-          <div class="col-md-1 d-flex justify-content-center align-items-center">
-            <button type="button" class="btn btn-light m-1">4</button>
-          </div>
-        </div>
 
-        <!-------------action buttons----------- -->
-
-        <div class="col-md-2 d-flex flex-column justify-content-center align-items-center">
-          <button type="button" class="btn btn-light m-1">DES</button>
-          <div class="d-flex">
-
-            <button type="button" class="btn btn-light m-1">ROLL</button>
-            <button type="button" class="btn btn-light m-1">HOLD</button>
-          </div>
-        </div>
-
-        <!-------------- level bar--p2---------- -->
-
-        <div class="col-md-5">
-          <div class="progress mt-3">
-            <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-------------- players and fight------------- -->
-
-
-
-
-
-      <!-------------- player 2------------ -->
-
-      <div class="players-row p-1 pt-3 mt-2  row bg-info">
-        <div class="col-md-5">
-          <h2>player 2</h2>
-          <p>0</p>
-          <img class="img-player1 img-fluid" src="./img/street_fighter.jpg" alt="">
+          <button type="button" class="btn btn-light m-1">ROLL</button>
+          <button type="button" class="btn btn-light m-1">HOLD</button>
         </div>
       </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <!-------------- player 2------------ -->
+
+    <div class="players-row p-1 pt-3 mt-2  row bg-info">
+      <div class="col">
+        <h2>player 2</h2>
+        <p>0</p>
+      </div>
+    </div>
+
+    <!-------------- level bar--p2---------- -->
+    <div class="level-bar-row p-1  row bg-info ">
+      <div class="col">
+        <div class="progress mt-3">
+          <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="level-bar-row p-1  row bg-info ">
+      <div class="col">
+        <img class="img-player1 img-fluid" src="./img/street_fighter.jpg" alt="">
+      </div>
+    </div>
   </section>
-
 
 
 
