@@ -13,3 +13,24 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.title-row {
+    margin-top: 15%;
+    margin-bottom: 2rem;
+    padding: 1rem;
+}
+h1.title {
+    margin: 0;
+}
+
+
+
+
+
+/* ------------ MEDIA QUERRYS --------------*/
+
+@media screen and (max-width: 600px) {
+    body {
+        overflow: auto;
+    }
+}
