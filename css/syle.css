@@ -14,6 +14,10 @@ body {
     background-repeat: no-repeat;
 }
 
+.wrapper-mobile {
+    display: none;
+}
+
 .title-row {
     margin-top: 15%;
     margin-bottom: 2rem;
@@ -23,14 +27,17 @@ h1.title {
     margin: 0;
 }
 
-
-
-
-
 /* ------------ MEDIA QUERRYS --------------*/
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 765px) {
     body {
         overflow: auto;
+    }
+
+    .wrapper-desktop {
+        display: none;
+    }
+    .wrapper-mobile {
+        display: block;
     }
 }
