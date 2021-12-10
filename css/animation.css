@@ -81,7 +81,8 @@ button:focus::before {
 }
 
 /* supprime une bordure apres click */
-.anim-btn:active {
+.anim-btn:focus {
+    visibility: hidden;
     display: none;
 }
 
