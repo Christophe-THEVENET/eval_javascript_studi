@@ -31,13 +31,12 @@
     }
 }
 
-
 /*animation boutons*/
 
 .anim-btn {
     min-width: 15rem;
     min-height: 15rem;
-    font-size: 3rem;
+    font-size: 2.5vmax;
     letter-spacing: 1.3px;
     font-weight: 700;
     background: linear-gradient(180deg, #faeb18 20%, #ee380b 80%);
@@ -56,7 +55,7 @@
 .anim-btn::before {
     content: '';
     border-radius: 1000px;
-    min-width: calc(250px + 12px);
+    min-width: calc(300px + 12px);
     min-height: calc(60px + 12px);
     border: 1px solid #ee380b;
     box-shadow: 0 0 60px #ee380b;
@@ -70,7 +69,7 @@
 /*taille aniv hover btn regles et son*/
 .anim-btn-rules::before,
 .anim-btn-sound::before {
-    min-width: calc(130px + 12px);
+    min-width: calc(170px + 12px);
 }
 
 .anim-btn:hover,
@@ -113,13 +112,13 @@ button:focus::after {
 /*reglage anim propose click*/
 @keyframes ring {
     0% {
-        width: 30px;
-        height: 30px;
-        opacity: 1;
+        width: 250px;
+        height: 50px;
+        opacity: 0.7;
     }
     100% {
-        width: 300px;
-        height: 150px;
+        width: 350px;
+        height: 200px;
         opacity: 0;
     }
 }
