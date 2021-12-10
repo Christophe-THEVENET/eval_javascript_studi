@@ -33,12 +33,12 @@
     position: relative;
     padding: 10px;
 }
-
+/* anim hover*/
 .anim-btn::before {
     content: '';
     border-radius: 1000px;
     min-width: calc(250px + 12px);
-    min-height: calc(50px + 12px);
+    min-height: calc(60px + 12px);
     border: 1px solid #ee380b;
     box-shadow: 0 0 60px #ee380b;
     position: absolute;
@@ -48,15 +48,10 @@
     opacity: 0;
     transition: all 0.3s ease-in-out 0s;
 }
-
-.anim-btn-rules::before {
-    min-width: calc(140px + 12px);
-    min-height: calc(30px + 12px);
-}
-
+/*taille aniv hover btn regles et son*/
+.anim-btn-rules::before,
 .anim-btn-sound::before {
-    min-width: calc(140px + 12px);
-    min-height: calc(30px + 12px);
+    min-width: calc(130px + 12px);
 }
 
 .anim-btn:hover,
@@ -70,7 +65,8 @@ button:focus::before {
     opacity: 1;
 }
 
-.anim-btn::after {
+/*anim propose click*/
+.anim-btn-insist::after {
     content: '';
     width: 30px;
     height: 30px;
@@ -84,12 +80,17 @@ button:focus::before {
     animation: ring 1.5s infinite;
 }
 
+/* supprime une bordure apres click */
+.anim-btn:active {
+    display: none;
+}
+
 .anim-btn:hover::after,
 button:focus::after {
     animation: none;
     display: none;
 }
-
+/*reglage anim propose click*/
 @keyframes ring {
     0% {
         width: 30px;
@@ -98,9 +99,7 @@ button:focus::after {
     }
     100% {
         width: 300px;
-        height: 300px;
+        height: 150px;
         opacity: 0;
     }
 }
-
-
