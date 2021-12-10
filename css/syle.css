@@ -1,6 +1,15 @@
+@font-face {
+    font-family: 'Feast of Flesh BB';
+    src: url('../fonts/FEASFBI_.TTF') format('truetype'),
+        url('../fonts/FEASFBRG.TTF') format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
 * {
     box-sizing: border-box;
-    border: 1px solid red;
+    /* border: 1px solid red; */
+    /* font-family: 'Stalinist One', cursive; */
+    font-family: 'Feast of Flesh BB';
 }
 
 body {
