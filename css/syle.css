@@ -4,12 +4,12 @@
         url('../fonts/FEASFBRG.TTF') format('truetype');
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Stalinist+One&display=swap');
-* {
+*,
+html {
     box-sizing: border-box;
-    /* border: 1px solid red; */
-    /* font-family: 'Stalinist One', cursive; */
     font-family: 'Feast of Flesh BB';
+    font-size: 62.5%;
+    border: 1px solid red;
 }
 
 body {
@@ -23,18 +23,23 @@ body {
     background-repeat: no-repeat;
     color: rgb(253, 253, 253);
 }
-
+/*layout mobile*/
 .wrapper-mobile {
     display: none;
 }
 
 .title-row {
     margin-top: 15%;
-    margin-bottom: 2rem;
+    margin-bottom: 10rem;
     padding: 1rem;
 }
 h1.title {
-    margin: 0;
+    font-size: 8vmax;
+    padding: 3rem;
+    background: linear-gradient(180deg, #faeb18 20%, #ee380b 80%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 /* ---------------------- MEDIA QUERRYS ----------------------*/
