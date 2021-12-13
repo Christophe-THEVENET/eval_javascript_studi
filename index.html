@@ -21,7 +21,7 @@
 
   <main class="wrapper-desktop container-xl min-vh-100">
 
-    <!-------------- title bloc------------- -->
+    <!---------------------------- TITLE BLOC ----------------------- -->
 
     <div class="title-bloc row">
       <div class="col d-flex justify-content-center align-items-center">
@@ -29,21 +29,21 @@
       </div>
     </div>
 
-    <!-------------- new game buttons bloc------------- -->
+    <!---------------------------- NEW GAME BLOC--------------------- -->
 
     <div class="new-game-bloc row">
       <div class="col d-flex justify-content-center align-items-center">
         <button type="button" class="anim-btn btn-rules">regles</button>
       </div>
       <div class="col d-flex justify-content-center align-items-center">
-        <button type="button" class="anim-btn btn-insist">nouvelle partie</button>
+        <button type="button" class="anim-btn anim-btn-insist">nouvelle partie</button>
       </div>
       <div class="col d-flex justify-content-center align-items-center">
         <button type="button" class="anim-btn btn-sound">son (on)</button>
       </div>
     </div>
 
-    <!------------------------ game bloc -------------------- -->
+    <!------------------------ NAME AND POINT BLOC -------------------- -->
 
     <div class="game-bloc row pt-5">
 
@@ -82,25 +82,23 @@
           </div>
         </div>
       </div>
+    </div>
+    <!------------------------- ACTION BLOC ---------------------------- -->
 
-      <!--------------buttons action bloc------------- -->
-
-      <div class="players-row row">
-
-        <div class="players col-5">
-          <img class="img-player1 img-fluid" src="./img/street_fighter.jpg" alt="">
-        </div>
-
-        <div class="col-md-2 d-flex flex-column justify-content-center align-items-center">
-          <button type="button" class="btn btn-light m-1">DES</button>
-          <button type="button" class="btn btn-light m-1">ROLL</button>
-          <button type="button" class="btn btn-light m-1">HOLD</button>
-        </div>
-        <div class="col-5">
-          <img class="img-player1 img-fluid" src="./img/street_fighter.jpg" alt="">
-        </div>
-
+    <div class="action-bloc row d-flex">
+      <div class="action--player">
+        <img class="img img-fluid" src="./img/man.jpg" alt="photo joueur 1">
       </div>
+      <div class="action--button  d-flex flex-column justify-content-center align-items-center">
+        <button type="button" class="btn btn-light m-1">DES</button>
+        <button type="button" class="btn btn-light m-1">ROLL</button>
+        <button type="button" class="btn btn-light m-1">HOLD</button>
+      </div>
+      <div class="action--player">
+        <img class="img img-fluid" src="./img/girl.jpg" alt="photo joueur 2">
+      </div>
+
+    </div>
   </main>
 
 

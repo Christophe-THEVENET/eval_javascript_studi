@@ -9,7 +9,7 @@ html {
     box-sizing: border-box;
     font-family: 'Feast of Flesh BB';
     font-size: 62.5%;
-    border: 1px solid red;
+    /*  border: 1px solid red; */
 }
 
 body {
@@ -28,7 +28,9 @@ body {
     display: none;
 }
 
-/*-------------------------title ----------------------*/
+/*----------------- TITLE BLOC ---------------*/
+
+/*--------title -----*/
 .title-bloc {
     padding: 1rem;
     margin-top: 5rem;
@@ -36,7 +38,7 @@ body {
 
 h1.title {
     font-size: 8vmax;
-    padding: 2rem;
+    padding: 1.5rem;
     width: 100%;
     text-align: center;
     /*couleur font degradée*/
@@ -48,7 +50,18 @@ h1.title {
     text-shadow: -3px 9px 11px rgba(238, 56, 11, 0.37);
 }
 
-/*-------------------------- game bloc---------------------*/
+/*-----------------  NEW GAME BLOC ---------------*/
+
+.new-game-bloc {
+    margin-top: -1rem;
+    margin-bottom: 3rem;
+}
+
+/*--------------- NAME AND POINT BLOC------------*/
+
+.game-bloc {
+    border: 1px solid red;
+}
 
 .progress {
     height: 1.3rem;
@@ -59,7 +72,7 @@ h1.title {
     background-color: #ee380b;
 }
 
-/*------------- score total bloc---------------*/
+/*----- score total bloc------*/
 
 .score-total-bloc p {
     text-align: center;
@@ -85,7 +98,7 @@ h1.title {
     font-size: 2rem;
 }
 
-/*---------player 1 bar left----------*/
+/*------player 1 bar left--------*/
 
 .player-title-left {
     font-size: 5rem;
@@ -103,7 +116,7 @@ h1.title {
     margin: 0;
 }
 
-/*---------player 1 bar right---------*/
+/*------player 2 bar right--------*/
 
 .player-title-right {
     font-size: 5rem;
@@ -117,6 +130,27 @@ h1.title {
 
 .text-score-right {
     flex: 1;
+}
+
+/*------------------ ACTION BLOC -------------------*/
+
+.img {
+    height: 40vh;
+}
+
+.action-bloc {
+    border: 1px solid red;
+    
+
+}
+
+.action--player {
+    border: 1px solid red;
+    flex: 2;
+}
+
+.action--button {
+    flex: 6;
 }
 
 /* ---------------------- MEDIA QUERRYS ----------------*/
