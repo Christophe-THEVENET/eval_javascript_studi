@@ -9,7 +9,7 @@ html {
     box-sizing: border-box;
     font-family: 'Feast of Flesh BB';
     font-size: 62.5%;
-    /* border: 1px solid red;  */
+    border: 1px solid red;
 }
 
 body {
@@ -23,10 +23,15 @@ body {
     background-repeat: no-repeat;
     color: rgb(253, 253, 253);
 }
+/*layout mobile caché*/
+.wrapper-mobile {
+    display: none;
+}
 
 /*-------------------------title ----------------------*/
-.title-block {
+.title-bloc {
     padding: 1rem;
+    margin-top: 5rem;
 }
 
 h1.title {
@@ -34,26 +39,84 @@ h1.title {
     padding: 2rem;
     width: 100%;
     text-align: center;
+    /*couleur font degradée*/
     background: linear-gradient(180deg, #faeb18 20%, #ee380b 80%);
     background-clip: border-box;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     text-shadow: -3px -4px 11px rgba(250, 235, 24, 0.37);
     text-shadow: -3px 9px 11px rgba(238, 56, 11, 0.37);
-    /* border: #ee380b 1px solid; */
-}
-/*-------------------- new game buttons-------------------*/
-
-/*layout mobile caché*/
-.wrapper-mobile {
-    display: none;
 }
 
-/*-------------------- level bar and score block-------------------*/
+/*-------------------------- game bloc---------------------*/
 
-p{
-    font-size: 3.5rem;
+.progress {
+    height: 1.3rem;
+    background-color: #faeb18;
+}
+
+.progress-bar {
+    background-color: #ee380b;
+}
+
+/*------------- score total bloc---------------*/
+
+.score-total-bloc p {
     text-align: center;
+    /*couleur font degradée*/
+    background: linear-gradient(180deg, #faeb18 20%, #ee380b 80%);
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: -3px -4px 11px rgba(250, 235, 24, 0.37);
+    text-shadow: -3px 9px 11px rgba(238, 56, 11, 0.37);
+}
+
+.score-total--title {
+    font-size: 3rem;
+    margin-top: -5rem;
+    margin-bottom: -1rem;
+}
+
+.score-total--number {
+    font-size: 5rem;
+}
+.score-total--slash {
+    font-size: 2rem;
+}
+
+/*---------player 1 bar left----------*/
+
+.player-title-left {
+    font-size: 5rem;
+    margin: 0;
+    flex: 1;
+}
+
+.point-score-left {
+    font-size: 8rem;
+    margin: 0;
+}
+
+.text-score {
+    font-size: 3rem;
+    margin: 0;
+}
+
+/*---------player 1 bar right---------*/
+
+.player-title-right {
+    font-size: 5rem;
+    margin: 0;
+}
+
+.point-score {
+    font-size: 8rem;
+    margin: 0;
+}
+
+.text-score-right {
+    flex: 1;
 }
 
 /* ---------------------- MEDIA QUERRYS ----------------*/
@@ -67,13 +130,13 @@ p{
         display: none;
     }
     .wrapper-mobile {
-        display: block;
+        display: bloc;
     }
-    .title-block {
+    .title-bloc {
         margin-bottom: -2rem;
     }
 
-    .new-game-block-mobile {
+    .new-game-bloc-mobile {
         height: 10vh;
     }
     .anim-btn {
