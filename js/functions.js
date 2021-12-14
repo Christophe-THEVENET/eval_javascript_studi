@@ -1,5 +1,5 @@
 /*jouer un son*/ 
 const playSound = (src) => {
-    let son = new Audio(src);
-    son.play();
+    let sound = new Audio(src);
+    sound.play();
 };
