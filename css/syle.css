@@ -28,15 +28,14 @@ body {
     display: none;
 }
 
-/*----------------- TITLE BLOC ---------------*/
+/*----------------- HEADER ---------------*/
 
 /*--------title -----*/
-.title-bloc {
+header {
     padding: 1rem;
     margin-top: 5rem;
 }
-
-h1.title {
+header  h1 {
     font-size: 8vmax;
     padding: 1.5rem;
     width: 100%;
@@ -50,9 +49,9 @@ h1.title {
     text-shadow: -3px 9px 11px rgba(238, 56, 11, 0.37);
 }
 
-/*-----------------  NEW GAME BLOC ---------------*/
+/*-----------------  NEW GAME  ---------------*/
 
-.new-game-bloc {
+.new-game {
     margin-top: -1rem;
     margin-bottom: 3rem;
 }
@@ -60,16 +59,18 @@ h1.title {
 /*--------------- NAME AND POINT BLOC------------*/
 
 .game-bloc {
-    border: 1px solid red;
+   /*  border: 1px solid red; */
 }
 
 .progress {
     height: 1.3rem;
-    background-color: #faeb18;
+    background-color: #ee380b;
+
 }
 
 .progress-bar {
-    background-color: #ee380b;
+    background-color: #faeb18;
+
 }
 
 /*----- score total bloc------*/
@@ -139,18 +140,37 @@ h1.title {
 }
 
 .action-bloc {
-    border: 1px solid red;
+    /* border: 1px solid red;  */
     
 
 }
 
-.action--player {
-    border: 1px solid red;
+.action-player {
+    /* border: 1px solid red; */
     flex: 2;
 }
 
-.action--button {
+.action-button-bloc {
     flex: 6;
+    border: 1px solid red; 
+    
+}
+
+.action-button--dice {
+    border: 1px solid red; 
+    height: 80%;
+    width: 80%;
+
+}
+
+.action-button--roll {
+     border: 1px solid red; 
+     width: 80%;
+
+}
+
+.action-button--roll .anim-btn {
+    margin: 0 10%;
 }
 
 /* ---------------------- MEDIA QUERRYS ----------------*/
