@@ -122,3 +122,9 @@ button:focus::after {
         opacity: 0;
     }
 }
+
+/*----- player who roll the dice---*/
+.img:active {
+    filter: grayscale(0);
+    transform: scale(1.05);
+}

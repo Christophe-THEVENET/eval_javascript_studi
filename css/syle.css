@@ -36,7 +36,7 @@ header {
     margin-top: 5rem;
 }
 
-header  h1 {
+header h1 {
     font-size: 8vmax;
     padding: 1.5rem;
     width: 100%;
@@ -132,7 +132,11 @@ header  h1 {
 
 .img {
     height: 40vh;
+    filter: grayscale(90%);
+    transition: all 0.3s;
+    transform: scale(0.95);
 }
+
 
 .action-player {
     flex: 2;
@@ -148,7 +152,7 @@ header  h1 {
 }
 
 .action-button--roll {
-     width: 80%;
+    width: 80%;
 }
 
 .action-button--roll .anim-btn {
