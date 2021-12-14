@@ -14,5 +14,7 @@ diceButton.onclick = function () {
     dice.style.transform = 'rotateX(' + xRand + 'deg) rotateY(' + yRand + 'deg)';
     dice.style.transform = 'rotateX(' + xRand + 'deg) rotateY(' + yRand + 'deg)';
 
-    play_audio();
+    playSound('../sound/dice.mp3')
+
 };
+

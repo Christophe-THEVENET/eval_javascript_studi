@@ -1,8 +1,5 @@
-$('.dice-sound').trigger('load');
-
-function play_audio() {
-    
-        $('.dice-sound').trigger('play');
-    
-    
-}
+/*jouer un son*/ 
+const playSound = (src) => {
+    let son = new Audio(src);
+    son.play();
+};
