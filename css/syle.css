@@ -132,6 +132,7 @@ header h1 {
 
 .img {
     height: 40vh;
+    width: 100%;
     filter: grayscale(10%);
     transition: all 0.3s;
     transform: scale(1);
@@ -139,16 +140,22 @@ header h1 {
 
 
 .action-player {
-    flex: 2;
+    flex: 4;
+    border: 1px solid red
+
+
 }
 
 .action-button {
     flex: 6;
+    border: 1px solid red
+
 }
 
 .action-button--dice {
     height: 80%;
     width: 80%;
+    border: 1px solid red
 }
 
 .action-button--roll {

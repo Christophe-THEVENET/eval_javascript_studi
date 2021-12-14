@@ -7,11 +7,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/animation.css">
+  <link rel="stylesheet" href="./css/dice.css">
   <link rel="stylesheet" href="./css/syle.css">
   <title>Dice Fighter</title>
 </head>
 
 <body>
+
+<!--   <audio class="dice-sound"  preload="none">
+    <source src="./sound/dice.mp3" type="audio/mpeg ">
+  </audio>  -->
+
+
 
   <!--------------------------------FORMAT DESKTOP------------------------------ -->
 
@@ -82,20 +89,54 @@
 
     <div class="action row d-flex">
       <div class="action-player ">
-        <img class="img img-fluid " src="./img/man.jpg" alt="photo joueur 1">
+        <img class="img img-fluid  " src="./img/man.jpg" alt="photo joueur 1">
       </div>
       <div class="action-button  d-flex flex-column justify-content-center align-items-center">
-      <!------dice bloc------ -->
-        <div class="action-button--dice">
-          <button type="button" class="btn btn-light m-1">DES</button>
+        <!------dice bloc------ -->
+        <div class="action-button--dice d-flex justify-content-center align-items-center">
+          <div class="dice-scene">
+            <section class="dice">
+              <section class="dice__face front">
+                <div class="dot dot-1"></div>
+              </section>
+              <section class="dice__face back">
+                <div class="dot dot-2"></div>
+                <div class="dot dot-2"></div>
+              </section>
+              <section class="dice__face left">
+                <div class="dot dot-3"></div>
+                <div class="dot dot-3"></div>
+                <div class="dot dot-3"></div>
+              </section>
+              <section class="dice__face right">
+                <div class="dot dot-4"></div>
+                <div class="dot dot-4"></div>
+                <div class="dot dot-4"></div>
+                <div class="dot dot-4"></div>
+              </section>
+              <section class="dice__face top">
+                <div class="dot dot-5-t1"></div>
+                <div class="dot dot-5-t2"></div>
+                <div class="dot dot-5-m"></div>
+                <div class="dot dot-5-b1"></div>
+                <div class="dot dot-5-b2"></div>
+              </section>
+              <section class="dice__face bottom">
+                <div class="dot dot-6"></div>
+                <div class="dot dot-6"></div>
+                <div class="dot dot-6"></div>
+                <div class="dot dot-6"></div>
+                <div class="dot dot-6"></div>
+                <div class="dot dot-6"></div>
+              </section>
+            </section>
+          </div>
         </div>
-      <!------roll hold bloc------ -->
+        <!------roll hold bloc------ -->
         <div class="action-button--roll d-flex justify-content-center">
-          <button type="button" class="anim-btn btn-rules">LANCER</button>
+          <button type="button" id="roll" class="anim-btn btn-rules">LANCER</button>
           <button type="button" class="anim-btn btn-rules">GARDER</button>
-
         </div>
-
       </div>
       <div class="action-player ">
         <img class="img img-fluid " src="./img/girl.jpg" alt="photo joueur 2">
@@ -105,14 +146,15 @@
   </main>
 
 
-
-
   
 
 
 
 
-  <script src="./js/jquery-3.6.0.js"></script>
+  <script src="./js/jquery-3.6.0.min.js"></script>
+  <script src="./js/bootstrap.bundle.min.js"></script>
+  <script src="./js/functions.js"></script>
+  <script src="./js/dice.js"></script>
   <script src="./js/script.js"></script>
 </body>
 
