@@ -127,4 +127,6 @@ button:focus::after {
 .img:active {
     filter: grayscale(0);
     transform: scale(1.05);
+    filter: brightness(200%);
+    
 }

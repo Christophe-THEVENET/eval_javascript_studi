@@ -132,9 +132,9 @@ header h1 {
 
 .img {
     height: 40vh;
-    filter: grayscale(90%);
+    filter: grayscale(10%);
     transition: all 0.3s;
-    transform: scale(0.95);
+    transform: scale(1);
 }
 
 
