@@ -139,32 +139,31 @@ header h1 {
     transform: scale(1);
 }
 
-
 .action-player {
     flex: 4;
-    border: 1px solid red
-
-
 }
 
 .action-button {
-    flex: 6;
-    border: 1px solid red
-
+    flex: 4;
+    margin-top: 3rem;
 }
 
 .action-button--dice {
     height: 80%;
-    width: 80%;
-    border: 1px solid red
+    width: 100%;
 }
 
 .action-button--roll {
-    width: 80%;
+    width:60%;
 }
 
 .action-button--roll .anim-btn {
     margin: 0 10%;
+}
+
+#roll {
+    margin-bottom: -4rem;
+    margin-top: 3rem;
 }
 
 /* ---------------------- MEDIA QUERRYS ----------------*/

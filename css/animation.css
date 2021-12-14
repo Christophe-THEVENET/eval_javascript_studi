@@ -75,7 +75,7 @@ btn-sound::before {
 .anim-btn:hover,
 .anim-btn:focus {
     color: #ee380b;
-    transform: translateY(-6px);
+    transform: translateY(-3px); 
 }
 
 .anim-btn:hover::before,
@@ -126,6 +126,7 @@ button:focus::after {
 /*----- joueur actif---*/
 .img:active {
     filter: grayscale(0);
-    transform: scale(1.05);
+    transform: scale(1.04);
     filter: brightness(200%);
+    box-shadow: 0px 5px 15px 3px #faeb1860;
 }

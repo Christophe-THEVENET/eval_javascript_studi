@@ -115,29 +115,12 @@
     transform: translate(-50%, -65%);
   }
   
-  /* #roll {
-    margin: 20px auto;
-    width: 180px;
-    height: 45px;
-    cursor: pointer;
-    font-size: 22px;
-    font-weight: bold;
-    border: none;
-    border-radius: 10px;
-    transform: scale(0.9);
-    transition: 0.4s all ease;
-  } */
-  
-  #roll:hover {
-    transform: scale(1);
-  }
-  
   #roll:focus {
     outline: none;
     border: none;
   }
   
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 765px) {
     .dice-scene, 
     .dice {
       transform: scale(0.7);
@@ -147,22 +130,3 @@
   
   
   
-  
-  
-  
-  
-  
-  
-  /* MY WEBSITE */
-  .me {
-    position: absolute;
-    top: 2vh;
-    right: 2vw;
-    z-index: 100;
-    cursor: pointer;
-  }
-  
-  #myLogo {
-    width: 45px;
-    height: 45px;
-  }
