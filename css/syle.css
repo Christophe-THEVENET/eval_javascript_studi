@@ -133,7 +133,8 @@ header h1 {
 .img {
     height: 40vh;
     width: 100%;
-    filter: grayscale(10%);
+    filter: grayscale(30%);
+    filter: brightness(70%);
     transition: all 0.3s;
     transform: scale(1);
 }
