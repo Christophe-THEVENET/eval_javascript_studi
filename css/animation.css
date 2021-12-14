@@ -123,10 +123,10 @@ button:focus::after {
     }
 }
 
-/*----- player who roll the dice---*/
+/*----- joueur actif---*/
 .img:active {
     filter: grayscale(0);
     transform: scale(1.05);
     filter: brightness(200%);
-    
+    box-shadow: 0px 5px 15px 3px #faeb1860;
 }
