@@ -180,42 +180,56 @@
       </div>
     </div>
 
-    <!------------------------ PLAYER NAME AND SCORE -------------------- -->
+    <!------------------------ SCORE TOTAL -------------------- -->
 
-    <div class="row pt-5">
-      <!-------player 1---progress bar1--left-------- -->
-      <div class="col-5 pt-5 mb-4">
-        <div class=" d-flex justify-content-start align-items-end">
-          <h2 class="player-title-left">player 1</h2>
-          <h3 class="point-score flash-win">0</h3>
-          <h3 class="text-score">points</h3>
-        </div>
-        <div class="progress col-12">
-          <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-          </div>
-        </div>
-      </div>
-
+    <div class="row">
       <!-------score total ---- -->
-      <div class="score-total col-2 ">
+      <div class="score-total col-12 ">
         <p class="score-total--title col-12 ">score total</p>
         <div class="col-12 d-flex justify-content-center align-items-center">
-          <p class="score-total--number col-5 ">45</p>
+          <p class="score-total--number col-5">45</p>
           <p class="score-total--slash col-2 "> / </p>
           <p class="score-total--number col-5 ">9</p>
         </div>
       </div>
+    </div>
 
-      <!-------player 2---progress bar 2--right-------- -->
-      <div class="col-5 pt-5 mb-4">
-        <div class=" d-flex justify-content-start align-items-end">
-          <h3 class="point-score">0</h3>
-          <h3 class="text-score text-score-right">points</h3>
-          <h2 class="player-title-right">player 2</h2>
+    <!------------------------ PLAYER 1 -------------------- -->
+
+    <div class="row">
+      <!-------player 1---progress bar1--left-------- -->
+      <div class="col-12 d-flex">
+        <div class="col-6 d-flex flex-column  justify-content-center align-items-center p-3">
+          <h2 class="col player-title-mobile ">player 1</h2>
+          <h3 class="col point-score-mobile flash-win">0</h3>
+          <h3 class="col text-score-mobile">points</h3>
         </div>
-        <div class="progress col-12">
-          <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-          </div>
+
+        <div class="col action-player">
+          <img class="img-mobile  " src="./img/man.jpg" alt="photo joueur 1">
+        </div>
+      </div>
+
+      <div class="progress col-12">
+        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+        </div>
+      </div>
+
+    </div>
+
+
+
+
+
+    <!-------player 2---progress bar 2--right-------- -->
+    <div class="col-5 pt-5 mb-4">
+      <div class=" d-flex justify-content-start align-items-end">
+        <h3 class="point-score">0</h3>
+        <h3 class="text-score text-score-right">points</h3>
+        <h2 class="player-title-right">player 2</h2>
+      </div>
+      <div class="progress col-12">
+        <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
         </div>
       </div>
     </div>
@@ -223,9 +237,7 @@
     <!------------------------- ACTION  ---------------------------- -->
 
     <div class="action row d-flex">
-      <div class="action-player ">
-        <img class="img img-fluid  " src="./img/man.jpg" alt="photo joueur 1">
-      </div>
+
       <div class="action-button  d-flex flex-column justify-content-center align-items-center">
         <!------dice bloc------ -->
         <div class="action-button--dice d-flex justify-content-center align-items-center">

@@ -174,7 +174,7 @@ header h1 {
     }
 
     .wrapper-mobile {
-        display: contents;
+        display: block;
     }
 
     .wrapper-desktop {
@@ -187,5 +187,21 @@ header h1 {
 
     .game-button-mobile {
         margin-top: -4rem;
+        margin-bottom: 4rem;
+    }
+
+    .img-mobile {
+        width: 80%;
+        height: 20rem;
+    }
+
+    .player-title-mobile {
+        font-size: 6vw;
+    }
+
+
+    .point-score-mobile {
+        font-size: 8vw;
+
     }
 }
