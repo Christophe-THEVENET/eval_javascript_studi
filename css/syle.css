@@ -9,7 +9,7 @@ html {
     box-sizing: border-box;
     font-family: 'Feast of Flesh BB';
     font-size: 62.5%;
-    /*  border: 1px solid red; */
+    border: 1px solid red;
 }
 
 body {
@@ -177,8 +177,15 @@ header h1 {
         display: contents;
     }
 
-
     .wrapper-desktop {
         display: none;
+    }
+
+    .new-game-buttons-mobile {
+        height: 10vh;
+    }
+
+    .game-button-mobile {
+        margin-top: -4rem;
     }
 }
