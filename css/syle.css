@@ -9,7 +9,7 @@ html {
     box-sizing: border-box;
     font-family: 'Feast of Flesh BB';
     font-size: 62.5%;
-    /* border: 1px solid red; */
+    border: 1px solid red; 
 }
 
 body {
@@ -210,4 +210,10 @@ header h1 {
         height: 0.7rem;
       
     }
+
+
+ 
+
+  
+
 }
