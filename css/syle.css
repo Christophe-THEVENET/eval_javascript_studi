@@ -9,7 +9,7 @@ html {
     box-sizing: border-box;
     font-family: 'Feast of Flesh BB';
     font-size: 62.5%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 body {
@@ -196,12 +196,18 @@ header h1 {
     }
 
     .player-title-mobile {
-        font-size: 6vw;
+        font-size: 7vw;
     }
 
 
     .point-score-mobile {
-        font-size: 8vw;
+        font-size: 9vw;
+        margin-right: 2rem;
 
+    }
+
+    .progress-mobile {
+        height: 0.7rem;
+      
     }
 }
