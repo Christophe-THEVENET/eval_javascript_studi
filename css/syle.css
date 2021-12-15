@@ -154,7 +154,7 @@ header h1 {
 }
 
 .action-button--roll {
-    width:60%;
+    width: 60%;
 }
 
 .action-button--roll .anim-btn {
@@ -173,21 +173,12 @@ header h1 {
         overflow: auto;
     }
 
-    .wrapper-desktop {
-        display: none;
-    }
     .wrapper-mobile {
-        display: bloc;
-    }
-    .title-bloc {
-        margin-bottom: -2rem;
+        display: contents;
     }
 
-    .new-game-bloc-mobile {
-        height: 10vh;
-    }
-    .anim-btn {
-        font-size: 2rem;
-        min-height: 0;
+
+    .wrapper-desktop {
+        display: none;
     }
 }
