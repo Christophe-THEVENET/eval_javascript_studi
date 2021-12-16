@@ -150,9 +150,8 @@ header h1 {
 }
 
 .action-button--dice {
-    height: 80%;
+    height: 30%;
     width: 100%;
-    border: 1px solid red;
 }
 
 .action-button--roll {
@@ -160,7 +159,8 @@ header h1 {
 }
 
 .action-button--roll .anim-btn {
-    margin: 0 10%;
+    margin: 10%;
+    
 }
 
 #roll {
