@@ -1,5 +1,4 @@
 /*animation flash  gagnant*/
-
 .flash-win {
     text-transform: uppercase;
     animation: blur-win 1s ease-out;
@@ -16,7 +15,6 @@
 }
 
 /*animation flash  perdant*/
-
 .flash-lose {
     text-transform: uppercase;
     animation: blur-lose 1s ease-out;
@@ -32,7 +30,6 @@
 }
 
 /*animation boutons*/
-
 .anim-btn {
     min-width: 15rem;
     min-height: 15rem;
@@ -132,8 +129,12 @@ button:focus::after {
     filter: brightness(200%);
     box-shadow: 0px 5px 15px 3px #faeb1860;
 }
-
-/*--------------------MEDIA QUERRY -------------------------*/
+/*
+------------------------------------------------
+------------------------------------------------
+-----------------------MEDIA QUERRY--------------
+------------------------------------------------
+--*/
 
 @media screen and (max-width: 765px) {
     @keyframes ring {
@@ -148,7 +149,6 @@ button:focus::after {
             opacity: 0;
         }
     }
-  
 }
 
 @media screen and (max-width: 500px) {
@@ -156,5 +156,4 @@ button:focus::after {
         min-width: 1rem;
         min-height: 5rem;
     }
-   
 }
