@@ -7,7 +7,7 @@
     width: 200px;
     height: 200px;
     perspective: 1000px;
-    transform: scale(0);
+    transform: scale(0.7);
 }
 
 .dice {
@@ -124,12 +124,7 @@
 }
 
 @media screen and (max-width: 765px) {
-    .dice-scene,
-    .dice {
-        transform: scale(0.6);
-    }
-
-    .dice {
-        width: 0;
+    .dice-scene {
+        transform: scale(0.5);
     }
 }
