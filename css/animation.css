@@ -51,6 +51,7 @@
     position: relative;
     padding: 10px;
 }
+
 /* anim hover*/
 .anim-btn::before {
     content: '';
@@ -75,7 +76,7 @@ btn-sound::before {
 .anim-btn:hover,
 .anim-btn:focus {
     color: #ee380b;
-    transform: translateY(-3px); 
+    transform: translateY(-3px);
 }
 
 .anim-btn:hover::before,
@@ -131,23 +132,31 @@ button:focus::after {
     box-shadow: 0px 5px 15px 3px #faeb1860;
 }
 
-
 /*--------------------MEDIA QUERRY -------------------------*/
 
 @media screen and (max-width: 765px) {
-
-
-@keyframes ring {
-    0% {
-        width: 150px;
-        height: 50px;
-        opacity: 0.7;
+    @keyframes ring {
+        0% {
+            width: 150px;
+            height: 50px;
+            opacity: 0.7;
+        }
+        100% {
+            width: 150px;
+            height: 50px;
+            opacity: 0;
+        }
     }
-    100% {
-        width: 150px;
-        height: 50px;
-        opacity: 0;
+    #roll {
+        margin: 0;
+        padding: 0;
     }
 }
 
+@media screen and (max-width: 500px) {
+    .anim-btn {
+        min-width: 1rem;
+        min-height: 5rem;
+    }
+   
 }

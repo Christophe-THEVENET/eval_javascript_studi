@@ -123,8 +123,20 @@
     border: none;
 }
 
+/* -------------------MEDIA QUERRY --------------*/
+
 @media screen and (max-width: 765px) {
     .dice-scene {
         transform: scale(0.5);
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .dice-scene {
+        transform: scale(0.3);
+    }
+    .dice-scene {
+        position: relative;
+        left: -15px;
     }
 }
