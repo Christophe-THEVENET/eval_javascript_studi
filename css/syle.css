@@ -30,6 +30,8 @@ body {
     display: none;
 }
 
+
+
 /*----------------- HEADER ---------------*/
 
 /*--------title -----*/
@@ -160,7 +162,6 @@ header h1 {
 
 .action-button--roll .anim-btn {
     margin: 10%;
-    
 }
 
 #roll {
@@ -170,10 +171,21 @@ header h1 {
 
 /* ---------------------- MEDIA QUERRYS ----------------*/
 
-/* pour avoir le scroll en paysage tablette*/
-@media screen and (max-width: 825px) {
+@media screen and (max-width: 1050px) {
     body {
         overflow: auto;
+    }
+    header {
+        padding: 0;
+    }
+    header h1 {
+        padding: 0;
+    }
+    .action-button--roll {
+        margin-top: -2rem;
+    }
+    .btn-roll {
+        margin-top: -3rem;
     }
 }
 
