@@ -133,7 +133,7 @@
         </div>
         <!------roll hold bloc------ -->
         <div class="action-button--roll d-flex justify-content-center flex-column">
-          <button type="button" id="roll" class="anim-btn btn-rules">LANCER</button>
+          <button type="button" id="roll" class="roll anim-btn btn-rules">LANCER</button>
           <button type="button" class="anim-btn btn-rules">GARDER</button>
         </div>
       </div>
@@ -213,7 +213,7 @@
         </div>
         <!-------player 1 image------ -->
         <div class="col-6 action-player">
-          <img class="img-mobile  " src="./img/man.jpg" alt="photo joueur 1">
+          <img class="img-mobile  img" src="./img/man.jpg" alt="photo joueur 1">
         </div>
       </div>
     </div>
@@ -224,12 +224,12 @@
       <div class="col-12  d-flex  justify-content-center align-items-center">
         <!------roll hold bloc------ -->
         <div class="col-4 action-button-roll-mobile d-flex justify-content-center flex-column">
-          <button type="button" id="roll-mobile" class="anim-btn btn-hold-mobile">LANCER</button>
+          <button type="button" id="roll-mobile" class="roll anim-btn">LANCER</button>
         </div>
         <!------dice bloc------ -->
         <div class="col-4 action-button-dice-mobile d-flex justify-content-center align-items-center">
           <div class="dice-scene">
-            <section class="dice dice-mobile">
+            <section class="dice">
               <section class="dice__face front">
                 <div class="dot dot-1"></div>
               </section>
@@ -271,9 +271,35 @@
           <button type="button" class="anim-btn btn-roll-mobile">GARDER</button>
         </div>
       </div>
-
-
     </div>
+
+        <!------------------------ PLAYER 2 -------------------- -->
+
+        <div class="row">
+          <div class="col-12 d-flex">
+            <!-------player 1 points------ -->
+            <div class="col-6 d-flex flex-column justify-content-center  align-items-center p-3">
+              <!-------player 1---progress bar1--left-------- -->
+              <div class="progress progress-mobile  col-9 m-auto mb-5">
+                <div class="progress-bar w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                </div>
+              </div>
+              <h2 class="player-title-mobile ">player 2</h2>
+              <div class="d-flex align-items-center">
+                <h3 class="point-score-mobile flash-win">0</h3>
+                <h3 class=" text-score-mobile">points</h3>
+              </div>
+            </div>
+            <!-------player 1 image------ -->
+            <div class="col-6 action-player">
+              <img class="img-mobile img " src="./img/girl.jpg" alt="photo joueur 1">
+            </div>
+          </div>
+        </div>
+    
+    
+
+
   </section>
 
 
