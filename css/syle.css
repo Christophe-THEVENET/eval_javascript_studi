@@ -9,7 +9,7 @@ html {
     box-sizing: border-box;
     font-family: 'Feast of Flesh BB';
     font-size: 62.5%;
-    /*  border: 1px solid red; */
+    /* border: 1px solid red;  */
 }
 
 body {
@@ -155,7 +155,7 @@ header h1 {
 }
 
 .action-button--roll {
-    width:60%;
+    width: 60%;
 }
 
 .action-button--roll .anim-btn {
@@ -174,21 +174,47 @@ header h1 {
         overflow: auto;
     }
 
+    .wrapper-mobile {
+        display: block;
+    }
+
     .wrapper-desktop {
         display: none;
     }
-    .wrapper-mobile {
-        display: bloc;
-    }
-    .title-bloc {
-        margin-bottom: -2rem;
-    }
 
-    .new-game-bloc-mobile {
+    .new-game-buttons-mobile {
         height: 10vh;
     }
-    .anim-btn {
-        font-size: 2rem;
-        min-height: 0;
+
+    .game-button-mobile {
+        margin-top: -4rem;
+        margin-bottom: 4rem;
     }
+
+    .img-mobile {
+        width: 80%;
+        height: 20rem;
+    }
+
+    .player-title-mobile {
+        font-size: 7vw;
+    }
+
+
+    .point-score-mobile {
+        font-size: 9vw;
+        margin-right: 2rem;
+
+    }
+
+    .progress-mobile {
+        height: 0.7rem;
+      
+    }
+
+
+ 
+
+  
+
 }
