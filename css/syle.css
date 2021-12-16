@@ -187,7 +187,7 @@ header h1 {
         display: none;
     }
     header {
-        padding: 0 0 2rem 0;
+        padding: 0 0 2rem;
     }
     .new-game-buttons-mobile {
         height: 10vh;
