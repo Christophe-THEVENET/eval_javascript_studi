@@ -23,6 +23,7 @@ body {
     background-repeat: no-repeat;
     color: rgb(253, 253, 253);
 }
+
 /*layout mobile caché*/
 .wrapper-mobile {
     display: none;
