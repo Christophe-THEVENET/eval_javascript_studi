@@ -1,5 +1,8 @@
 let dice = document.getElementById('dice');
 let rollBtn = document.getElementById('roll');
+let diceMobile = document.getElementById('dice-mobile');
+
+let rollBtnMobile = document.getElementById('roll-mobile');
 
 function rollDice() {
     let result = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
@@ -9,4 +12,13 @@ function rollDice() {
     console.log(result);
 }
 
+function rollDiceMobile() {
+    let result = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+    diceMobile.dataset.side = result;
+    diceMobile.classList.toggle('reRoll');
+    playSound('sound/dice.mp3');
+    console.log(result);
+}
+
 rollBtn.addEventListener('click', rollDice);
+rollBtnMobile.addEventListener('click', rollDiceMobile);

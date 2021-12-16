@@ -152,6 +152,7 @@ header h1 {
 .action-button--dice {
     height: 80%;
     width: 100%;
+    border: 1px solid red;
 }
 
 .action-button--roll {
@@ -214,5 +215,9 @@ header h1 {
 
     .progress-mobile {
         height: 0.7rem;
+    }
+    /*dé mobile*/
+    .action-button-dice-mobile {
+        margin: 2rem 0;
     }
 }
