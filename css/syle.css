@@ -34,8 +34,7 @@ body {
 
 /*--------title -----*/
 header {
-    padding: 1rem;
-    margin-top: 5rem;
+    padding: 3rem 0;
 }
 
 header h1 {
@@ -187,7 +186,9 @@ header h1 {
     .wrapper-desktop {
         display: none;
     }
-
+    header {
+        padding: 0 0 2rem 0;
+    }
     .new-game-buttons-mobile {
         height: 10vh;
     }
