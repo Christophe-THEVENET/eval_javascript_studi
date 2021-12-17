@@ -31,8 +31,8 @@
 
 /*animation boutons*/
 .anim-btn {
-    min-width: 15rem;
-    min-height: 15rem;
+    min-width: 12rem;
+    min-height: 12rem;
     font-size: 2vmax;
     letter-spacing: 1.3px;
     font-weight: 700;
@@ -68,7 +68,7 @@
 /*taille aniv hover btn regles et son*/
 btn-rules::before,
 btn-sound::before {
-    min-width: calc(170px + 12px);
+    min-width: calc(150px + 12px);
 }
 
 .anim-btn:hover,
@@ -77,12 +77,23 @@ btn-sound::before {
     transform: translateY(-3px);
 }
 
+/*hover boutons lancer / garder*/
+.btn-roll:hover,
+.btn-roll:focus {
+    transform: translateY(3px);
+}
+
+.btn-hold:hover,
+.btn-hold:focus {
+    transform: translateY(3px);
+}
+
 .anim-btn:hover::before,
 button:focus::before {
     opacity: 1;
 }
 
-/*anim propose click*/
+/*anim guide user*/
 .btn-insist::after {
     content: '';
     width: 30px;

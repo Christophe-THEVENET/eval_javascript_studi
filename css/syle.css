@@ -146,32 +146,26 @@ header h1 {
     flex: 4;
 }
 
+/*container dé + boutons*/
 .action-button {
     flex: 4;
-    margin-top: 3rem;
-    border: 1px solid red;
-
+   /*  margin-top: 3rem; */
 }
 
 /*container du dé*/
 .action-button--dice {
-    height: 30%;
-    width: 100%;
+   /*  height: 30%; */
+   /*  width: 100%; */
+
 }
-/*container des boutons lancer / garder*/
+
+/*container des boutons*/
 .action-button--roll {
-    width: 60%;
-    border: 1px solid red;
+  height: 60%;
 }
 
 
-.btn-roll {
-   
-}
 
-.btn-hold {
-
-}
 
 /* ---------------------- MEDIA QUERRYS ----------------*/
 
