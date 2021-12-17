@@ -14,15 +14,24 @@
 
 <body>
 
+
+
+
+
   <!--------------------------------FORMAT DESKTOP------------------------------ -->
 
+
+
   <main class="wrapper-desktop container-xl min-vh-100">
+
+
+
 
     <!---------------------------- HEADER ----------------------- -->
 
     <header class="row">
       <div class="col d-flex justify-content-center align-items-center">
-        <h1 class="flash-win">DICE FIGTHER</h1>
+        <h1 class="flash-win">dice fighter</h1>
       </div>
     </header>
 
@@ -30,7 +39,8 @@
 
     <div class="new-game row">
       <div class="col d-flex justify-content-center align-items-center">
-        <button type="button" class="anim-btn btn-rules">regles</button>
+        <button type="button" id="btn-modal" class="anim-btn btn-rules" data-toggle="modal"
+          data-target="#exampleModal">regles</button>
       </div>
       <div class="col d-flex justify-content-center align-items-center">
         <button type="button" class="anim-btn btn-insist">nouvelle partie</button>
@@ -161,7 +171,7 @@
 
     <header class="row">
       <div class="col d-flex justify-content-center align-items-center">
-        <h1 class="flash-win">DICE FIGTHER</h1>
+        <h1 class="flash-win">dice fighter</h1>
       </div>
     </header>
 
@@ -301,13 +311,20 @@
 
 
 
+  <!------------MODALE REGLES-------------- -->
 
 
 
-        <!------------MODALE REGLES-------------- -->
+  <div class="rules-modal">
+    <h5>regles du dice fighter</h5>
+    <p>Le premier joueur qui atteint les 100 points a gagne !</p>
+    <p>chaque joueur a un score temporaire et un score total</p>
+    <p>a chaque tour, vous lancez le de autant de fois que vous le souhaitez.</p>
+    <p>Quand vous souhaitez securiser votre score temporaire, cliquez sur 'garder' pour ajouter votre score temporaire au total. Cela donnera la main a votre adversaire</p>
+    <p>!!! attention !!! si votre de tombe sur 1 vous perdez votre score temporaire, et, vous passez la main. </p>
 
-
-  <div class="modal"></div>
+    <button type="button" class="btn-close-modal">fermer</button>
+  </div>
 
 
 
