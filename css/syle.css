@@ -170,9 +170,8 @@ header h1 {
     padding: 4rem;
 }
 
-
-
-.rules-modal h5 {
+.rules-modal h5,
+.new-game-modal h5 {
     padding: 1rem 3rem;
     border-radius: 20px;
     font-size: 4.5vmin;
@@ -198,18 +197,18 @@ header h1 {
 
 .btn-close-modal {
     padding: 1rem 3rem;
-    border-radius: 20px;
+    border-radius: 10px;
     font-size: 3rem;
     border: none;
-    background: #fa85188c;
-    color: #000000;
+    background: #000000;
+    color: #ffffff;
     margin-top: 2rem;
     transition: all, 0.3s linear;
 }
 
 .btn-close-modal:hover {
     padding: 1rem 3rem;
-    border-radius: 20px;
+
     font-size: 3rem;
     border: none;
     background: #fa8518;
@@ -220,7 +219,71 @@ header h1 {
 
 
 
-*/
+/* ------------------------ MODALE NOUVELLE PARTIE ----------------------*/
+
+.new-game-modal {
+    background-color: #ffffff;
+    color: #000;
+    position: fixed;
+    top: 45%;
+    left: 50%;
+    width: 40%;
+    height: 40%;
+    transform: translate(-50%, -45%);
+    border-radius: 15px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+    font-size: 3vw;
+}
+
+
+.new-game-modal form {
+    margin-top: 8%;
+    width:70%;
+    height: 30vh;
+}
+
+
+
+
+.player-bloc {
+    display: flex;
+    align-items: center;
+    height: 4vh;
+}
+
+.player-bloc label {
+    width: 80%;
+    font-size: 1.5vw;
+    text-align: end;
+    margin-right: 2rem;
+}
+
+.player-bloc input {
+    font-size: 1vw;
+}
+
+.btn-dark {
+    margin: 5rem auto;
+    transform: scale(1.5);
+    transition: all, 0.3s linear;
+
+}
+
+.btn-dark:hover {
+    padding: 1rem 3rem;
+    font-size: 3rem;
+    border: none;
+    background: #fa8518;
+    box-shadow: 1px 2px 6px 2px rgb(46, 5, 5);
+}
+
+/* .player-bloc input {
+    width: 80%;
+    font-size: 1vw;
+} */
 
 /* ---------------------- MEDIA QUERRYS ----------------*/
 
