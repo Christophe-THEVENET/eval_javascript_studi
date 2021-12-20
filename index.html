@@ -336,10 +336,15 @@
         <input type="text" name="player1" id="player1" class="form-control" placeholder="pseudo" autocomplete="off">
       </div>
       <div class="player-bloc mb-5">
-        <label for="pseudo">joueur 2</label>
+        <label for="player2">joueur 2</label>
         <input type="text" name="player2" id="player2" class="form-control" placeholder="Pseudo" autocomplete="off">
       </div>
-      <button id="btn-close-ng-modal" class=" btn btn-dark d-block fs-4 " type="submit">Jouer !</button>
+      <div class="player-bloc mb-5">
+        <label for="win-score">score a atteindre</label>
+        <input type="number" id="win-score" name="win-score" min="10" max="100" step="10"
+          placeholder="choix de 10 à 100">
+      </div>
+      <button id="btn-close-ng-modal" class="btn-close-ng-modal" type="submit">Jouer !</button>
     </form>
   </div>
 
