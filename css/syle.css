@@ -196,7 +196,7 @@ header h1 {
 }
 
 .btn-close-modal {
-    padding: 1rem 3rem;
+    padding: 0.5rem 2rem;
     border-radius: 10px;
     font-size: 3.2vmin;
     border: none;
@@ -265,7 +265,7 @@ header h1 {
 }
 
 .btn-close-ng-modal {
-    padding: 1rem 3rem;
+    padding: 0.5rem 2rem;
     border-radius: 10px;
     font-size: 3.2vmin;
     border: none;
@@ -348,5 +348,9 @@ header h1 {
     /*dé mobile*/
     .action-button-dice-mobile {
         margin: 2rem 0;
+    }
+
+    .rules-modal, .new-game-modal {
+        width: 95%;
     }
 }

@@ -1,10 +1,11 @@
 /*commandes modale régles*/
 let rulesModal = document.querySelector('.rules-modal');
-let newGameModal = document.querySelector('.new-game-modal')
 let btnRulesModal = document.querySelector('#btn-modal');
 let btnRulesModalMobile = document.querySelector('#btn-modal-mobile');
 let btnCloseModal = document.querySelector('#btn-close-rules-modal');
+let newGameModal = document.querySelector('.new-game-modal');
 let btnNewGame = document.querySelector('#btn-new-game');
+let btnNewGameMobile = document.querySelector('#btn-modal-ng-mobile');
 let btnCloseNewGame = document.querySelector('#btn-close-ng-modal');
 
 /*fermer la modale rules*/
@@ -24,7 +25,12 @@ btnRulesModalMobile.addEventListener('click', () => {
 /*ouvrir la modale newGame*/
 btnNewGame.addEventListener('click', () => {
     newGameModal.style.display = 'flex';
-}); 
+});
+
+/*ouvrir la modale newGame mobile*/
+btnNewGameMobile.addEventListener('click', () => {
+    newGameModal.style.display = 'flex';
+});
 
 /*fermer la modale newGame*/
 btnCloseNewGame.addEventListener('click', () => {
