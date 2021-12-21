@@ -9,13 +9,13 @@ let btnNewGame = document.querySelector('#btn-new-game');
 let btnNewGameMobile = document.querySelector('#btn-modal-ng-mobile');
 let btnStartNewGame = document.querySelector('#btn-close-ng-modal');
 
-/*---------  HTML NOM JOUEURS ET SCORE A ATTEINDRE INPUT -----------------*/
+/*---------  HTML NOMS JOUEURS / SCORE A ATTEINDRE INPUT -----------------*/
 
 let player1NameInput = document.querySelector('#player1-input');
 let player2NameInput = document.querySelector('#player2-input');
 let scoreToWinInput = document.querySelector('#win-score-input');
 
-/*---------  HTML NOM DES JOUEURS OUTPUT----------------*/
+/*---------  HTML NOMS JOUEURS / SCORE A ATTEINDRE OUTPUT----------------*/
 /* desktop*/
 let player1NameOutput = document.querySelector('#player1-output');
 let player2NameOutput = document.querySelector('#player2-output');
@@ -26,6 +26,16 @@ let player2NameOutputMobile = document.querySelector('#player2-output-mobile');
 let scoreToWinOutputMobile = document.querySelector('#win-score-output-mobile'); 
 
 
+/*---------  HTML POINTS EN COURS / POINTS TOTAL OUTPUT----------------*/
+/* desktop*/
+let player1RoundOutput = document.querySelector('#player1-output');
+let player2RoundOutput = document.querySelector('#player2-output');
+let player1GlobalOutput = document.querySelector('#player2-output');
+let player2GlobalOutput = document.querySelector('#player2-output');
+/* mobile*/
+/*  let player1NameOutputMobile = document.querySelector('#player1-output-mobile');
+let player2NameOutputMobile = document.querySelector('#player2-output-mobile');
+let scoreToWinOutputMobile = document.querySelector('#win-score-output-mobile');  */
 
 
 
@@ -74,7 +84,7 @@ btnStartNewGame.addEventListener('click', () => {
         playSound('sound/fight.mp3', 0.2);
     }, 1500);
 
-    /*afficher nom des joueurs*/
+    /*afficher nom des joueurs et score a atteindre*/
     /*desktop*/
     player1NameOutput.textContent = player1NameInput.value
     player2NameOutput.textContent = player2NameInput.value

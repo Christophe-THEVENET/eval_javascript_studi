@@ -98,7 +98,7 @@ header h1 {
 /*------player 1 bar left--------*/
 
 .player-title-left {
-    font-size: 5rem;
+    font-size: 3vw;
     margin: 0;
     flex: 1;
 }
@@ -116,7 +116,7 @@ header h1 {
 /*------player 2 bar right--------*/
 
 .player-title-right {
-    font-size: 5rem;
+    font-size: 3vw;
     margin: 0;
 }
 
