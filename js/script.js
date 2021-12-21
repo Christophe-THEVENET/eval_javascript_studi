@@ -28,11 +28,18 @@ let scoreToWinOutputMobile = document.querySelector('#win-score-output-mobile');
 
 /*---------  HTML POINTS EN COURS / POINTS TOTAL OUTPUT----------------*/
 /* desktop*/
-let player1RoundOutput = document.querySelector('#player1-output');
-let player2RoundOutput = document.querySelector('#player2-output');
-let player1GlobalOutput = document.querySelector('#player2-output');
-let player2GlobalOutput = document.querySelector('#player2-output');
+let player1Round = document.querySelector('#player1-round');
+let player2Round = document.querySelector('#player2-round');
 /* mobile*/
+let player1RoundMobile = document.querySelector('#player1-round-mobile');
+let player2RoundMobile = document.querySelector('#player2-round-mobile');
+/* desktop*/
+let player1Global = document.querySelector('#player1-global');
+let player2Global = document.querySelector('#player2-global');
+/* mobile*/
+let player1GlobalMobile = document.querySelector('#player1-global-mobile');
+let player2GlobalMobile = document.querySelector('#player2-global-mobile');
+
 /*  let player1NameOutputMobile = document.querySelector('#player1-output-mobile');
 let player2NameOutputMobile = document.querySelector('#player2-output-mobile');
 let scoreToWinOutputMobile = document.querySelector('#win-score-output-mobile');  */
@@ -94,4 +101,21 @@ btnStartNewGame.addEventListener('click', () => {
     player2NameOutputMobile.textContent = player2NameInput.value
     scoreToWinOutputMobile.textContent = `total (${scoreToWinInput.value}pts)`
 
+
+
+
 });
+
+
+
+
+
+player1Round.textContent = 34
+player1RoundMobile.textContent = 34
+player2Round.textContent = 7
+player2RoundMobile.textContent = 7
+
+player1Global.textContent = 45
+player1GlobalMobile.textContent = 45
+player2Global.textContent = 12
+player2GlobalMobile.textContent = 12

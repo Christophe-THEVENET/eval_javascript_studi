@@ -57,7 +57,7 @@
       <div class="col-5 pt-5 mb-4">
         <div class=" d-flex justify-content-start align-items-end">
           <h2 class="player-title-left" id="player1-output">joueur 1</h2>
-          <h3 class="point-score flash-win">0</h3>
+          <h3 class="point-score flash-win" id="player1-round">0</h3>
           <h3 class="text-score">points</h3>
         </div>
         <div class="progress col-12">
@@ -70,16 +70,16 @@
       <div class="score-total col-2 ">
         <p class="score-total--title col-12 " id="win-score-output">score total</p>
         <div class="col-12 d-flex justify-content-center align-items-center">
-          <p class="score-total--number col-5 ">0</p>
+          <p class="score-total--number col-5 " id="player1-global" >0</p>
           <p class="score-total--slash col-2 ">/</p>
-          <p class="score-total--number col-5 ">0</p>
+          <p class="score-total--number col-5 " id="player2-global">0</p>
         </div>
       </div>
 
       <!-------player 2---progress bar 2--right-------- -->
       <div class="col-5 pt-5 mb-4">
         <div class=" d-flex justify-content-start align-items-end">
-          <h3 class="point-score">0</h3>
+          <h3 class="point-score" id="player2-round">0</h3>
           <h3 class="text-score text-score-right">points</h3>
           <h2 class="player-title-right" id="player2-output">joueur 2</h2>
         </div>
@@ -203,9 +203,9 @@
       <div class="score-total col-12 d-flex  flex-column justify-content-center align-items-center">
         <p class="score-total--title col-12 " id="win-score-output-mobile">score total</p>
         <div class="col-6 d-flex justify-content-center align-items-center">
-          <p class="score-total--number col-5">0</p>
+          <p class="score-total--number col-5" id="player1-global-mobile">0</p>
           <p class="score-total--slash col-2 ">/</p>
-          <p class="score-total--number col-5 ">0</p>
+          <p class="score-total--number col-5 " id="player2-global-mobile">0</p>
         </div>
       </div>
     </div>
@@ -223,7 +223,7 @@
           </div>
           <h2 class="player-title-mobile " id="player1-output-mobile">joueur 1</h2>
           <div class="d-flex align-items-center">
-            <h3 class="point-score-mobile flash-win">0</h3>
+            <h3 class="point-score-mobile flash-win player1-round" id="player1-round-mobile">0</h3>
             <h3 class=" text-score-mobile">points</h3>
           </div>
         </div>
@@ -304,7 +304,7 @@
           </div>
           <h2 class="player-title-mobile " id="player2-output-mobile">joueur 2</h2>
           <div class="d-flex align-items-center">
-            <h3 class="point-score-mobile flash-win">0</h3>
+            <h3 class="point-score-mobile flash-win" id="player2-round-mobile">0</h3>
             <h3 class=" text-score-mobile">points</h3>
           </div>
         </div>
@@ -340,11 +340,13 @@
     <form>
       <div class="player-bloc  mb-5">
         <label for="player1">joueur 1</label>
-        <input type="text" name="player1" id="player1-input" maxlength="12" class="form-control" placeholder="pseudo" autocomplete="off">
+        <input type="text" name="player1" id="player1-input" maxlength="12" class="form-control" placeholder="pseudo"
+          autocomplete="off">
       </div>
       <div class="player-bloc mb-5">
         <label for="player2">joueur 2</label>
-        <input type="text" name="player2" id="player2-input" maxlength="12" class="form-control" placeholder="Pseudo" autocomplete="off">
+        <input type="text" name="player2" id="player2-input" maxlength="12" class="form-control" placeholder="Pseudo"
+          autocomplete="off">
       </div>
       <div class="player-bloc mb-5">
         <label for="win-score-input">score a atteindre</label>
