@@ -10,11 +10,15 @@ class Player {
         this.round = round;
         this.global = global;
     }
-
+    /*recuperer points*/
     getRound = () => this.round;
+    /*recuperer total*/
     getGolbal = () => this.global;
-
+    /*recuperer nom joueur */
+    getName = () => this.name;
+    /*modifier points*/
     setRound = (round) => (this.round = round);
+    /*modifier total*/
     setGlobal = (global) => (this.global = global);
 }
 

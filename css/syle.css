@@ -319,6 +319,7 @@ header h1 {
     header {
         padding: 0 0 2rem;
     }
+    
     .new-game-buttons-mobile {
         height: 10vh;
     }
@@ -350,7 +351,8 @@ header h1 {
         margin: 2rem 0;
     }
 
-    .rules-modal, .new-game-modal {
+    .rules-modal,
+    .new-game-modal {
         width: 95%;
     }
 }
