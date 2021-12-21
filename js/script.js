@@ -11,14 +11,19 @@ let btnStartNewGame = document.querySelector('#btn-close-ng-modal');
 
 /*---------  HTML NOM JOUEURS ET SCORE A ATTEINDRE INPUT -----------------*/
 
-let player1NameInput = document.querySelector('#player1');
-let player2NameInput = document.querySelector('#player2');
-let scoreToWinInput = document.querySelector('#win-score');
+let player1NameInput = document.querySelector('#player1-input');
+let player2NameInput = document.querySelector('#player2-input');
+let scoreToWinInput = document.querySelector('#win-score-input');
 
 /*---------  HTML NOM DES JOUEURS OUTPUT----------------*/
-
-let player1NameOutput = document.querySelector('#player1-name');
-let player2NameOutput = document.querySelector('#player2-name');
+/* desktop*/
+let player1NameOutput = document.querySelector('#player1-output');
+let player2NameOutput = document.querySelector('#player2-output');
+let scoreToWinOutput = document.querySelector('#win-score-output');
+/* mobile*/
+/* let player1NameOutput = document.querySelector('#player1-output');
+let player2NameOutput = document.querySelector('#player2-output');
+let scoreToWinOutput = document.querySelector('#win-score-output'); */
 
 
 
@@ -72,4 +77,10 @@ btnStartNewGame.addEventListener('click', () => {
     /*afficher nom des joueurs*/
     player1NameOutput.textContent = player1NameInput.value
     player2NameOutput.textContent = player2NameInput.value
+    scoreToWinOutput.textContent = `total (${scoreToWinInput.value})`
+
+    player1NameOutput.textContent = 'qsdfq'
+    player2NameOutput.textContent = 'sdfqsdf'
+    scoreToWinOutput.textContent = `total (40)`
+
 });

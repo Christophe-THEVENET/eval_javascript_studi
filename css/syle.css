@@ -82,7 +82,7 @@ header h1 {
 }
 
 .score-total--title {
-    font-size: 3rem;
+    font-size: 2vmax;
     margin-top: -5rem;
     margin-bottom: -1rem;
 }
@@ -319,7 +319,7 @@ header h1 {
     header {
         padding: 0 0 2rem;
     }
-    
+
     .new-game-buttons-mobile {
         height: 10vh;
     }
