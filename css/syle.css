@@ -136,8 +136,16 @@ header h1 {
     width: 100%;
     filter: grayscale(30%);
     filter: brightness(70%);
-    transition: all 0.3s;
+    transition: all 0.6s;
     transform: scale(1);
+}
+
+/*----- joueur actif---*/
+.img-active {
+    filter: grayscale(0);
+    transform: scale(1.04);
+    filter: brightness(200%);
+    box-shadow: 0px 5px 15px 3px #faeb1860;
 }
 
 .action-player {
