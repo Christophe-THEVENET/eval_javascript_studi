@@ -21,10 +21,9 @@ let player1NameOutput = document.querySelector('#player1-output');
 let player2NameOutput = document.querySelector('#player2-output');
 let scoreToWinOutput = document.querySelector('#win-score-output');
 /* mobile*/
- let player1NameOutputMobile = document.querySelector('#player1-output-mobile');
+let player1NameOutputMobile = document.querySelector('#player1-output-mobile');
 let player2NameOutputMobile = document.querySelector('#player2-output-mobile');
-let scoreToWinOutputMobile = document.querySelector('#win-score-output-mobile'); 
-
+let scoreToWinOutputMobile = document.querySelector('#win-score-output-mobile');
 
 /*---------  HTML POINTS EN COURS / POINTS TOTAL OUTPUT----------------*/
 /* desktop*/
@@ -43,9 +42,6 @@ let player2GlobalMobile = document.querySelector('#player2-global-mobile');
 /*  let player1NameOutputMobile = document.querySelector('#player1-output-mobile');
 let player2NameOutputMobile = document.querySelector('#player2-output-mobile');
 let scoreToWinOutputMobile = document.querySelector('#win-score-output-mobile');  */
-
-
-
 
 /*---------------------  GESTION DES MODALES -----------------------*/
 
@@ -93,29 +89,24 @@ btnStartNewGame.addEventListener('click', () => {
 
     /*afficher nom des joueurs et score a atteindre*/
     /*desktop*/
-    player1NameOutput.textContent = player1NameInput.value
-    player2NameOutput.textContent = player2NameInput.value
-    scoreToWinOutput.textContent = `total (${scoreToWinInput.value}pts)`
+    player1NameOutput.textContent = player1NameInput.value;
+    player2NameOutput.textContent = player2NameInput.value;
+    scoreToWinOutput.textContent = `total (${scoreToWinInput.value}pts)`;
     /*mobile*/
-    player1NameOutputMobile.textContent = player1NameInput.value
-    player2NameOutputMobile.textContent = player2NameInput.value
-    scoreToWinOutputMobile.textContent = `total (${scoreToWinInput.value}pts)`
-
-
-
-
+    player1NameOutputMobile.textContent = player1NameInput.value;
+    player2NameOutputMobile.textContent = player2NameInput.value;
+    scoreToWinOutputMobile.textContent = `total (${scoreToWinInput.value}pts)`;
 });
 
+player1NameOutput.textContent = player1.getName();
+player2NameOutput.textContent = player2.getName();
 
+player1Round.textContent = player1.getRound();
+player1RoundMobile.textContent = player1.getRound();
+player2Round.textContent = player2.getRound();
+player2RoundMobile.textContent = player2.getRound();
 
-
-
-player1Round.textContent = 34
-player1RoundMobile.textContent = 34
-player2Round.textContent = 7
-player2RoundMobile.textContent = 7
-
-player1Global.textContent = 45
-player1GlobalMobile.textContent = 45
-player2Global.textContent = 12
-player2GlobalMobile.textContent = 12
+player1Global.textContent = player1.getGlobal();
+player1GlobalMobile.textContent = player1.getGlobal();
+player2Global.textContent = player2.getGlobal();
+player2GlobalMobile.textContent = player2.getGlobal();
