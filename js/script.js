@@ -26,22 +26,19 @@ let player2NameOutputMobile = document.querySelector('#player2-output-mobile');
 let scoreToWinOutputMobile = document.querySelector('#win-score-output-mobile');
 
 /*---------  HTML POINTS EN COURS / POINTS TOTAL OUTPUT----------------*/
-/* desktop*/
-let player1Round = document.querySelector('#player1-round');
-let player2Round = document.querySelector('#player2-round');
-/* mobile*/
-let player1RoundMobile = document.querySelector('#player1-round-mobile');
-let player2RoundMobile = document.querySelector('#player2-round-mobile');
-/* desktop*/
-let player1Global = document.querySelector('#player1-global');
-let player2Global = document.querySelector('#player2-global');
-/* mobile*/
-let player1GlobalMobile = document.querySelector('#player1-global-mobile');
-let player2GlobalMobile = document.querySelector('#player2-global-mobile');
 
-/*  let player1NameOutputMobile = document.querySelector('#player1-output-mobile');
-let player2NameOutputMobile = document.querySelector('#player2-output-mobile');
-let scoreToWinOutputMobile = document.querySelector('#win-score-output-mobile');  */
+/* desktop*/
+let player1RoundOutput = document.querySelector('#player1-round');
+let player2RoundOutput = document.querySelector('#player2-round');
+/* mobile*/
+let player1RoundMobileOutput = document.querySelector('#player1-round-mobile');
+let player2RoundMobileOutput = document.querySelector('#player2-round-mobile');
+/* desktop*/
+let player1GlobalOutput = document.querySelector('#player1-global');
+let player2GlobalOutput = document.querySelector('#player2-global');
+/* mobile*/
+let player1GlobalMobileOutput = document.querySelector('#player1-global-mobile');
+let player2GlobalMobileOutput = document.querySelector('#player2-global-mobile');
 
 /*---------------------  GESTION DES MODALES -----------------------*/
 
@@ -91,22 +88,9 @@ btnStartNewGame.addEventListener('click', () => {
     /*desktop*/
     player1NameOutput.textContent = player1NameInput.value;
     player2NameOutput.textContent = player2NameInput.value;
-    scoreToWinOutput.textContent = `total (${scoreToWinInput.value}pts)`;
-    /*mobile*/
-    player1NameOutputMobile.textContent = player1NameInput.value;
-    player2NameOutputMobile.textContent = player2NameInput.value;
-    scoreToWinOutputMobile.textContent = `total (${scoreToWinInput.value}pts)`;
+    scoreToWinOutput.textContent = `total (${scoreToWinInput.value})`
+     /*mobile*/
+     player1NameOutputMobile.textContent = player1NameInput.value;
+     player2NameOutputMobile.textContent = player2NameInput.value;
+     scoreToWinOutputMobile.textContent = `total (${scoreToWinInput.value})`
 });
-
-player1NameOutput.textContent = player1.getName();
-player2NameOutput.textContent = player2.getName();
-
-player1Round.textContent = player1.getRound();
-player1RoundMobile.textContent = player1.getRound();
-player2Round.textContent = player2.getRound();
-player2RoundMobile.textContent = player2.getRound();
-
-player1Global.textContent = player1.getGlobal();
-player1GlobalMobile.textContent = player1.getGlobal();
-player2Global.textContent = player2.getGlobal();
-player2GlobalMobile.textContent = player2.getGlobal();

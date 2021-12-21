@@ -6,27 +6,22 @@ const playSound = (src, vol) => {
 };
 
 class Player {
-    constructor(name, round, global) {
-        this.name = name;
+    constructor(round = 0, global = 0) {
         this.round = round;
         this.global = global;
     }
 
-    /*recuperer nom joueur */
-    getName = () => this.name;
     /*recuperer points*/
     getRound = () => this.round;
     /*recuperer total*/
     getGlobal = () => this.global;
-    /*modifier nom joueur */
-    setName = (name) => (this.name = name);
     /*modifier points*/
-    setRound = (round) => (this.round = round);
+    setRound = (round) => (this.round += round);
     /*modifier total*/
-    setGlobal = (global) => (this.global = global);
+    setGlobal = (global) => (this.global += global);
 
-    addRound = (number) => (this.round += number);
+   
 }
 
-let player1 = new Player(player1NameInput, 6, 89);
-let player2 = new Player(player2NameInput, 12, 45);
+let player1 = new Player(4, 7);
+let player2 = new Player(88, 743);
