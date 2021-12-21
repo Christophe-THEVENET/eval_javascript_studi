@@ -21,9 +21,9 @@ let player1NameOutput = document.querySelector('#player1-output');
 let player2NameOutput = document.querySelector('#player2-output');
 let scoreToWinOutput = document.querySelector('#win-score-output');
 /* mobile*/
-/* let player1NameOutput = document.querySelector('#player1-output');
-let player2NameOutput = document.querySelector('#player2-output');
-let scoreToWinOutput = document.querySelector('#win-score-output'); */
+ let player1NameOutputMobile = document.querySelector('#player1-output-mobile');
+let player2NameOutputMobile = document.querySelector('#player2-output-mobile');
+let scoreToWinOutputMobile = document.querySelector('#win-score-output-mobile'); 
 
 
 
@@ -75,12 +75,13 @@ btnStartNewGame.addEventListener('click', () => {
     }, 1500);
 
     /*afficher nom des joueurs*/
+    /*desktop*/
     player1NameOutput.textContent = player1NameInput.value
     player2NameOutput.textContent = player2NameInput.value
-    scoreToWinOutput.textContent = `total (${scoreToWinInput.value})`
-
-    player1NameOutput.textContent = 'qsdfq'
-    player2NameOutput.textContent = 'sdfqsdf'
-    scoreToWinOutput.textContent = `total (40)`
+    scoreToWinOutput.textContent = `total (${scoreToWinInput.value}pts)`
+    /*mobile*/
+    player1NameOutputMobile.textContent = player1NameInput.value
+    player2NameOutputMobile.textContent = player2NameInput.value
+    scoreToWinOutputMobile.textContent = `total (${scoreToWinInput.value}pts)`
 
 });
