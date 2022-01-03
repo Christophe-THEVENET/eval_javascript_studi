@@ -50,30 +50,40 @@ btnStartNewGame.addEventListener('click', () => {
     scoreToWinOutput.textContent = `total (${scoreToWinInput})`;
     scoreToWinOutputMobile.textContent = `total ${scoreToWinInput}`;
 
-
     /*instance des nouveaux joueurs*/
     let player1 = new Player(player1NameInput, 0, 0, player1Img);
     let player2 = new Player(player2NameInput, 0, 0, player2Img);
 
     /*affiche le nom des joueurs*/
-    player1.showPlayerName(player1NameOutput, player1NameOutputMobile, player1Img);
+    player1.showPlayerName(player1NameOutput, player1NameOutputMobile);
     player2.showPlayerName(player2NameOutput, player2NameOutputMobile);
 
     player1.activeImgPlayer();
-    player2.activeImgPlayer();
 
     /*-----------  LANCER DE DE PLAYER 1  -------------------*/
 
-
-
-
     rollBtn.addEventListener('click', () => {
-    player1.activeImgPlayer();
+        player1.activeImgPlayer();
 
-        someRoundRollDice(player1, player1RoundOutput, rollDice());
+       
 
-        if (player1.NumberOne === true) {
+        if (player1.NumberOne === false) {
+            someRoundRollDice(player1, player1RoundOutput, rollDice());
 
-        } 
+            return;
+        } else if (player1.NumberOne === true) {
+            player2.activeImgPlayer();
+            player1.unactiveImgPlayer()
+            someRoundRollDice(player2, player2RoundOutput, rollDice());
+            return;
+        } else if (player2.NumberOne === false) {
+            player2.activeImgPlayer();
+
+            someRoundRollDice(player2, player2RoundOutput, rollDice());
+            return;
+        } else {
+            someRoundRollDice(player1, player1RoundOutput, rollDice());
+            return;
+        }
     });
 });

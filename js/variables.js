@@ -30,17 +30,12 @@ let player2Img = document.querySelector('#player2-img');
 let player1ImgMobile = document.querySelector('#player1-img-mobile');
 let player2ImgMobile = document.querySelector('#player2-img-mobile');
 
-
-
-
-    /*---------  HTML NOMS JOUEURS / SCORE A ATTEINDRE OUTPUT----------------*/
-    /* desktop*/
-    let player1NameOutput = document.querySelector('#player1-output');
-    let player2NameOutput = document.querySelector('#player2-output');
-    let scoreToWinOutput = document.querySelector('#win-score-output');
-    /* mobile*/
-    let player1NameOutputMobile = document.querySelector('#player1-output-mobile');
-    let player2NameOutputMobile = document.querySelector('#player2-output-mobile');
-    let scoreToWinOutputMobile = document.querySelector('#win-score-output-mobile');
-
-
+/*---------  HTML NOMS JOUEURS / SCORE A ATTEINDRE OUTPUT----------------*/
+/* desktop*/
+let player1NameOutput = document.querySelector('#player1-output');
+let player2NameOutput = document.querySelector('#player2-output');
+let scoreToWinOutput = document.querySelector('#win-score-output');
+/* mobile*/
+let player1NameOutputMobile = document.querySelector('#player1-output-mobile');
+let player2NameOutputMobile = document.querySelector('#player2-output-mobile');
+let scoreToWinOutputMobile = document.querySelector('#win-score-output-mobile');

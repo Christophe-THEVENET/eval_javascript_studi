@@ -5,9 +5,6 @@ const playSound = (src, vol) => {
     sound.volume = vol;
 };
 
-
-
-
 /*-----  CLASSE PLAYER ROUND ET GLOBAL--------*/
 
 class Player {
@@ -37,10 +34,16 @@ class Player {
     };
     /*active image du joueur*/
     activeImgPlayer = () => {
-        this.img.classList.add = 'img-active';
-        console.log(this.img);
-
+        this.img.classList.add('img-active');
     };
+     /*desactive image du joueur*/
+     unactiveImgPlayer = () => {
+        this.img.classList.remove('img-active');
+    };
+
+    
+
+
 }
 
 /*----- SOMME DES RESULTATS DU DE ET O POINTS SI 1 --------*/
@@ -57,9 +60,7 @@ const someRoundRollDice = (player, playerRoundOutput, number) => {
         }, 1000);
     } else {
         player.setRound(number);
-        console.log(player.NumberOne);
         player.NumberOne = false;
-        console.log(player.getRound());
         playerRoundOutput.textContent = player.getRound();
         playerRoundOutput.classList.add('flash-win');
         /*supprime le flash anim au bout d 1s*/

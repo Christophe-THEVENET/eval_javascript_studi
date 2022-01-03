@@ -4,6 +4,7 @@ let rollBtn = document.getElementById('roll');
 let rollBtnMobile = document.getElementById('roll-mobile');
 
 /*lancer dé*/
+
 function rollDice() {
     let result = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
     dice.dataset.side = result;

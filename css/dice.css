@@ -2,7 +2,7 @@
     width: 8vw;
     height: 8vw;
     transform-style: preserve-3d;
-    transition: transform 1.5s ease-out;
+    transition: transform 1s ease-out;
 }
 
 .sides {
@@ -177,7 +177,7 @@
     width: 10vw;
     height: 10vw;
     transform-style: preserve-3d;
-    transition: transform 1.5s ease-out;
+    transition: transform 1s ease-out;
 }
 
 .dot-mobile {
