@@ -20,7 +20,6 @@ function rollDiceMobile() {
     diceMobile.dataset.side = result;
     diceMobile.classList.toggle('reRoll');
     playSound('sound/dice.mp3', 1);
-    console.log(result);
     return result;
 }
 

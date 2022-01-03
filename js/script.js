@@ -67,6 +67,11 @@ btnStartNewGame.addEventListener('click', () => {
 
     rollBtn.addEventListener('click', () => {
         player1.setRound(rollDice());
-        console.log(player1.getRound());
+        console.log('total ' + player1.getRound());
+        player1RoundOutput.classList.add('flash-win');
+        player1RoundOutput.textContent = player1.getRound();
+        setTimeout(() => {
+            player1RoundOutput.classList.remove('flash-win');
+        }, 1000);
     });
 });
