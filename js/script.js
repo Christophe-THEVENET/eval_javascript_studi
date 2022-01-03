@@ -47,15 +47,26 @@ btnStartNewGame.addEventListener('click', () => {
     let player2NameInput = document.querySelector('#player2-input').value;
     /*afficher score a atteindre*/
     let scoreToWinInput = document.querySelector('#win-score-input').value;
-    scoreToWinOutput.textContent = `total ${scoreToWinInput}`;
+    scoreToWinOutput.textContent = `total (${scoreToWinInput})`;
     scoreToWinOutputMobile.textContent = `total ${scoreToWinInput}`;
 
     /*instance des nouveaux joueurs*/
-    
     let player1 = new Player(player1NameInput, 0, 0);
     let player2 = new Player(player2NameInput, 0, 0);
 
     /*affiche le nom des joueurs*/
     player1.showPlayerName(player1NameOutput, player1NameOutputMobile);
     player2.showPlayerName(player2NameOutput, player2NameOutputMobile);
+
+    /*anim img active*/
+    animImg(document.querySelector('#player1-img'), document.querySelector('#player1-img-mobile'));
+
+    let rollBtn = document.querySelector('#roll');
+
+    /*tentative recup de*/
+
+    rollBtn.addEventListener('click', () => {
+        player1.setRound(rollDice());
+        console.log(player1.getRound());
+    });
 });

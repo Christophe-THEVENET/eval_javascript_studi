@@ -24,13 +24,12 @@ class Player {
     /*modifier total*/
     setGlobal = (num) => (this.global += num);
 
-    /*afficher nom des joueurs et score a atteindre*/
-    showPlayerName = (player, playerMobile) => {
-        player.textContent = this.name;
-        playerMobile.textContent = this.name;
+    /*afficher nom des joueurs*/
+    showPlayerName = (playerNameDesktop, playerNameMobile) => {
+        playerNameDesktop.textContent = this.name;
+        playerNameMobile.textContent = this.name;
     };
 }
-
 
 /*-----  ANIME L IMAGE DU JOUEUR ACTIF --------*/
 const animImg = (playerImg, playerImgMobile) => {
@@ -43,4 +42,3 @@ const unanimImg = (playerImg, playerImgMobile) => {
     playerImg.classList.remove('img-active');
     playerImgMobile.classList.remove('img-active');
 };
-
