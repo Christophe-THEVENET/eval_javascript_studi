@@ -5,10 +5,13 @@ const playSound = (src, vol) => {
     sound.volume = vol;
 };
 
+
+
+
 /*-----  CLASSE PLAYER ROUND ET GLOBAL--------*/
 
 class Player {
-    constructor(name, round, global, img,) {
+    constructor(name, round, global, img) {
         this.name = name;
         this.round = round;
         this.global = global;
@@ -25,21 +28,18 @@ class Player {
     setRound = (num) => (this.round += num);
     /*modifier total*/
     setGlobal = (num) => (this.global += num);
-
     /*annule points*/
-
     setRound0 = () => (this.round = 0);
-
     /*afficher nom des joueurs*/
     showPlayerName = (playerNameDesktop, playerNameMobile) => {
         playerNameDesktop.textContent = this.name;
         playerNameMobile.textContent = this.name;
     };
-
     /*active image du joueur*/
-
     activeImgPlayer = () => {
-        this.img.classList.add = 'active-img';
+        this.img.classList.add = 'img-active';
+        console.log(this.img);
+
     };
 }
 

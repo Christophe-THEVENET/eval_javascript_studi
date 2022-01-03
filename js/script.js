@@ -50,10 +50,9 @@ btnStartNewGame.addEventListener('click', () => {
     scoreToWinOutput.textContent = `total (${scoreToWinInput})`;
     scoreToWinOutputMobile.textContent = `total ${scoreToWinInput}`;
 
-    let player1Img = document.querySelector('#player1-img');
 
     /*instance des nouveaux joueurs*/
-    let player1 = new Player(player1NameInput, 0, 0, player1Img, false);
+    let player1 = new Player(player1NameInput, 0, 0, player1Img);
     let player2 = new Player(player2NameInput, 0, 0, player2Img);
 
     /*affiche le nom des joueurs*/
@@ -61,14 +60,20 @@ btnStartNewGame.addEventListener('click', () => {
     player2.showPlayerName(player2NameOutput, player2NameOutputMobile);
 
     player1.activeImgPlayer();
+    player2.activeImgPlayer();
 
     /*-----------  LANCER DE DE PLAYER 1  -------------------*/
 
+
+
+
     rollBtn.addEventListener('click', () => {
+    player1.activeImgPlayer();
+
         someRoundRollDice(player1, player1RoundOutput, rollDice());
 
         if (player1.NumberOne === true) {
-            
+
         } 
     });
 });
