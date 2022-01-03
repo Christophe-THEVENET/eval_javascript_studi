@@ -50,34 +50,25 @@ btnStartNewGame.addEventListener('click', () => {
     scoreToWinOutput.textContent = `total (${scoreToWinInput})`;
     scoreToWinOutputMobile.textContent = `total ${scoreToWinInput}`;
 
+    let player1Img = document.querySelector('#player1-img');
+
     /*instance des nouveaux joueurs*/
-    let player1 = new Player(player1NameInput, 0, 0);
-    let player2 = new Player(player2NameInput, 0, 0);
+    let player1 = new Player(player1NameInput, 0, 0, player1Img, false);
+    let player2 = new Player(player2NameInput, 0, 0, player2Img);
 
     /*affiche le nom des joueurs*/
-    player1.showPlayerName(player1NameOutput, player1NameOutputMobile);
+    player1.showPlayerName(player1NameOutput, player1NameOutputMobile, player1Img);
     player2.showPlayerName(player2NameOutput, player2NameOutputMobile);
 
-    /*anim img active*/
-
-    animImg(document.querySelector('#player1-img'), document.querySelector('#player1-img-mobile'));
+    player1.activeImgPlayer();
 
     /*-----------  LANCER DE DE PLAYER 1  -------------------*/
 
     rollBtn.addEventListener('click', () => {
-        /*recup chiffre et ajoute a round*/
-        /*
-        player1.setRound(rollDice());
-        player1RoundOutput.classList.add('flash-win');
-        player1RoundOutput.textContent = player1.getRound();
-        /*supprime le flash anim au bout d 1s*/
-        /*
-        setTimeout(() => {
-            player1RoundOutput.classList.remove('flash-win');
-        }, 1000);
- */
+        someRoundRollDice(player1, player1RoundOutput, rollDice());
 
-        someRoundRollDice(player1,player1RoundOutput, rollDice());
-
+        if (player1.NumberOne === true) {
+            
+        } 
     });
 });
