@@ -44,3 +44,5 @@ let player2ImgMobile = document.querySelector('#player2-img-mobile');
     let scoreToWinOutputMobile = document.querySelector('#win-score-output-mobile');
 
 
+
+    

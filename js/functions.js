@@ -24,6 +24,9 @@ class Player {
     /*modifier total*/
     setGlobal = (num) => (this.global += num);
 
+    /*annule points*/
+    setRound0 = (num) => (this.round = num);
+
     /*afficher nom des joueurs*/
     showPlayerName = (playerNameDesktop, playerNameMobile) => {
         playerNameDesktop.textContent = this.name;
@@ -41,4 +44,28 @@ const animImg = (playerImg, playerImgMobile) => {
 const unanimImg = (playerImg, playerImgMobile) => {
     playerImg.classList.remove('img-active');
     playerImgMobile.classList.remove('img-active');
+};
+
+/*----- SOMME DES RESULTATS DU DE ET O POINTS SI 1 --------*/
+const someRoundRollDice = (player, playerRoundOutput, number) => {
+    /*si le de fait 1*/
+    if (number === 1) {
+        player.setRound0(0);
+        playerRoundOutput.textContent = player.getRound();
+        
+        playerRoundOutput.classList.add('flash-lose');
+        /*supprime le flash anim au bout d 1s*/
+                setTimeout(() => {
+            playerRoundOutput.classList.remove('flash-lose');
+        }, 1000);
+    } else {
+        player.setRound(number);
+        console.log(player.getRound());
+        playerRoundOutput.textContent = player.getRound();
+        playerRoundOutput.classList.add('flash-win');
+        /*supprime le flash anim au bout d 1s*/
+                setTimeout(() => {
+            playerRoundOutput.classList.remove('flash-win');
+        }, 1000);
+    }
 };
