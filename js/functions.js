@@ -62,15 +62,12 @@ class Player {
     };
 }
 
-
-
-function flash() {
+/**anim titre flash */
+const flash = () => {
     setInterval(() => {
         title.classList.add('flash-win');
         setTimeout(() => {
-        title.classList.remove('flash-win');
-            
+            title.classList.remove('flash-win');
         }, 400);
     }, 400);
-
-}
+};

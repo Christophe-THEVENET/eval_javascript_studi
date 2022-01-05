@@ -143,8 +143,7 @@ btnStartNewGame.addEventListener('click', () => {
     /*-----------  GARDER LE SCORE  -------------------*/
 
     holdBtn.addEventListener('click', () => {
-
-    /*--------  joueur 1 hold -----------*/
+        /*--------  joueur 1 hold -----------*/
         if (player1.inGame) {
             playSound('sound/ryuken-kick.mp3', 0.1);
             player1.setGlobal(player1.getRound());
@@ -160,11 +159,11 @@ btnStartNewGame.addEventListener('click', () => {
                 player2.unactivePlayer();
                 player1.activePlayer();
                 flash();
-                videoBloc.style.display = 'flex';
+                videoBloc1.style.display = 'flex';
                 videoPlayer1.play();
             }
         } else {
-    /*--------  joueur 2 hold -----------*/
+            /*--------  joueur 2 hold -----------*/
             playSound('sound/chun-li-laugh.mp3', 0.1);
             player2.setGlobal(player2.getRound());
             player2.setRound0();
@@ -179,10 +178,9 @@ btnStartNewGame.addEventListener('click', () => {
                 player1.unactivePlayer();
                 player2.activePlayer();
                 flash();
-                videoBloc.style.display = 'flex';
+                videoBloc2.style.display = 'flex';
                 videoPlayer2.play();
             }
-        }
         }
     });
 });
