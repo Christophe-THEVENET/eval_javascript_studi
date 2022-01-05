@@ -83,11 +83,13 @@ btnStartNewGame.addEventListener('click', () => {
             player2.inGame = true;
             player1.unactiveImgPlayer();
             player2.activePlayer();
+            playSound('sound/switch.wav', 0.2);
         } else {
             player1.inGame = true;
             player2.inGame = false;
             player1.activePlayer();
             player2.unactiveImgPlayer();
+            playSound('sound/switch.wav', 0.2);
         }
     };
 
@@ -109,21 +111,29 @@ btnStartNewGame.addEventListener('click', () => {
             player1.flashLose(player1RoundOutput);
             player1.flashLose(title);
             nextPlayer();
+            playSound('sound/dieguy.wav', 0.2);
+
             /*  player 1 fait !=1*/
         } else if (player1.inGame && result !== 1) {
             player1.setRound(result);
             player1RoundOutput.textContent = player1.getRound();
             player1.flashWin(player1RoundOutput);
+            playSound('sound/ryuken-hadooken.mp3', 0.1);
+
             /*  player 2 fait 1*/
         } else if (player2.inGame && result === 1) {
             player2.setRound0();
             player2RoundOutput.textContent = player2.getRound();
             player1.flashLose(title);
             nextPlayer();
+            playSound('sound/diegirl.wav', 0.2);
+
             /*  player 2 fait !=1*/
         } else if (player2.inGame && result !== 1) {
             player2.setRound(result);
             player2RoundOutput.textContent = player2.getRound();
+            playSound('sound/chun-li-yap.mp3', 0.1);
+
         }
     });
 });

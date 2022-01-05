@@ -42,3 +42,11 @@ let scoreToWinOutputMobile = document.querySelector('#win-score-output-mobile');
 /*titre*/
 let title = document.querySelector('#title');
 
+
+/*dé*/
+let dice = document.getElementById('dice');
+let diceMobile = document.getElementById('dice-mobile');
+let rollBtn = document.getElementById('roll');
+let rollBtnMobile = document.getElementById('roll-mobile');
+let holdBtn = document.getElementById('hold')
+let holdBtnMobile = document.getElementById('hold-mobile')
