@@ -39,3 +39,6 @@ let scoreToWinOutput = document.querySelector('#win-score-output');
 let player1NameOutputMobile = document.querySelector('#player1-output-mobile');
 let player2NameOutputMobile = document.querySelector('#player2-output-mobile');
 let scoreToWinOutputMobile = document.querySelector('#win-score-output-mobile');
+/*titre*/
+let title = document.querySelector('#title');
+

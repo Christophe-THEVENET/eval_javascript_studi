@@ -35,70 +35,29 @@ class Player {
     /*active le joueur*/
     activePlayer = () => {
         this.img.classList.add('img-active');
-        this.inGame = true
+        this.inGame = true;
     };
-     /*desactive le joueur*/
-     unactiveImgPlayer = () => {
+    /*desactive le joueur*/
+    unactiveImgPlayer = () => {
         this.img.classList.remove('img-active');
-        this.inGame = false
+        this.inGame = false;
     };
-
-
+    /*anime le score win blanc*/
+    flashWin = (output) => {
+        output.classList.add('flash-win');
+        /*supprime le flash anim au bout d 1s*/
+        setTimeout(() => {
+            output.classList.remove('flash-win');
+        }, 1000);
+    };
+    /*anime le score lose rouge*/
+    flashLose = (output) => {
+        output.classList.add('flash-lose');
+        /*supprime le flash anim au bout d 1s*/
+        setTimeout(() => {
+            output.classList.remove('flash-lose');
+        }, 1000);
+    };
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*----- SOMME DES RESULTATS DU DE ET O POINTS SI 1 --------*/
-
-/* const someRoundRollDice = (player, playerRoundOutput, number) => { */
-
-
-    /*si le de fait 1*/
-
-
-
-
-
-
-
-    
-
-    /* if (number === 1) {
-        player.setRound0();
-        player.NumberOne = true;
-        playerRoundOutput.textContent = player.getRound();
-        playerRoundOutput.classList.add('flash-lose'); */
-
-        /*supprime le flash anim au bout d 1s*/
-/* 
-        setTimeout(() => {
-            playerRoundOutput.classList.remove('flash-lose');
-        }, 1000);
-    } else {
-        player.setRound(number);
-        player.NumberOne = false;
-        playerRoundOutput.textContent = player.getRound();
-        playerRoundOutput.classList.add('flash-win'); */
-
-        /*supprime le flash anim au bout d 1s*/
-
-      /*   setTimeout(() => {
-            playerRoundOutput.classList.remove('flash-win');
-        }, 1000);
-    }
-};
- */

@@ -84,18 +84,25 @@ btnStartNewGame.addEventListener('click', () => {
         dice.classList.toggle('reRoll');
         playSound('sound/dice.mp3', 0.7);
 
-        /*  player 1*/
+        /*  player 1 fait 1*/
         if (player1.inGame && result === 1) {
             player1.setRound0();
             player1RoundOutput.textContent = player1.getRound();
+            player1.flashLose(player1RoundOutput);
+            player1.flashLose(title);
             nextPlayer();
+            /*  player 1 fait !=1*/
         } else if (player1.inGame && result !== 1) {
             player1.setRound(result);
             player1RoundOutput.textContent = player1.getRound();
+            player1.flashWin(player1RoundOutput);
+            /*  player 2 fait 1*/
         } else if (player2.inGame && result === 1) {
             player2.setRound0();
             player2RoundOutput.textContent = player2.getRound();
+            player1.flashLose(title);
             nextPlayer();
+            /*  player 2 fait !=1*/
         } else if (player2.inGame && result !== 1) {
             player2.setRound(result);
             player2RoundOutput.textContent = player2.getRound();
