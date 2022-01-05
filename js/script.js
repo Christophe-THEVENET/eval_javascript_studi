@@ -1,3 +1,8 @@
+/*effet pour guider  sur  bouton nouvelle partie */
+document.addEventListener('DOMContentLoaded', () => {
+    btnNewGame.classList.add('btn-insist');
+});
+
 /*-------------  GESTION DES MODALES --------------*/
 
 /*ouvrir la modale rules*/
@@ -20,6 +25,8 @@ btnCloseModal.addEventListener('click', () => {
 btnNewGame.addEventListener('click', () => {
     newGameModal.style.display = 'flex';
     playSound('sound/new-game.wav', 0.8);
+    /**sup effet guide bouton  */
+    btnNewGame.classList.remove('btn-insist');
 });
 
 /*ouvrir la modale newGame mobile*/
@@ -58,9 +65,18 @@ btnStartNewGame.addEventListener('click', () => {
     player1.showPlayerName(player1NameOutput, player1NameOutputMobile);
     player2.showPlayerName(player2NameOutput, player2NameOutputMobile);
 
+    /*reset des scores*/
+    player1.setRound0();
+    player2.setRound0();
+    player1RoundOutput.textContent = player1.getRound();
+    player2RoundOutput.textContent = player1.getRound();
+
+    /**active le joueur 1 */
     player1.activePlayer();
     player1.inGame = true;
+    rollBtn.classList.add('btn-insist');
 
+    /**changement de joueur */
     const nextPlayer = () => {
         if (player1.inGame === true) {
             player1.inGame = false;
@@ -83,6 +99,8 @@ btnStartNewGame.addEventListener('click', () => {
         dice.dataset.side = result;
         dice.classList.toggle('reRoll');
         playSound('sound/dice.mp3', 0.7);
+        /**sup guide bouton lancer */
+        rollBtn.classList.remove('btn-insist');
 
         /*  player 1 fait 1*/
         if (player1.inGame && result === 1) {

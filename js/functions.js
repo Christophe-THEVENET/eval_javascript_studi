@@ -27,8 +27,10 @@ class Player {
     setGlobal = (num) => (this.global += num);
     /*annule points*/
     setRound0 = () => (this.round = 0);
+     /*annule total*/
+     setGlobal0 = () => (this.round = 0);
     /*afficher nom des joueurs*/
-    showPlayerName = (playerNameDesktop, playerNameMobile) => {
+        showPlayerName = (playerNameDesktop, playerNameMobile) => {
         playerNameDesktop.textContent = this.name;
         playerNameMobile.textContent = this.name;
     };
