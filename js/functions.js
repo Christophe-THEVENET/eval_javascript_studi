@@ -28,7 +28,7 @@ class Player {
     /*annule points*/
     setRound0 = () => (this.round = 0);
     /*annule total*/
-    setGlobal0 = () => (this.round = 0);
+    setGlobal0 = () => (this.global = 0);
     /*afficher nom des joueurs*/
     showPlayerName = (playerNameDesktop, playerNameMobile) => {
         playerNameDesktop.textContent = this.name;
@@ -40,7 +40,7 @@ class Player {
         this.inGame = true;
     };
     /*desactive le joueur*/
-    unactiveImgPlayer = () => {
+    unactivePlayer = () => {
         this.img.classList.remove('img-active');
         this.inGame = false;
     };
@@ -60,4 +60,17 @@ class Player {
             output.classList.remove('flash-lose');
         }, 1000);
     };
+}
+
+
+
+function flash() {
+    setInterval(() => {
+        title.classList.add('flash-win');
+        setTimeout(() => {
+        title.classList.remove('flash-win');
+            
+        }, 400);
+    }, 400);
+
 }

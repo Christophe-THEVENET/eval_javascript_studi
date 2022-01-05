@@ -50,3 +50,9 @@ let rollBtn = document.getElementById('roll');
 let rollBtnMobile = document.getElementById('roll-mobile');
 let holdBtn = document.getElementById('hold')
 let holdBtnMobile = document.getElementById('hold-mobile')
+
+
+/**video */
+
+let videoBloc = document.getElementById('videoBloc')
+let videoPlayer1 = document.getElementById('videoPlayer1')

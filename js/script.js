@@ -68,8 +68,12 @@ btnStartNewGame.addEventListener('click', () => {
     /*reset des scores*/
     player1.setRound0();
     player2.setRound0();
+    player1.setGlobal0();
+    player2.setGlobal0();
     player1RoundOutput.textContent = player1.getRound();
     player2RoundOutput.textContent = player1.getRound();
+    player1GlobalOutput.textContent = player1.getRound();
+    player2GlobalOutput.textContent = player1.getRound();
 
     /**active le joueur 1 */
     player1.activePlayer();
@@ -81,19 +85,19 @@ btnStartNewGame.addEventListener('click', () => {
         if (player1.inGame === true) {
             player1.inGame = false;
             player2.inGame = true;
-            player1.unactiveImgPlayer();
+            player1.unactivePlayer();
             player2.activePlayer();
             playSound('sound/switch.wav', 0.2);
         } else {
             player1.inGame = true;
             player2.inGame = false;
             player1.activePlayer();
-            player2.unactiveImgPlayer();
+            player2.unactivePlayer();
             playSound('sound/switch.wav', 0.2);
         }
     };
 
-    /*-----------  LANCER DE DE PLAYER 1  -------------------*/
+    /*-----------  LANCER LE DE  -------------------*/
 
     rollBtn.addEventListener('click', () => {
         /* lancer du dé*/
@@ -133,7 +137,52 @@ btnStartNewGame.addEventListener('click', () => {
             player2.setRound(result);
             player2RoundOutput.textContent = player2.getRound();
             playSound('sound/chun-li-yap.mp3', 0.1);
+        }
+    });
 
+    /*-----------  GARDER LE SCORE  -------------------*/
+
+    holdBtn.addEventListener('click', () => {
+
+    /*--------  joueur 1 hold -----------*/
+        if (player1.inGame) {
+            playSound('sound/ryuken-kick.mp3', 0.1);
+            player1.setGlobal(player1.getRound());
+            player1.setRound0();
+            player1GlobalOutput.textContent = player1.getGlobal();
+            nextPlayer();
+            /*-----------  VICTOIRE player 1 -------------------*/
+            if (player1.getGlobal() >= scoreToWinInput) {
+                setTimeout(() => {
+                    playSound('sound/ryuken-shoryuken.mp3', 0.1);
+                }, 500);
+                playSound('sound/Street Fighter II Music - Guile - HQ.mp3', 0.5);
+                player2.unactivePlayer();
+                player1.activePlayer();
+                flash();
+                videoBloc.style.display = 'flex';
+                videoPlayer1.play();
+            }
+        } else {
+    /*--------  joueur 2 hold -----------*/
+            playSound('sound/chun-li-laugh.mp3', 0.1);
+            player2.setGlobal(player2.getRound());
+            player2.setRound0();
+            player2GlobalOutput.textContent = player2.getGlobal();
+            nextPlayer();
+            /*-----------  VICTOIRE player 2 -------------------*/
+            if (player2.getGlobal() >= scoreToWinInput) {
+                setTimeout(() => {
+                    playSound('sound/chun-li-kick.mp3', 0.1);
+                }, 500);
+                playSound('sound/Street Fighter II Music - Guile - HQ.mp3', 0.5);
+                player1.unactivePlayer();
+                player2.activePlayer();
+                flash();
+                videoBloc.style.display = 'flex';
+                videoPlayer2.play();
+            }
+        }
         }
     });
 });
