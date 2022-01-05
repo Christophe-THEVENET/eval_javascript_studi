@@ -8,12 +8,12 @@ const playSound = (src, vol) => {
 /*-----  CLASSE PLAYER ROUND ET GLOBAL--------*/
 
 class Player {
-    constructor(name, round, global, img) {
+    constructor(name, img) {
         this.name = name;
-        this.round = round;
-        this.global = global;
+        this.round = 0;
+        this.global = 0;
         this.img = img;
-        this.NumberOne = false;
+        this.inGame = false;
     }
     /*recuperer nom*/
     getName = () => this.name;
@@ -32,29 +32,59 @@ class Player {
         playerNameDesktop.textContent = this.name;
         playerNameMobile.textContent = this.name;
     };
-    /*active image du joueur*/
-    activeImgPlayer = () => {
+    /*active le joueur*/
+    activePlayer = () => {
         this.img.classList.add('img-active');
+        this.inGame = true
     };
-     /*desactive image du joueur*/
+     /*desactive le joueur*/
      unactiveImgPlayer = () => {
         this.img.classList.remove('img-active');
+        this.inGame = false
     };
-
-    
 
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*----- SOMME DES RESULTATS DU DE ET O POINTS SI 1 --------*/
-const someRoundRollDice = (player, playerRoundOutput, number) => {
+
+/* const someRoundRollDice = (player, playerRoundOutput, number) => { */
+
+
     /*si le de fait 1*/
-    if (number === 1) {
+
+
+
+
+
+
+
+    
+
+    /* if (number === 1) {
         player.setRound0();
         player.NumberOne = true;
         playerRoundOutput.textContent = player.getRound();
-        playerRoundOutput.classList.add('flash-lose');
+        playerRoundOutput.classList.add('flash-lose'); */
+
         /*supprime le flash anim au bout d 1s*/
+/* 
         setTimeout(() => {
             playerRoundOutput.classList.remove('flash-lose');
         }, 1000);
@@ -62,10 +92,13 @@ const someRoundRollDice = (player, playerRoundOutput, number) => {
         player.setRound(number);
         player.NumberOne = false;
         playerRoundOutput.textContent = player.getRound();
-        playerRoundOutput.classList.add('flash-win');
+        playerRoundOutput.classList.add('flash-win'); */
+
         /*supprime le flash anim au bout d 1s*/
-        setTimeout(() => {
+
+      /*   setTimeout(() => {
             playerRoundOutput.classList.remove('flash-win');
         }, 1000);
     }
 };
+ */

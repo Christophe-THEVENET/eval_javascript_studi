@@ -51,39 +51,54 @@ btnStartNewGame.addEventListener('click', () => {
     scoreToWinOutputMobile.textContent = `total ${scoreToWinInput}`;
 
     /*instance des nouveaux joueurs*/
-    let player1 = new Player(player1NameInput, 0, 0, player1Img);
-    let player2 = new Player(player2NameInput, 0, 0, player2Img);
+    let player1 = new Player(player1NameInput, player1Img);
+    let player2 = new Player(player2NameInput, player2Img);
 
     /*affiche le nom des joueurs*/
     player1.showPlayerName(player1NameOutput, player1NameOutputMobile);
     player2.showPlayerName(player2NameOutput, player2NameOutputMobile);
 
-    player1.activeImgPlayer();
+    player1.activePlayer();
+    player1.inGame = true;
+
+    const nextPlayer = () => {
+        if (player1.inGame === true) {
+            player1.inGame = false;
+            player2.inGame = true;
+            player1.unactiveImgPlayer();
+            player2.activePlayer();
+        } else {
+            player1.inGame = true;
+            player2.inGame = false;
+            player1.activePlayer();
+            player2.unactiveImgPlayer();
+        }
+    };
 
     /*-----------  LANCER DE DE PLAYER 1  -------------------*/
 
     rollBtn.addEventListener('click', () => {
-        player1.activeImgPlayer();
+        /* lancer du dé*/
+        let result = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+        dice.dataset.side = result;
+        dice.classList.toggle('reRoll');
+        playSound('sound/dice.mp3', 0.7);
 
-       
-
-        if (player1.NumberOne === false) {
-            someRoundRollDice(player1, player1RoundOutput, rollDice());
-
-            return;
-        } else if (player1.NumberOne === true) {
-            player2.activeImgPlayer();
-            player1.unactiveImgPlayer()
-            someRoundRollDice(player2, player2RoundOutput, rollDice());
-            return;
-        } else if (player2.NumberOne === false) {
-            player2.activeImgPlayer();
-
-            someRoundRollDice(player2, player2RoundOutput, rollDice());
-            return;
-        } else {
-            someRoundRollDice(player1, player1RoundOutput, rollDice());
-            return;
+        /*  player 1*/
+        if (player1.inGame && result === 1) {
+            player1.setRound0();
+            player1RoundOutput.textContent = player1.getRound();
+            nextPlayer();
+        } else if (player1.inGame && result !== 1) {
+            player1.setRound(result);
+            player1RoundOutput.textContent = player1.getRound();
+        } else if (player2.inGame && result === 1) {
+            player2.setRound0();
+            player2RoundOutput.textContent = player2.getRound();
+            nextPlayer();
+        } else if (player2.inGame && result !== 1) {
+            player2.setRound(result);
+            player2RoundOutput.textContent = player2.getRound();
         }
     });
 });
