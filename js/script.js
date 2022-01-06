@@ -118,10 +118,10 @@ btnStartNewGame.addEventListener('click', () => {
                 player1.setRound0();
                 player1RoundOutput.textContent = player1.getRound();
                 player1RoundOutputMobile.textContent = player1.getRound();
-                 player1.flashLose(player1RoundOutput);
+                player1.flashLose(player1RoundOutput);
                 player1.flashLose(player1RoundOutputMobile);
                 player1.flashLose(title);
-                player1.flashLose(titleMobile);  
+                player1.flashLose(titleMobile);
                 nextPlayer();
                 playSound('sound/dieguy.wav', 0.2);
 
@@ -131,7 +131,7 @@ btnStartNewGame.addEventListener('click', () => {
                 player1RoundOutput.textContent = player1.getRound();
                 player1RoundOutputMobile.textContent = player1.getRound();
                 player1.flashWin(player1RoundOutput);
-                player1.flashWin(player1RoundOutputMobile); 
+                player1.flashWin(player1RoundOutputMobile);
                 playSound('sound/ryuken-hadooken.mp3', 0.1);
 
                 /*  player 2 fait 1*/
@@ -142,7 +142,7 @@ btnStartNewGame.addEventListener('click', () => {
                 player2.flashLose(player2RoundOutput);
                 player2.flashLose(player2RoundOutputMobile);
                 player2.flashLose(title);
-                player2.flashLose(titleMobile); 
+                player2.flashLose(titleMobile);
                 nextPlayer();
                 playSound('sound/diegirl.wav', 0.2);
 
@@ -152,7 +152,7 @@ btnStartNewGame.addEventListener('click', () => {
                 player2RoundOutput.textContent = player2.getRound();
                 player2RoundOutputMobile.textContent = player2.getRound();
                 player2.flashWin(player2RoundOutput);
-                player2.flashWin(player2RoundOutputMobile); 
+                player2.flashWin(player2RoundOutputMobile);
                 playSound('sound/chun-li-yap.mp3', 0.1);
             }
         });
@@ -184,6 +184,8 @@ btnStartNewGame.addEventListener('click', () => {
                     flash();
                     videoBloc1.style.display = 'flex';
                     videoPlayer1.play();
+                    title.textContent = `${player1NameInput}  Bravo!!!!!`;
+                    titleMobile.textContent = `${player1NameInput}  Bravo!!!!!`;
                 }
             } else {
                 /*--------  joueur 2 hold -----------*/
@@ -208,6 +210,8 @@ btnStartNewGame.addEventListener('click', () => {
                     flash();
                     videoBloc2.style.display = 'flex';
                     videoPlayer2.play();
+                    title.textContent = `${player2NameInput}  Bravo!!!!!`;
+                    titleMobile.textContent = `${player2NameInput}  Bravo!!!!!`;
                 }
             }
         });

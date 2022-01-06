@@ -73,6 +73,6 @@ const flash = () => {
         setTimeout(() => {
             title.classList.remove('flash-win');
              titleMobile.classList.remove('flash-win'); 
-        }, 400);
-    }, 400);
+        }, 200);
+    }, 600);
 };
