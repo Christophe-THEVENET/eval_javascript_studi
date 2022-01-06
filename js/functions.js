@@ -69,8 +69,10 @@ class Player {
 const flash = () => {
     setInterval(() => {
         title.classList.add('flash-win');
+        titleMobile.classList.add('flash-win'); 
         setTimeout(() => {
             title.classList.remove('flash-win');
+             titleMobile.classList.remove('flash-win'); 
         }, 400);
     }, 400);
 };

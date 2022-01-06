@@ -43,11 +43,14 @@ let player2NameOutputMobile = document.querySelector('#player2-output-mobile');
 let scoreToWinOutputMobile = document.querySelector('#win-score-output-mobile');
 /*titre*/
 let title = document.querySelector('#title');
+let titleMobile = document.querySelector('#title-mobile');
 
 
 /*dé*/
-let dice = document.getElementById('dice');
-let diceMobile = document.getElementById('dice-mobile');
+/* let dice = document.getElementById('dice');
+let diceMobile = document.getElementById('dice-mobile'); */
+
+let diceAll = document.querySelectorAll('.dice-all')
 
 
 
