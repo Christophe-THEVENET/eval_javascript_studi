@@ -71,9 +71,9 @@ btnStartNewGame.addEventListener('click', () => {
     player1.setGlobal0();
     player2.setGlobal0();
     player1RoundOutput.textContent = player1.getRound();
-    player2RoundOutput.textContent = player1.getRound();
-    player1GlobalOutput.textContent = player1.getRound();
-    player2GlobalOutput.textContent = player1.getRound();
+    player2RoundOutput.textContent = player2.getRound();
+    player1GlobalOutput.textContent = player1.getGlobal();
+    player2GlobalOutput.textContent = player2.getGlobal();
 
     /**active le joueur 1 */
     player1.activePlayer();
@@ -149,6 +149,10 @@ btnStartNewGame.addEventListener('click', () => {
             player1.setGlobal(player1.getRound());
             player1.setRound0();
             player1GlobalOutput.textContent = player1.getGlobal();
+            player1RoundOutput.textContent = player1.getRound();
+            
+            player1.flashWin(player1GlobalOutput);
+
             nextPlayer();
             /*-----------  VICTOIRE player 1 -------------------*/
             if (player1.getGlobal() >= scoreToWinInput) {
@@ -168,6 +172,10 @@ btnStartNewGame.addEventListener('click', () => {
             player2.setGlobal(player2.getRound());
             player2.setRound0();
             player2GlobalOutput.textContent = player2.getGlobal();
+            player2RoundOutput.textContent = player2.getRound();
+            player2.flashWin(player2GlobalOutput);
+
+
             nextPlayer();
             /*-----------  VICTOIRE player 2 -------------------*/
             if (player2.getGlobal() >= scoreToWinInput) {
