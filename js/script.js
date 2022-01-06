@@ -1,20 +1,20 @@
 /*effet pour guider  sur  bouton nouvelle partie */
 document.addEventListener('DOMContentLoaded', () => {
-    btnNewGame.classList.add('btn-insist');
-});
 
+    for(btnNewGame of btnNewGameAll) {
+
+        btnNewGame.classList.add('btn-insist');
+    }
+    });
+    
 /*-------------  GESTION DES MODALES --------------*/
-
 /*ouvrir la modale rules*/
-btnRulesModal.addEventListener('click', () => {
-    playSound('sound/select.wav', 0.3);
-    rulesModal.style.display = 'flex';
-});
-/*ouvrir la modale rules mobile*/
-btnRulesModalMobile.addEventListener('click', () => {
-    playSound('sound/select.wav', 0.3);
-    rulesModal.style.display = 'flex';
-});
+for(btnRules of btnRulesAll) {
+    btnRules.addEventListener('click', () => {
+        playSound('sound/select.wav', 0.3);
+        rulesModal.style.display = 'flex';
+    });
+}
 
 /*fermer la modale rules*/
 btnCloseModal.addEventListener('click', () => {
@@ -22,18 +22,18 @@ btnCloseModal.addEventListener('click', () => {
 });
 
 /*ouvrir la modale newGame*/
-btnNewGame.addEventListener('click', () => {
-    newGameModal.style.display = 'flex';
-    playSound('sound/new-game.wav', 0.8);
-    /**sup effet guide bouton  */
-    btnNewGame.classList.remove('btn-insist');
-});
 
-/*ouvrir la modale newGame mobile*/
-btnNewGameMobile.addEventListener('click', () => {
-    newGameModal.style.display = 'flex';
-    playSound('sound/new-game.wav', 0.8);
-});
+for(btnNewGame of btnNewGameAll) {
+
+    btnNewGame.addEventListener('click', () => {
+        newGameModal.style.display = 'flex';
+        playSound('sound/new-game.wav', 0.8);
+        /**sup effet guide bouton  */
+        btnNewGame.classList.remove('btn-insist');
+    });
+}
+
+
 
 /*----------------- LANCER LE JEU -------------------*/
 
@@ -78,7 +78,7 @@ btnStartNewGame.addEventListener('click', () => {
     /**active le joueur 1 */
     player1.activePlayer();
     player1.inGame = true;
-    rollBtn.classList.add('btn-insist');
+    /*  rollBtnAll.classList.add('btn-insist'); */
 
     /**changement de joueur */
     const nextPlayer = () => {
@@ -99,47 +99,49 @@ btnStartNewGame.addEventListener('click', () => {
 
     /*-----------  LANCER LE DE  -------------------*/
 
-    rollBtn.addEventListener('click', () => {
-        /* lancer du dé*/
-        let result = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
-        dice.dataset.side = result;
-        dice.classList.toggle('reRoll');
-        playSound('sound/dice.mp3', 0.7);
-        /**sup guide bouton lancer */
-        rollBtn.classList.remove('btn-insist');
+    for (rollBtn of rollBtnAll) {
+        rollBtn.addEventListener('click', () => {
+            /* lancer du dé*/
+            let result = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+            dice.dataset.side = result;
+            dice.classList.toggle('reRoll');
+            diceMobile.dataset.side = result;
+            diceMobile.classList.toggle('reRoll');
+            playSound('sound/dice.mp3', 0.7);
+            /**sup guide bouton lancer */
+            rollBtn.classList.remove('btn-insist');
+            /*  player 1 fait 1*/
+            if (player1.inGame && result === 1) {
+                player1.setRound0();
+                player1RoundOutput.textContent = player1.getRound();
+                player1.flashLose(player1RoundOutput);
+                player1.flashLose(title);
+                nextPlayer();
+                playSound('sound/dieguy.wav', 0.2);
 
-        /*  player 1 fait 1*/
-        if (player1.inGame && result === 1) {
-            player1.setRound0();
-            player1RoundOutput.textContent = player1.getRound();
-            player1.flashLose(player1RoundOutput);
-            player1.flashLose(title);
-            nextPlayer();
-            playSound('sound/dieguy.wav', 0.2);
+                /*  player 1 fait !=1*/
+            } else if (player1.inGame && result !== 1) {
+                player1.setRound(result);
+                player1RoundOutput.textContent = player1.getRound();
+                player1.flashWin(player1RoundOutput);
+                playSound('sound/ryuken-hadooken.mp3', 0.1);
 
-            /*  player 1 fait !=1*/
-        } else if (player1.inGame && result !== 1) {
-            player1.setRound(result);
-            player1RoundOutput.textContent = player1.getRound();
-            player1.flashWin(player1RoundOutput);
-            playSound('sound/ryuken-hadooken.mp3', 0.1);
+                /*  player 2 fait 1*/
+            } else if (player2.inGame && result === 1) {
+                player2.setRound0();
+                player2RoundOutput.textContent = player2.getRound();
+                player1.flashLose(title);
+                nextPlayer();
+                playSound('sound/diegirl.wav', 0.2);
 
-            /*  player 2 fait 1*/
-        } else if (player2.inGame && result === 1) {
-            player2.setRound0();
-            player2RoundOutput.textContent = player2.getRound();
-            player1.flashLose(title);
-            nextPlayer();
-            playSound('sound/diegirl.wav', 0.2);
-
-            /*  player 2 fait !=1*/
-        } else if (player2.inGame && result !== 1) {
-            player2.setRound(result);
-            player2RoundOutput.textContent = player2.getRound();
-            playSound('sound/chun-li-yap.mp3', 0.1);
-        }
-    });
-
+                /*  player 2 fait !=1*/
+            } else if (player2.inGame && result !== 1) {
+                player2.setRound(result);
+                player2RoundOutput.textContent = player2.getRound();
+                playSound('sound/chun-li-yap.mp3', 0.1);
+            }
+        });
+    }
     /*-----------  GARDER LE SCORE  -------------------*/
 
     holdBtn.addEventListener('click', () => {
@@ -150,7 +152,7 @@ btnStartNewGame.addEventListener('click', () => {
             player1.setRound0();
             player1GlobalOutput.textContent = player1.getGlobal();
             player1RoundOutput.textContent = player1.getRound();
-            
+
             player1.flashWin(player1GlobalOutput);
 
             nextPlayer();
@@ -174,7 +176,6 @@ btnStartNewGame.addEventListener('click', () => {
             player2GlobalOutput.textContent = player2.getGlobal();
             player2RoundOutput.textContent = player2.getRound();
             player2.flashWin(player2GlobalOutput);
-
 
             nextPlayer();
             /*-----------  VICTOIRE player 2 -------------------*/

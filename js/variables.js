@@ -1,12 +1,12 @@
 /*-------------------  HTML MODALE -----------------------*/
 /*commandes modale régles*/
 let rulesModal = document.querySelector('.rules-modal');
-let btnRulesModal = document.querySelector('#btn-modal');
-let btnRulesModalMobile = document.querySelector('#btn-modal-mobile');
+let btnRulesAll = document.querySelectorAll('.btn-rules');
 let btnCloseModal = document.querySelector('#btn-close-rules-modal');
 let newGameModal = document.querySelector('.new-game-modal');
-let btnNewGame = document.querySelector('#btn-new-game');
-let btnNewGameMobile = document.querySelector('#btn-modal-ng-mobile');
+/* let btnNewGame = document.querySelector('#btn-new-game');
+let btnNewGameMobile = document.querySelector('#btn-modal-ng-mobile'); */
+let btnNewGameAll = document.getElementsByClassName('btn-new-game');
 let btnStartNewGame = document.querySelector('#btn-close-ng-modal');
 
 /*--------------------  HTML PLAYERS--------------------*/
@@ -46,10 +46,13 @@ let title = document.querySelector('#title');
 /*dé*/
 let dice = document.getElementById('dice');
 let diceMobile = document.getElementById('dice-mobile');
-let rollBtn = document.getElementById('roll');
 let rollBtnMobile = document.getElementById('roll-mobile');
+let rollBtnAll = document.getElementsByClassName('btn-roll')
 let holdBtn = document.getElementById('hold')
 let holdBtnMobile = document.getElementById('hold-mobile')
+
+
+
 
 
 /**video */
