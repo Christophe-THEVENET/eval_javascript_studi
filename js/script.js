@@ -181,7 +181,7 @@ btnStartNewGame.addEventListener('click', () => {
                     playSound('sound/Street Fighter II Music - Guile - HQ.mp3', 0.5);
                     player2.unactivePlayer();
                     player1.activePlayer();
-                    flash();
+                    player1.flash();
                     videoBloc1.style.display = 'flex';
                     videoPlayer1.play();
                     title.textContent = `${player1NameInput}  Bravo!!!!!`;
@@ -207,7 +207,7 @@ btnStartNewGame.addEventListener('click', () => {
                     playSound('sound/Street Fighter II Music - Guile - HQ.mp3', 0.5);
                     player1.unactivePlayer();
                     player2.activePlayer();
-                    flash();
+                    player2.flash();
                     videoBloc2.style.display = 'flex';
                     videoPlayer2.play();
                     title.textContent = `${player2NameInput}  Bravo!!!!!`;

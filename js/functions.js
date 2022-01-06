@@ -26,9 +26,9 @@ class Player {
     setRound = (num) => (this.round += num);
     /*modifier total*/
     setGlobal = (num) => (this.global += num);
-    /*annule points*/
+    /*reset points*/
     setRound0 = () => (this.round = 0);
-    /*annule total*/
+    /*reset total*/
     setGlobal0 = () => (this.global = 0);
     /*afficher nom des joueurs*/
     showPlayerName = (playerNameDesktop, playerNameMobile) => {
@@ -63,16 +63,15 @@ class Player {
             output.classList.remove('flash-lose');
         }, 1000);
     };
+    /**anim titre flash */
+    flash = () => {
+        setInterval(() => {
+            title.classList.add('flash-win');
+            titleMobile.classList.add('flash-win');
+            setTimeout(() => {
+                title.classList.remove('flash-win');
+                titleMobile.classList.remove('flash-win');
+            }, 200);
+        }, 600);
+    };
 }
-
-/**anim titre flash */
-const flash = () => {
-    setInterval(() => {
-        title.classList.add('flash-win');
-        titleMobile.classList.add('flash-win'); 
-        setTimeout(() => {
-            title.classList.remove('flash-win');
-             titleMobile.classList.remove('flash-win'); 
-        }, 200);
-    }, 600);
-};
