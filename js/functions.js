@@ -8,11 +8,12 @@ const playSound = (src, vol) => {
 /*-----  CLASSE PLAYER ROUND ET GLOBAL--------*/
 
 class Player {
-    constructor(name, img) {
+    constructor(name, img, imgMobile) {
         this.name = name;
         this.round = 0;
         this.global = 0;
         this.img = img;
+        this.imgMobile = imgMobile;
         this.inGame = false;
     }
     /*recuperer nom*/
@@ -37,11 +38,13 @@ class Player {
     /*active le joueur*/
     activePlayer = () => {
         this.img.classList.add('img-active');
+        this.imgMobile.classList.add('img-active');
         this.inGame = true;
     };
     /*desactive le joueur*/
     unactivePlayer = () => {
         this.img.classList.remove('img-active');
+        this.imgMobile.classList.remove('img-active');
         this.inGame = false;
     };
     /*anime le score win blanc*/

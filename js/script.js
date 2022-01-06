@@ -55,8 +55,8 @@ btnStartNewGame.addEventListener('click', () => {
     scoreToWinOutputMobile.textContent = `total ${scoreToWinInput}`;
 
     /*instance des nouveaux joueurs*/
-    let player1 = new Player(player1NameInput, player1Img);
-    let player2 = new Player(player2NameInput, player2Img);
+    let player1 = new Player(player1NameInput, player1Img, player1ImgMobile);
+    let player2 = new Player(player2NameInput, player2Img, player2ImgMobile);
 
     /*affiche le nom des joueurs*/
     player1.showPlayerName(player1NameOutput, player1NameOutputMobile);
@@ -157,52 +157,57 @@ btnStartNewGame.addEventListener('click', () => {
     }
     /*-----------  GARDER LE SCORE  -------------------*/
 
-    holdBtn.addEventListener('click', () => {
-        /*--------  joueur 1 hold -----------*/
-        if (player1.inGame) {
-            playSound('sound/ryuken-kick.mp3', 0.1);
-            player1.setGlobal(player1.getRound());
-            player1.setRound0();
-            player1GlobalOutput.textContent = player1.getGlobal();
-            player1RoundOutput.textContent = player1.getRound();
-
-            player1.flashWin(player1GlobalOutput);
-
-            nextPlayer();
-            /*-----------  VICTOIRE player 1 -------------------*/
-            if (player1.getGlobal() >= scoreToWinInput) {
-                setTimeout(() => {
-                    playSound('sound/ryuken-shoryuken.mp3', 0.1);
-                }, 500);
-                playSound('sound/Street Fighter II Music - Guile - HQ.mp3', 0.5);
-                player2.unactivePlayer();
-                player1.activePlayer();
-                flash();
-                videoBloc1.style.display = 'flex';
-                videoPlayer1.play();
+    for (holdBtn of holdBtnAll) {
+        holdBtn.addEventListener('click', () => {
+            /*--------  joueur 1 hold -----------*/
+            if (player1.inGame) {
+                playSound('sound/ryuken-kick.mp3', 0.1);
+                player1.setGlobal(player1.getRound());
+                player1.setRound0();
+                player1GlobalOutput.textContent = player1.getGlobal();
+                player1GlobalOutputMobile.textContent = player1.getGlobal();
+                player1RoundOutput.textContent = player1.getRound();
+                player1RoundOutputMobile.textContent = player1.getRound();
+                player1.flashWin(player1GlobalOutput);
+                player1.flashWin(player1GlobalOutputMobile);
+                nextPlayer();
+                /*-----------  VICTOIRE player 1 -------------------*/
+                if (player1.getGlobal() >= scoreToWinInput) {
+                    setTimeout(() => {
+                        playSound('sound/ryuken-shoryuken.mp3', 0.1);
+                    }, 500);
+                    playSound('sound/Street Fighter II Music - Guile - HQ.mp3', 0.5);
+                    player2.unactivePlayer();
+                    player1.activePlayer();
+                    flash();
+                    videoBloc1.style.display = 'flex';
+                    videoPlayer1.play();
+                }
+            } else {
+                /*--------  joueur 2 hold -----------*/
+                playSound('sound/chun-li-laugh.mp3', 0.1);
+                player2.setGlobal(player2.getRound());
+                player2.setRound0();
+                player2GlobalOutput.textContent = player2.getGlobal();
+                player2GlobalOutputMobile.textContent = player2.getGlobal();
+                player2RoundOutput.textContent = player2.getRound();
+                player2RoundOutputMobile.textContent = player2.getRound();
+                player2.flashWin(player2GlobalOutput);
+                player2.flashWin(player2GlobalOutputMobile);
+                nextPlayer();
+                /*-----------  VICTOIRE player 2 -------------------*/
+                if (player2.getGlobal() >= scoreToWinInput) {
+                    setTimeout(() => {
+                        playSound('sound/chun-li-kick.mp3', 0.1);
+                    }, 500);
+                    playSound('sound/Street Fighter II Music - Guile - HQ.mp3', 0.5);
+                    player1.unactivePlayer();
+                    player2.activePlayer();
+                    flash();
+                    videoBloc2.style.display = 'flex';
+                    videoPlayer2.play();
+                }
             }
-        } else {
-            /*--------  joueur 2 hold -----------*/
-            playSound('sound/chun-li-laugh.mp3', 0.1);
-            player2.setGlobal(player2.getRound());
-            player2.setRound0();
-            player2GlobalOutput.textContent = player2.getGlobal();
-            player2RoundOutput.textContent = player2.getRound();
-            player2.flashWin(player2GlobalOutput);
-
-            nextPlayer();
-            /*-----------  VICTOIRE player 2 -------------------*/
-            if (player2.getGlobal() >= scoreToWinInput) {
-                setTimeout(() => {
-                    playSound('sound/chun-li-kick.mp3', 0.1);
-                }, 500);
-                playSound('sound/Street Fighter II Music - Guile - HQ.mp3', 0.5);
-                player1.unactivePlayer();
-                player2.activePlayer();
-                flash();
-                videoBloc2.style.display = 'flex';
-                videoPlayer2.play();
-            }
-        }
-    });
+        });
+    }
 });
