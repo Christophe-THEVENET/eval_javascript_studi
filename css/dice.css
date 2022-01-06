@@ -1,4 +1,4 @@
-#dice {
+.dice-all {
     width: 8vw;
     height: 8vw;
     transform-style: preserve-3d;
@@ -116,135 +116,60 @@
     left: 75%;
 }
 
-#dice .side-1 {
+.dice-all .side-1 {
     transform: translateZ(4vw);
 }
-#dice .side-2 {
+.dice-all .side-2 {
     transform: rotateX(-180deg) translateZ(4vw);
 }
-#dice .side-3 {
+.dice-all .side-3 {
     transform: rotateY(90deg) translateZ(4vw);
 }
-#dice .side-4 {
+.dice-all .side-4 {
     transform: rotateY(-90deg) translateZ(4vw);
 }
-#dice .side-5 {
+.dice-all .side-5 {
     transform: rotateX(90deg) translateZ(4vw);
 }
-#dice .side-6 {
+.dice-all .side-6 {
     transform: rotateX(-90deg) translateZ(4vw);
 }
 
-#dice[data-side='1'] {
+.dice-all[data-side='1'] {
     transform: rotateX(360deg) rotateY(360deg) rotateZ(720deg);
 }
-#dice[data-side='2'] {
+.dice-all[data-side='2'] {
     transform: rotateX(360deg) rotateY(540deg) rotateZ(720deg);
 }
-#dice[data-side='3'] {
+.dice-all[data-side='3'] {
     transform: rotateX(360deg) rotateY(630deg) rotateZ(720deg);
 }
-#dice[data-side='4'] {
+.dice-all[data-side='4'] {
     transform: rotateX(360deg) rotateY(450deg) rotateZ(720deg);
 }
-#dice[data-side='5'] {
+.dice-all[data-side='5'] {
     transform: rotateX(630deg) rotateY(360deg) rotateZ(720deg);
 }
-#dice[data-side='6'] {
+.dice-all[data-side='6'] {
     transform: rotateX(450deg) rotateY(360deg) rotateZ(720deg);
 }
 
-#dice[data-side='1'].reRoll {
+.dice-all[data-side='1'].reRoll {
     transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
 }
-#dice[data-side='2'].reRoll {
+.dice-all[data-side='2'].reRoll {
     transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
 }
-#dice[data-side='3'].reRoll {
+.dice-all[data-side='3'].reRoll {
     transform: rotateX(0deg) rotateY(270deg) rotateZ(0deg);
 }
-#dice[data-side='4'].reRoll {
+.dice-all[data-side='4'].reRoll {
     transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
 }
-#dice[data-side='5'].reRoll {
+.dice-all[data-side='5'].reRoll {
     transform: rotateX(270deg) rotateY(0deg) rotateZ(0deg);
 }
-#dice[data-side='6'].reRoll {
+.dice-all[data-side='6'].reRoll {
     transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg);
 }
 
-/*  ------------------- dé mobile ----------------*/
-
-#dice-mobile {
-    width: 8vw;
-    height: 8vw;
-    transform-style: preserve-3d;
-    transition: transform 1s ease-out;
-}
-
-.dot-mobile {
-    display: block;
-    position: absolute;
-    width: 1.5vw;
-    height: 1.5vw;
-    border-radius: 50%;
-    background-color: black;
-    transform: translate(-50%, -50%);
-}
-
-#dice-mobile .side-1 {
-    transform: translateZ(4vw);
-}
-#dice-mobile .side-2 {
-    transform: rotateX(-180deg) translateZ(4vw);
-}
-#dice-mobile .side-3 {
-    transform: rotateY(90deg) translateZ(4vw);
-}
-#dice-mobile .side-4 {
-    transform: rotateY(-90deg) translateZ(4vw);
-}
-#dice-mobile .side-5 {
-    transform: rotateX(90deg) translateZ(4vw);
-}
-#dice-mobile .side-6 {
-    transform: rotateX(-90deg) translateZ(4vw);
-}
-
-#dice[data-side='1'] {
-    transform: rotateX(360deg) rotateY(360deg) rotateZ(720deg);
-}
-#dice[data-side='2'] {
-    transform: rotateX(360deg) rotateY(540deg) rotateZ(720deg);
-}
-#dice[data-side='3'] {
-    transform: rotateX(360deg) rotateY(630deg) rotateZ(720deg);
-}
-#dice-mobile[data-side='4'] {
-    transform: rotateX(360deg) rotateY(450deg) rotateZ(720deg);
-}
-#dice-mobile[data-side='5'] {
-    transform: rotateX(630deg) rotateY(360deg) rotateZ(720deg);
-}
-#dice-mobile[data-side='6'] {
-    transform: rotateX(450deg) rotateY(360deg) rotateZ(720deg);
-}
-
-#dice-mobile[data-side='1'].reRoll {
-    transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
-}
-#dice-mobile[data-side='2'].reRoll {
-    transform: rotateX(0deg) rotateY(180deg) rotateZ(0deg);
-}
-#dice-mobile[data-side='3'].reRoll {
-    transform: rotateX(0deg) rotateY(270deg) rotateZ(0deg);
-}
-#dice-mobile[data-side='4'].reRoll {
-    transform: rotateX(0deg) rotateY(90deg) rotateZ(0deg);
-}
-#dice-mobile[data-side='5'].reRoll {
-    transform: rotateX(270deg) rotateY(0deg) rotateZ(0deg);
-}
-#dice-mobile[data-side='6'].reRoll {
-    transform: rotateX(90deg) rotateY(0deg) rotateZ(0deg);
-}

@@ -306,7 +306,7 @@ header h2 {
     display: none;
     justify-content: center;
     align-items: flex-end;
-    background-color: rgba(0, 0, 0, 0.87);
+    background-color: rgb(0, 0, 0);
 }
 
 .video {

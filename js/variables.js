@@ -2,20 +2,16 @@
 let rulesModal = document.querySelector('.rules-modal');
 let newGameModal = document.querySelector('.new-game-modal');
 
-
 /*-------------------  HTML BOUTONS -----------------------*/
 let btnRulesAll = document.querySelectorAll('.btn-rules-js');
 let btnCloseRules = document.querySelector('#btn-close-rules-modal');
 let btnNewGameAll = document.querySelectorAll('.btn-new-game');
 let btnStartNewGame = document.querySelector('#btn-close-ng-modal');
-/* let rollBtnMobile = document.getElementById('roll-mobile'); */
 let rollBtnAll = document.getElementsByClassName('btn-roll-js')
 let holdBtnAll = document.getElementsByClassName('btn-hold-js')
 let holdBtnMobile = document.getElementById('hold-mobile')
 
-
-
-/*--------------------  HTML PLAYERS--------------------*/
+/*----------------  HTML PLAYERS-SCORE-IMG-----------------*/
 /*--------------------round----------------*/
 let player1RoundOutput = document.querySelector('#player1-round');
 let player2RoundOutput = document.querySelector('#player2-round');
@@ -32,7 +28,7 @@ let player2Img = document.querySelector('#player2-img');
 let player1ImgMobile = document.querySelector('#player1-img-mobile');
 let player2ImgMobile = document.querySelector('#player2-img-mobile');
 
-/*---------  HTML NOMS JOUEURS / SCORE A ATTEINDRE OUTPUT----------------*/
+/*--------  HTML NOMS JOUEURS / SCORE A ATTEINDRE OUTPUT--------------*/
 /* desktop*/
 let player1NameOutput = document.querySelector('#player1-output');
 let player2NameOutput = document.querySelector('#player2-output');
@@ -44,21 +40,9 @@ let scoreToWinOutputMobile = document.querySelector('#win-score-output-mobile');
 /*titre*/
 let title = document.querySelector('#title');
 let titleMobile = document.querySelector('#title-mobile');
-
-
 /*dé*/
-/* let dice = document.getElementById('dice');
-let diceMobile = document.getElementById('dice-mobile'); */
-
 let diceAll = document.querySelectorAll('.dice-all')
-
-
-
-
-
-
 /**video */
-
 let videoBloc1 = document.getElementById('videoBloc1')
 let videoPlayer1 = document.getElementById('videoPlayer1')
 let videoBloc2 = document.getElementById('videoBloc2')
