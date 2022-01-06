@@ -1,3 +1,11 @@
+/** ----- PARTOUT OU IL Y A DES BOUCLES FOR OF ----- */
+
+/** ----- C EST PARCE QUE J AI FAIT 2 HTML ----- */
+
+/** ---UN POUR LE DESKTOP ET UN POUR LE MOBILE----- */
+
+/** ---TOUS LES BOUTONS SONT DONC EN DOUBLES MAIS DIFFERENTS-- */
+
 /*effet pour guider  sur  bouton nouvelle partie */
 document.addEventListener('DOMContentLoaded', () => {
     for (btnNewGame of btnNewGameAll) {
@@ -32,9 +40,11 @@ btnStartNewGame.addEventListener('click', () => {
     for (btnNewGame of btnNewGameAll) {
         btnNewGame.classList.remove('btn-insist');
     }
+    /*ajoute le guide bouton lancer */
     for (btnRoll of rollBtnAll) {
         btnRoll.classList.add('btn-insist');
     }
+    /*ferme modale nouvelle partie */
     newGameModal.style.display = 'none';
     playSound('sound/intro.mp3', 0.2);
     /*decalage du son round*/
@@ -78,7 +88,6 @@ btnStartNewGame.addEventListener('click', () => {
 
     /**active le joueur 1 */
     player1.activePlayer();
-    player1.inGame = true;
 
     /**changement de joueur */
     const nextPlayer = () => {
@@ -98,7 +107,7 @@ btnStartNewGame.addEventListener('click', () => {
     };
 
     /*-----------  LANCER LE DE  -------------------*/
-
+    /**2 boutons lancer a cause du choix de 2 html desktop/mobile */
     for (rollBtn of rollBtnAll) {
         rollBtn.addEventListener('click', () => {
             /**supprime le guide boutons lancer */
@@ -107,12 +116,13 @@ btnStartNewGame.addEventListener('click', () => {
             }
             /* lancer du dé*/
             let result = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+            /**2 dés a cause du choix de 2 html desktop/mobile */
             for (dice of diceAll) {
                 dice.dataset.side = result;
                 dice.classList.toggle('reRoll');
             }
+            /* son lancer du dé*/
             playSound('sound/dice.mp3', 0.7);
-            /**sup guide bouton lancer */
             /*  player 1 fait 1*/
             if (player1.inGame && result === 1) {
                 player1.setRound0();
