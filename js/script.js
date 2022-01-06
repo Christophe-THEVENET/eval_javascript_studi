@@ -1,43 +1,38 @@
 /*effet pour guider  sur  bouton nouvelle partie */
 document.addEventListener('DOMContentLoaded', () => {
-
-    for(btnNewGame of btnNewGameAll) {
-
+    for (btnNewGame of btnNewGameAll) {
         btnNewGame.classList.add('btn-insist');
     }
-    });
-    
+});
+
 /*-------------  GESTION DES MODALES --------------*/
-/*ouvrir la modale rules*/
-for(btnRules of btnRulesAll) {
+/*ouvrir la modale rules desktop et mobile*/
+for (btnRules of btnRulesAll) {
     btnRules.addEventListener('click', () => {
         playSound('sound/select.wav', 0.3);
         rulesModal.style.display = 'flex';
     });
 }
-
 /*fermer la modale rules*/
-btnCloseModal.addEventListener('click', () => {
+btnCloseRules.addEventListener('click', () => {
     rulesModal.style.display = 'none';
 });
 
-/*ouvrir la modale newGame*/
-
-for(btnNewGame of btnNewGameAll) {
-
+/*ouvrir la modale newGame desktop et mobile*/
+for (btnNewGame of btnNewGameAll) {
     btnNewGame.addEventListener('click', () => {
         newGameModal.style.display = 'flex';
         playSound('sound/new-game.wav', 0.8);
-        /**sup effet guide bouton  */
-        btnNewGame.classList.remove('btn-insist');
     });
 }
-
-
 
 /*----------------- LANCER LE JEU -------------------*/
 
 btnStartNewGame.addEventListener('click', () => {
+    /*supprime le guide bouton nouvelle parties */
+    for (btnNewGame of btnNewGameAll) {
+        btnNewGame.classList.remove('btn-insist');
+    }
     newGameModal.style.display = 'none';
     playSound('sound/intro.mp3', 0.2);
     /*decalage du son round*/

@@ -1,13 +1,15 @@
 /*-------------------  HTML MODALE -----------------------*/
-/*commandes modale régles*/
 let rulesModal = document.querySelector('.rules-modal');
-let btnRulesAll = document.querySelectorAll('.btn-rules');
-let btnCloseModal = document.querySelector('#btn-close-rules-modal');
 let newGameModal = document.querySelector('.new-game-modal');
-/* let btnNewGame = document.querySelector('#btn-new-game');
-let btnNewGameMobile = document.querySelector('#btn-modal-ng-mobile'); */
-let btnNewGameAll = document.getElementsByClassName('btn-new-game');
+
+
+/*-------------------  HTML BOUTONS -----------------------*/
+let btnRulesAll = document.querySelectorAll('.btn-rules-js');
+let btnCloseRules = document.querySelector('#btn-close-rules-modal');
+let btnNewGameAll = document.querySelectorAll('.btn-new-game');
 let btnStartNewGame = document.querySelector('#btn-close-ng-modal');
+
+
 
 /*--------------------  HTML PLAYERS--------------------*/
 
