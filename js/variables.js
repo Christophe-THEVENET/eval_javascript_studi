@@ -8,6 +8,10 @@ let btnRulesAll = document.querySelectorAll('.btn-rules-js');
 let btnCloseRules = document.querySelector('#btn-close-rules-modal');
 let btnNewGameAll = document.querySelectorAll('.btn-new-game');
 let btnStartNewGame = document.querySelector('#btn-close-ng-modal');
+/* let rollBtnMobile = document.getElementById('roll-mobile'); */
+let rollBtnAll = document.getElementsByClassName('btn-roll-js')
+let holdBtn = document.getElementById('hold')
+let holdBtnMobile = document.getElementById('hold-mobile')
 
 
 
@@ -17,14 +21,14 @@ let btnStartNewGame = document.querySelector('#btn-close-ng-modal');
 let player1RoundOutput = document.querySelector('#player1-round');
 let player2RoundOutput = document.querySelector('#player2-round');
 /* mobile*/
-let player1RoundMobileOutput = document.querySelector('#player1-round-mobile');
-let player2RoundMobileOutput = document.querySelector('#player2-round-mobile');
+let player1RoundOutputMobile = document.querySelector('#player1-round-mobile');
+let player2RoundOutputMobile = document.querySelector('#player2-round-mobile');
 /* desktop*/
 let player1GlobalOutput = document.querySelector('#player1-global');
 let player2GlobalOutput = document.querySelector('#player2-global');
 /* mobile*/
-let player1GlobalMobileOutput = document.querySelector('#player1-global-mobile');
-let player2GlobalMobileOutput = document.querySelector('#player2-global-mobile');
+let player1GlobalOutputMobile = document.querySelector('#player1-global-mobile');
+let player2GlobalOutputMobile = document.querySelector('#player2-global-mobile');
 /* desktop*/
 let player1Img = document.querySelector('#player1-img');
 let player2Img = document.querySelector('#player2-img');
@@ -48,10 +52,7 @@ let title = document.querySelector('#title');
 /*dé*/
 let dice = document.getElementById('dice');
 let diceMobile = document.getElementById('dice-mobile');
-let rollBtnMobile = document.getElementById('roll-mobile');
-let rollBtnAll = document.getElementsByClassName('btn-roll')
-let holdBtn = document.getElementById('hold')
-let holdBtnMobile = document.getElementById('hold-mobile')
+
 
 
 
