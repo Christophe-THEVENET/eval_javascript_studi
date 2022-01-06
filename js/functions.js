@@ -1,5 +1,5 @@
 /*-----  JOUER UN SON AVEC REGLAGE VOLUME --------*/
-const playSound = (src, vol) => {
+const playSound = (src, vol,) => {
     let sound = new Audio(src);
     sound.play();
     sound.volume = vol;

@@ -6,6 +6,17 @@
 
 /** ---TOUS LES BOUTONS SONT DONC EN DOUBLES MAIS DIFFERENTS-- */
 
+btnSoundDesktop.addEventListener('click', () => {
+    console.log('toto');
+    if (btnSoundDesktop.textContent == 'son (on)') {
+        btnSoundDesktop.textContent = 'son (off)';
+        return;
+    } else {
+        btnSoundDesktop.textContent = 'son (off)';
+        return
+    }
+});
+
 /*effet pour guider  sur  bouton nouvelle partie */
 document.addEventListener('DOMContentLoaded', () => {
     for (btnNewGame of btnNewGameAll) {
