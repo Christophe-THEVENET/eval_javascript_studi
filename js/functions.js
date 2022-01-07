@@ -17,7 +17,7 @@ for (let btnSound of btnSoundAll) {
 
 const playSound = (src, vol) => {
     let sound = new Audio(src);
-
+    
     if (soundOn === true) {
         sound.play();
         sound.volume = vol;
