@@ -2,6 +2,6 @@
 
 ### jeu de dé en javascript
 
-> url bientôt disponible
+> https://dicefighter.netlify.app/
 
 ![Game Image](./DiceFighter.png)
