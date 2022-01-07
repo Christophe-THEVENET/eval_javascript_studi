@@ -1,8 +1,29 @@
+/*-----  toggle bouton son (on/off)--------*/
+let soundOn = true;
+
+for (let btnSound of btnSoundAll) {
+    btnSound.addEventListener('click', () => {
+        if (soundOn === true) {
+            soundOn = false;
+            btnSound.textContent = 'son (off)';
+        } else {
+            soundOn = true;
+            btnSound.textContent = 'son (on)';
+        }
+        return;
+    });
+}
 /*-----  JOUER UN SON AVEC REGLAGE VOLUME --------*/
+
 const playSound = (src, vol) => {
     let sound = new Audio(src);
-    sound.play();
-    sound.volume = vol;
+
+    if (soundOn === true) {
+        sound.play();
+        sound.volume = vol;
+    } else {
+        sound.pause();
+    }
 };
 
 /*-----  CLASSE PLAYER ROUND ET GLOBAL--------*/
@@ -76,11 +97,14 @@ class Player {
     };
     /**calcul et modif progress bar */
     progressBar = (getGlobal, progressBar) => {
+        /**pour les 2 barres (mobile et bureau) du joueur */
         for (let bar of progressBar) {
+            /**transforme score to win a 100%  (regle de 3)*/
             let scoreToWin = document.querySelector('#win-score-input').value;
             let factor = 100 / scoreToWin;
             let progress = 0;
             progress += factor * getGlobal;
+            /**applique une largeur  qui corespond au score Global*/
             bar.style.width = `${progress}%`;
         }
     };

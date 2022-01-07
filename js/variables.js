@@ -3,13 +3,13 @@ let rulesModal = document.querySelector('.rules-modal');
 let newGameModal = document.querySelector('.new-game-modal');
 
 /*-------------------  HTML BOUTONS -----------------------*/
+/*--------parametres---------*/
 let btnRulesAll = document.querySelectorAll('.btn-rules-js');
 let btnCloseRules = document.querySelector('#btn-close-rules-modal');
 let btnNewGameAll = document.querySelectorAll('.btn-new-game');
 let btnStartNewGame = document.querySelector('#btn-close-ng-modal');
 let btnSoundAll = document.getElementsByClassName('btn-sound');
-let btnSoundDesktop = document.querySelector('#btn-sound-desktop');
-
+/*--------action--------*/
 let rollBtnAll = document.getElementsByClassName('btn-roll-js');
 let holdBtnAll = document.getElementsByClassName('btn-hold-js');
 let holdBtnMobile = document.getElementById('hold-mobile');
