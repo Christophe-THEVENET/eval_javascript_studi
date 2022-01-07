@@ -179,6 +179,8 @@ header h2 {
     align-items: center;
     padding: 4rem;
     z-index: 2000;
+    width: 90%;
+    max-width: 100rem;
 }
 
 .rules-modal h5,
@@ -239,6 +241,8 @@ header h2 {
     flex-direction: column;
     align-items: center;
     padding: 6rem 3rem;
+    width: 90%;
+    max-width: 100rem;
 }
 
 .new-game-modal form {
@@ -340,6 +344,7 @@ header h2 {
         z-index: 1000;
         top: 3%;
     }
+   
 }
 
 @media screen and (max-width: 765px) {
