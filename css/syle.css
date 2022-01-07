@@ -9,7 +9,7 @@ html {
     box-sizing: border-box;
     font-family: 'Feast of Flesh BB';
     font-size: 62.5%;
-    /*  border: 1px solid red; */
+    /* border: 1px solid red; */
 }
 
 body {
@@ -39,7 +39,7 @@ header {
 
 header h1,
 header h2 {
-    font-size: 8vmax;
+    font-size: 6vmax;
     padding: 1.5rem;
     width: 100%;
     text-align: center;
@@ -162,6 +162,13 @@ header h2 {
 /*container des boutons*/
 .action-button--roll {
     height: 60%;
+}
+
+/*barre de progression player 1*/
+.progress-bar-p1 {
+}
+/*barre de progression player 2*/
+.progress-bar-p2 {
 }
 
 /* ------------------------ MODALE REGLES ----------------------*/
@@ -318,7 +325,6 @@ header h2 {
     margin-bottom: 2%;
 }
 
-
 /* ---------------------- MEDIA QUERRYS ----------------*/
 
 @media screen and (max-width: 1050px) {
@@ -401,5 +407,3 @@ header h2 {
         top: 1%;
     }
 }
-
-

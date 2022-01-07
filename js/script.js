@@ -13,7 +13,7 @@ btnSoundDesktop.addEventListener('click', () => {
         return;
     } else {
         btnSoundDesktop.textContent = 'son (off)';
-        return
+        return;
     }
 });
 
@@ -43,6 +43,8 @@ for (btnNewGame of btnNewGameAll) {
         playSound('sound/new-game.wav', 0.8);
     });
 }
+
+
 
 /*----------------- LANCER LE JEU -------------------*/
 
@@ -193,6 +195,7 @@ btnStartNewGame.addEventListener('click', () => {
                 player1RoundOutputMobile.textContent = player1.getRound();
                 player1.flashWin(player1GlobalOutput);
                 player1.flashWin(player1GlobalOutputMobile);
+                player1.progressBar(player1.getGlobal(), player1ProgressBar);
                 nextPlayer();
                 /*-----------  VICTOIRE player 1 -------------------*/
                 if (player1.getGlobal() >= scoreToWinInput) {
@@ -205,8 +208,8 @@ btnStartNewGame.addEventListener('click', () => {
                     player1.flash();
                     videoBloc1.style.display = 'flex';
                     videoPlayer1.play();
-                    title.textContent = `${player1NameInput}  Bravo!!!!!`;
-                    titleMobile.textContent = `${player1NameInput}  Bravo!!!!!`;
+                    title.textContent = `${player1NameInput}  bravo!`;
+                    titleMobile.textContent = `${player1NameInput}  bravo!`;
                 }
             } else {
                 /*--------  joueur 2 hold -----------*/
@@ -219,6 +222,8 @@ btnStartNewGame.addEventListener('click', () => {
                 player2RoundOutputMobile.textContent = player2.getRound();
                 player2.flashWin(player2GlobalOutput);
                 player2.flashWin(player2GlobalOutputMobile);
+                player2.progressBar(player2.getGlobal(), player2ProgressBar);
+
                 nextPlayer();
                 /*-----------  VICTOIRE player 2 -------------------*/
                 if (player2.getGlobal() >= scoreToWinInput) {
@@ -231,8 +236,8 @@ btnStartNewGame.addEventListener('click', () => {
                     player2.flash();
                     videoBloc2.style.display = 'flex';
                     videoPlayer2.play();
-                    title.textContent = `${player2NameInput}  Bravo!!!!!`;
-                    titleMobile.textContent = `${player2NameInput}  Bravo!!!!!`;
+                    title.textContent = `${player2NameInput}  bravo!`;
+                    titleMobile.textContent = `${player2NameInput}  bravo!`;
                 }
             }
         });

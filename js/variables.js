@@ -30,6 +30,9 @@ let player1Img = document.querySelector('#player1-img');
 let player2Img = document.querySelector('#player2-img');
 let player1ImgMobile = document.querySelector('#player1-img-mobile');
 let player2ImgMobile = document.querySelector('#player2-img-mobile');
+/*------------------progress bar ----------------*/
+let player1ProgressBar = document.querySelectorAll('.progress-bar-p1');
+let player2ProgressBar = document.querySelectorAll('.progress-bar-p2');
 
 /*--------  HTML NOMS JOUEURS / SCORE A ATTEINDRE OUTPUT--------------*/
 /* desktop*/

@@ -1,5 +1,5 @@
 /*-----  JOUER UN SON AVEC REGLAGE VOLUME --------*/
-const playSound = (src, vol,) => {
+const playSound = (src, vol) => {
     let sound = new Audio(src);
     sound.play();
     sound.volume = vol;
@@ -73,5 +73,15 @@ class Player {
                 titleMobile.classList.remove('flash-win');
             }, 200);
         }, 600);
+    };
+    /**calcul et modif progress bar */
+    progressBar = (getGlobal, progressBar) => {
+        for (let bar of progressBar) {
+            let scoreToWin = document.querySelector('#win-score-input').value;
+            let factor = 100 / scoreToWin;
+            let progress = 0;
+            progress += factor * getGlobal;
+            bar.style.width = `${progress}%`;
+        }
     };
 }
