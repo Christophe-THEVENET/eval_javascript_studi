@@ -185,7 +185,7 @@ header h2 {
 .new-game-modal h5 {
     padding: 1rem 3rem;
     border-radius: 20px;
-    font-size: 4.5vmin;
+    font-size: 5vmin;
     background: #000000;
     background-clip: border-box;
     -webkit-background-clip: text;
@@ -270,7 +270,7 @@ header h2 {
 
 .player-bloc input {
     width: 80%;
-    font-size: 3.2vmin;
+    
 }
 
 .btn-close-ng-modal {
@@ -286,7 +286,7 @@ header h2 {
 }
 
 .player-bloc input[placeholder] {
-    font-size: 1.5vmin;
+    font-size: 1.8vmin;
 }
 
 .btn-close-ng-modal:hover {
@@ -315,10 +315,6 @@ header h2 {
     z-index: 1000;
     margin-bottom: 2%;
 }
-
-
-
-
 
 /* ---------------------- MEDIA QUERRYS ----------------*/
 
@@ -394,7 +390,37 @@ header h2 {
     .rules-modal,
     .new-game-modal {
         width: 95%;
+        padding: 2rem 0.5rem;
+        font-size: 8vmin;
     }
+
+    .rules-modal h5,
+    .new-game-modal h5 {
+        width: 95%;
+        padding: 1rem 0.2rem;
+        text-align: center;
+        font-size: 9.2vmin;
+    }
+
+    .rules-modal p {
+        width: 95%;
+        padding: 0.2rem;
+        font-size: 5vmin;
+    }
+
+    .new-game-modal label {
+        font-size: 7vmin;
+    }
+
+    .player-bloc input[placeholder] {
+        width: 100%;
+        font-size: 4.5vmin;
+    }
+
+    .btn-close-ng-modal, .btn-close-modal {
+        font-size: 6vmin;
+    }
+
     .video {
         width: 90%;
         position: absolute;
