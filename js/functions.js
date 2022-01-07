@@ -1,6 +1,5 @@
 /*-----  toggle bouton son (on/off)--------*/
 let soundOn = true;
-
 for (let btnSound of btnSoundAll) {
     btnSound.addEventListener('click', () => {
         if (soundOn === true) {
@@ -17,7 +16,7 @@ for (let btnSound of btnSoundAll) {
 
 const playSound = (src, vol) => {
     let sound = new Audio(src);
-    
+
     if (soundOn === true) {
         sound.play();
         sound.volume = vol;
@@ -26,7 +25,7 @@ const playSound = (src, vol) => {
     }
 };
 
-/*-----  CLASSE PLAYER ROUND ET GLOBAL--------*/
+/*----------------  CLASSE PLAYER -----------------------*/
 
 class Player {
     constructor(name, img, imgMobile) {

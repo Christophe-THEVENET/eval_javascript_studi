@@ -164,13 +164,6 @@ header h2 {
     height: 60%;
 }
 
-/*barre de progression player 1*/
-.progress-bar-p1 {
-}
-/*barre de progression player 2*/
-.progress-bar-p2 {
-}
-
 /* ------------------------ MODALE REGLES ----------------------*/
 
 .rules-modal {
@@ -230,8 +223,6 @@ header h2 {
 }
 
 /*
-
-
 
 /* ------------------------ MODALE NOUVELLE PARTIE ----------------------*/
 
@@ -324,6 +315,10 @@ header h2 {
     z-index: 1000;
     margin-bottom: 2%;
 }
+
+
+
+
 
 /* ---------------------- MEDIA QUERRYS ----------------*/
 
