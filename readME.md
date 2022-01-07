@@ -1,4 +1,4 @@
-# <h1 style="text-align: center;">DICE FIGHTER</h1>
+# <p align="center">DICE FIGHTER</p>
 
 ### jeu de dé en javascript
 
