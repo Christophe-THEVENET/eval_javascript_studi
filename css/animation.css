@@ -108,11 +108,6 @@ button:focus::before {
     animation: ring 1.5s infinite;
 }
 
-/* supprime une bordure apres click */
-.anim-btn:focus {
-    display: none;
-    visibility: hidden;
-}
 
 .anim-btn:hover::after,
 button:focus::after {
