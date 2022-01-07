@@ -1,6 +1,6 @@
 # jeu de dé en javascript
 
-### > url bientôt disponible
+> url bientôt disponible
 
 
-![Game Image](./img/DiceFighter.png)
+![Game Image](./DiceFighter.png)
