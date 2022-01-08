@@ -100,13 +100,14 @@ btnStartNewGame.addEventListener('click', () => {
             player2.inGame = true;
             player1.unactivePlayer();
             player2.activePlayer();
-            playSound('sound/switch.wav', 0.2);
+            playSound('sound/switch1.wav', 0.2);
+
         } else {
             player1.inGame = true;
             player2.inGame = false;
             player1.activePlayer();
             player2.unactivePlayer();
-            playSound('sound/switch.wav', 0.2);
+            playSound('sound/switch1.wav', 0.2);
         }
     };
 
@@ -138,6 +139,8 @@ btnStartNewGame.addEventListener('click', () => {
                 player1.flashLose(titleMobile);
                 nextPlayer();
                 playSound('sound/dieguy.wav', 0.2);
+                playSound('sound/dice-one.wav', 0.2);
+
 
                 /*  player 1 fait !=1*/
             } else if (player1.inGame && result !== 1) {
@@ -159,6 +162,7 @@ btnStartNewGame.addEventListener('click', () => {
                 player2.flashLose(titleMobile);
                 nextPlayer();
                 playSound('sound/diegirl.wav', 0.2);
+                playSound('sound/dice-one.wav', 0.2);
 
                 /*  player 2 fait !=1*/
             } else if (player2.inGame && result !== 1) {
