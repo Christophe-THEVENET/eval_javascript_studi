@@ -71,13 +71,12 @@ btn-sound::before {
     min-width: calc(150px + 12px);
 }
 
-.anim-btn:hover
- {
+.anim-btn:hover {
     color: #ee380b;
     transform: translateY(-3px);
 }
 .anim-btn:active {
-    color: #000;
+    visibility: hidden;
 }
 
 /*hover boutons lancer / garder*/
@@ -116,7 +115,6 @@ button:focus::before {
     animation: ring 1.5s infinite;
 }
 
-
 .anim-btn:hover::after,
 button:focus::after {
     animation: none;
@@ -135,7 +133,6 @@ button:focus::after {
         opacity: 0;
     }
 }
-
 
 /*
 ------------------------------------------------
@@ -156,6 +153,14 @@ button:focus::after {
             height: 50px;
             opacity: 0;
         }
+    }
+    .anim-btn:hover::before,
+    button:focus::before {
+        opacity: 0;
+    }
+    .anim-btn:hover,
+    button:focus {
+        transform: translateY(0px);
     }
 }
 
