@@ -71,10 +71,13 @@ btn-sound::before {
     min-width: calc(150px + 12px);
 }
 
-.anim-btn:hover,
-.anim-btn:focus {
+.anim-btn:hover
+ {
     color: #ee380b;
     transform: translateY(-3px);
+}
+.anim-btn:active {
+    color: #000;
 }
 
 /*hover boutons lancer / garder*/
@@ -91,6 +94,11 @@ btn-sound::before {
 .anim-btn:hover::before,
 button:focus::before {
     opacity: 1;
+}
+
+/* supprime une bordure apres click */
+.anim-btn:focus {
+    visibility: hidden;
 }
 
 /*anim guide user*/
