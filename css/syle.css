@@ -16,7 +16,6 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
-    overflow: hidden;
     background-image: url('../img/180755.jpg');
     background-position: center;
     background-size: cover;
@@ -274,7 +273,6 @@ header h2 {
 
 .player-bloc input {
     width: 80%;
-    
 }
 
 .btn-close-ng-modal {
@@ -344,7 +342,6 @@ header h2 {
         z-index: 1000;
         top: 3%;
     }
-   
 }
 
 @media screen and (max-width: 765px) {
@@ -422,7 +419,8 @@ header h2 {
         font-size: 4.5vmin;
     }
 
-    .btn-close-ng-modal, .btn-close-modal {
+    .btn-close-ng-modal,
+    .btn-close-modal {
         font-size: 6vmin;
     }
 
