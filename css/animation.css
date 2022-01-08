@@ -154,15 +154,7 @@ button:focus::after {
             opacity: 0;
         }
     }
-    /* .anim-btn:hover::before,
-    button:focus::before {
-        opacity: 0;
-    } */
-    .anim-btn:hover,
-    button:focus {
-        transform: translateY(0px);
-    }
-}
+   
 
 @media screen and (max-width: 500px) {
     .anim-btn {
@@ -170,3 +162,5 @@ button:focus::after {
         min-height: 5rem;
     }
 }
+}
+
