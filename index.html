@@ -37,7 +37,7 @@
 
   <!--------------------------------FORMAT DESKTOP------------------------------ -->
 
-  <main class="wrapper-desktop container-xl min-vh-100">
+  <main class="wrapper-desktop container-fluid min-vh-100">
 
     <!---------------------------- HEADER ----------------------- -->
 
@@ -110,9 +110,10 @@
         <img class="img img-fluid  " src="./img/man.jpg" id="player1-img" alt="photo joueur 1">
       </div>
       <!-----container dé + boutons ---- -->
-      <div class="action-button  d-flex flex-column align-items-center">
+      <div class="action-button d-flex flex-column
+      justify-content-start align-items-center">
         <!-----container dé----- -->
-        <div class="action-button--dice d-flex justify-content-center align-items-center">
+        <div class="action-button--dice ">
           <!-------emplacement du dé------- -->
           <div class="dice-all" data-side="1">
             <div class="sides side-1">
@@ -151,7 +152,7 @@
           </div>
         </div>
         <!-----container boutons----- -->
-        <div class="action-button--roll d-flex justify-content-around flex-column align-items-center">
+        <div class="action-button--roll d-flex flex-column justify-content-around">
           <button type="button" id="roll" class="anim-btn btn-rules btn-roll btn-roll-js">LANCER</button>
           <button type="button" id="hold" class="anim-btn btn-rules btn-hold btn-hold-js">GARDER</button>
         </div>

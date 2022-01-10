@@ -9,7 +9,6 @@ html {
     box-sizing: border-box;
     font-family: 'Feast of Flesh BB';
     font-size: 62.5%;
-       
 }
 
 body {
@@ -30,8 +29,9 @@ body {
     display: none;
 }
 
-.wrapper-desktop{
+.wrapper-desktop {
     padding-top: 1%;
+    max-width: 1800px;
 }
 /*----------------- HEADER ---------------*/
 
@@ -135,6 +135,7 @@ header h2 {
 
 .img {
     height: 40vh;
+
     width: 100%;
     filter: grayscale(30%);
     filter: brightness(70%);
@@ -152,23 +153,27 @@ header h2 {
 
 .action-player {
     flex: 4;
-    
 }
 
 /*container dé + boutons*/
 .action-button {
     flex: 4;
+    border: 1px solid red;
+
 
 }
+
 /*container des boutons*/
-
 .action-button--dice {
-    margin-bottom: 10%;
 
+    
 }
 
 /*container des boutons*/
 .action-button--roll {
+    flex: 5;
+    border: 1px solid red;
+
 }
 
 /* ------------------------ MODALE REGLES ----------------------*/
@@ -187,7 +192,7 @@ header h2 {
     padding: 4rem;
     z-index: 2000;
     width: 90%;
-    max-width: 100rem;
+    max-width: 150rem;
 }
 
 .rules-modal h5,
@@ -249,7 +254,7 @@ header h2 {
     align-items: center;
     padding: 6rem 3rem;
     width: 90%;
-    max-width: 100rem;
+    max-width: 150rem;
 }
 
 .new-game-modal form {
@@ -329,7 +334,6 @@ header h2 {
 /* ---------------------- MEDIA QUERRYS ----------------*/
 
 @media screen and (max-width: 1050px) {
-   
     .video {
         width: 90%;
         position: absolute;
