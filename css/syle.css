@@ -321,9 +321,7 @@ header h2 {
 /* ---------------------- MEDIA QUERRYS ----------------*/
 
 @media screen and (max-width: 1050px) {
-    body {
-        overflow: auto;
-    }
+
     header {
         padding: 0;
     }
