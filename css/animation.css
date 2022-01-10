@@ -90,15 +90,21 @@ btn-sound::before {
     transform: translateY(3px);
 }
 
-.anim-btn:hover::before,
-button:focus::before {
+.anim-btn:hover::before
+ {
     opacity: 1;
 }
 
-/* supprime une bordure apres click */
-.anim-btn:focus {
-    visibility: hidden;
+button:focus::before {
+    opacity: 0;
 }
+
+
+/* supprime une bordure apres click */
+ .anim-btn:focus {
+    opacity: 1;
+}  
+
 
 /*anim guide user*/
 .btn-insist::after {
