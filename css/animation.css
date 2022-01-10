@@ -147,6 +147,11 @@ button:focus::after {
 --*/
 
 @media screen and (max-width: 765px) {
+
+    .anim-btn:hover::before
+ {
+    opacity: 0;
+}
     @keyframes ring {
         0% {
             width: 150px;
