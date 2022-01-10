@@ -105,7 +105,6 @@ button:focus::before {
     opacity: 1;
 }  
 
-
 /*anim guide user*/
 .btn-insist::after {
     content: '';

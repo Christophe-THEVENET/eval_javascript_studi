@@ -9,7 +9,7 @@ html {
     box-sizing: border-box;
     font-family: 'Feast of Flesh BB';
     font-size: 62.5%;
-    /* border: 1px solid red; */
+       
 }
 
 body {
@@ -22,6 +22,7 @@ body {
     background-repeat: no-repeat;
     color: rgb(253, 253, 253);
     padding-bottom: 2rem;
+    overflow: hidden;
 }
 
 /*layout mobile caché*/
@@ -29,12 +30,12 @@ body {
     display: none;
 }
 
+.wrapper-desktop{
+    padding-top: 1%;
+}
 /*----------------- HEADER ---------------*/
 
 /*--------title -----*/
-header {
-    padding: 3rem 0;
-}
 
 header h1,
 header h2 {
@@ -55,7 +56,7 @@ header h2 {
 /*-----------------  NEW GAME  ---------------*/
 
 .new-game {
-    margin-top: -3rem;
+    margin-top: -4rem;
     margin-bottom: 3rem;
 }
 
@@ -151,16 +152,23 @@ header h2 {
 
 .action-player {
     flex: 4;
+    
 }
 
 /*container dé + boutons*/
 .action-button {
     flex: 4;
+
+}
+/*container des boutons*/
+
+.action-button--dice {
+    margin-bottom: 10%;
+
 }
 
 /*container des boutons*/
 .action-button--roll {
-    height: 60%;
 }
 
 /* ------------------------ MODALE REGLES ----------------------*/
@@ -321,19 +329,7 @@ header h2 {
 /* ---------------------- MEDIA QUERRYS ----------------*/
 
 @media screen and (max-width: 1050px) {
-
-    header {
-        padding: 0;
-    }
-    header h1 {
-        padding: 0;
-    }
-    .action-button--roll {
-        margin-top: -2rem;
-    }
-    .btn-roll {
-        margin-top: -3rem;
-    }
+   
     .video {
         width: 90%;
         position: absolute;
