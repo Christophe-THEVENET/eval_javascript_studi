@@ -158,22 +158,11 @@ header h2 {
 /*container dé + boutons*/
 .action-button {
     flex: 4;
-    border: 1px solid red;
-
-
-}
-
-/*container des boutons*/
-.action-button--dice {
-
-    
 }
 
 /*container des boutons*/
 .action-button--roll {
     flex: 5;
-    border: 1px solid red;
-
 }
 
 /* ------------------------ MODALE REGLES ----------------------*/
