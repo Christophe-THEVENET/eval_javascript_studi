@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /*ouvrir la modale rules desktop et mobile*/
 for (btnRules of btnRulesAll) {
     btnRules.addEventListener('click', () => {
-        playSound('sound/select.wav', 0.3);
+        playSound('src/sound/select.wav', 0.3);
         rulesModal.style.display = 'flex';
     });
 }
@@ -30,7 +30,7 @@ btnCloseRules.addEventListener('click', () => {
 for (btnNewGame of btnNewGameAll) {
     btnNewGame.addEventListener('click', () => {
         newGameModal.style.display = 'flex';
-        playSound('sound/new-game.wav', 0.8);
+        playSound('src/sound/new-game.wav', 0.8);
     });
 }
 
@@ -47,14 +47,14 @@ btnStartNewGame.addEventListener('click', () => {
     }
     /*ferme modale nouvelle partie */
     newGameModal.style.display = 'none';
-    playSound('sound/intro.mp3', 0.2);
+    playSound('src/sound/intro.mp3', 0.2);
     /*decalage du son round*/
     setTimeout(() => {
-        playSound('sound/round.mp3', 0.2);
+        playSound('src/sound/round.mp3', 0.2);
     }, 500);
     /*decalage du son fight*/
     setTimeout(() => {
-        playSound('sound/fight.mp3', 0.2);
+        playSound('src/sound/fight.mp3', 0.2);
     }, 1500);
 
     /*recupere les noms des joueurs*/
@@ -97,13 +97,13 @@ btnStartNewGame.addEventListener('click', () => {
             player2.inGame = true;
             player1.unactivePlayer();
             player2.activePlayer();
-            playSound('sound/switch1.wav', 0.2);
+            playSound('src/sound/switch1.wav', 0.2);
         } else {
             player1.inGame = true;
             player2.inGame = false;
             player1.activePlayer();
             player2.unactivePlayer();
-            playSound('sound/switch1.wav', 0.2);
+            playSound('src/sound/switch1.wav', 0.2);
         }
     };
 
@@ -123,7 +123,7 @@ btnStartNewGame.addEventListener('click', () => {
                 dice.classList.toggle('reRoll');
             }
             /* son lancer du dé*/
-            playSound('sound/dice.mp3', 0.7);
+            playSound('src/sound/dice.mp3', 0.7);
             /*  player 1 fait 1*/
             if (player1.inGame && result === 1) {
                 player1.setRound0();
@@ -134,8 +134,8 @@ btnStartNewGame.addEventListener('click', () => {
                 player1.flashLose(title);
                 player1.flashLose(titleMobile);
                 nextPlayer();
-                playSound('sound/dieguy.wav', 0.2);
-                playSound('sound/dice-one.wav', 0.2);
+                playSound('src/sound/dieguy.wav', 0.2);
+                playSound('src/sound/dice-one.wav', 0.2);
 
                 /*  player 1 fait !=1*/
             } else if (player1.inGame && result !== 1) {
@@ -144,7 +144,7 @@ btnStartNewGame.addEventListener('click', () => {
                 player1RoundOutputMobile.textContent = player1.getRound();
                 player1.flashWin(player1RoundOutput);
                 player1.flashWin(player1RoundOutputMobile);
-                playSound('sound/ryuken-hadooken.mp3', 0.1);
+                playSound('src/sound/ryuken-hadooken.mp3', 0.1);
 
                 /*  player 2 fait 1*/
             } else if (player2.inGame && result === 1) {
@@ -156,8 +156,8 @@ btnStartNewGame.addEventListener('click', () => {
                 player2.flashLose(title);
                 player2.flashLose(titleMobile);
                 nextPlayer();
-                playSound('sound/diegirl.wav', 0.2);
-                playSound('sound/dice-one.wav', 0.2);
+                playSound('src/sound/diegirl.wav', 0.2);
+                playSound('src/sound/dice-one.wav', 0.2);
 
                 /*  player 2 fait !=1*/
             } else if (player2.inGame && result !== 1) {
@@ -166,7 +166,7 @@ btnStartNewGame.addEventListener('click', () => {
                 player2RoundOutputMobile.textContent = player2.getRound();
                 player2.flashWin(player2RoundOutput);
                 player2.flashWin(player2RoundOutputMobile);
-                playSound('sound/chun-li-yap.mp3', 0.1);
+                playSound('src/sound/chun-li-yap.mp3', 0.1);
             }
         });
     }
@@ -176,7 +176,7 @@ btnStartNewGame.addEventListener('click', () => {
         holdBtn.addEventListener('click', () => {
             /*--------  joueur 1 hold -----------*/
             if (player1.inGame) {
-                playSound('sound/ryuken-kick.mp3', 0.1);
+                playSound('src/sound/ryuken-kick.mp3', 0.1);
                 player1.setGlobal(player1.getRound());
                 player1.setRound0();
                 player1GlobalOutput.textContent = player1.getGlobal();
@@ -190,9 +190,9 @@ btnStartNewGame.addEventListener('click', () => {
                 /*-----------  VICTOIRE player 1 -------------------*/
                 if (player1.getGlobal() >= scoreToWinInput) {
                     setTimeout(() => {
-                        playSound('sound/ryuken-shoryuken.mp3', 0.1);
+                        playSound('src/sound/ryuken-shoryuken.mp3', 0.1);
                     }, 500);
-                    playSound('sound/Street Fighter II Music - Guile - HQ.mp3', 0.5);
+                    playSound('src/sound/Street Fighter II Music - Guile - HQ.mp3', 0.5);
                     player2.unactivePlayer();
                     player1.activePlayer();
                     player1.flash();
@@ -203,7 +203,7 @@ btnStartNewGame.addEventListener('click', () => {
                 }
             } else {
                 /*--------  joueur 2 hold -----------*/
-                playSound('sound/chun-li-laugh.mp3', 0.1);
+                playSound('src/sound/chun-li-laugh.mp3', 0.1);
                 player2.setGlobal(player2.getRound());
                 player2.setRound0();
                 player2GlobalOutput.textContent = player2.getGlobal();
@@ -218,9 +218,9 @@ btnStartNewGame.addEventListener('click', () => {
                 /*-----------  VICTOIRE player 2 -------------------*/
                 if (player2.getGlobal() >= scoreToWinInput) {
                     setTimeout(() => {
-                        playSound('sound/chun-li-kick.mp3', 0.1);
+                        playSound('src/sound/chun-li-kick.mp3', 0.1);
                     }, 500);
-                    playSound('sound/Street Fighter II Music - Guile - HQ.mp3', 0.5);
+                    playSound('src/sound/Street Fighter II Music - Guile - HQ.mp3', 0.5);
                     player1.unactivePlayer();
                     player2.activePlayer();
                     player2.flash();
