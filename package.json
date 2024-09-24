@@ -1,12 +1,20 @@
 {
-  "name": "ee_javascript",
-  "version": "1.0.0",
-  "description": "évaluation d'entrainement javascript",
-  "main": "index.js",
-  "scripts": {
-    "start": "node ./js/script.js"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+    "name": "ee_javascript",
+    "version": "1.0.0",
+    "description": "évaluation d'entrainement javascript",
+    "main": "index.js",
+    "scripts": {
+        "start": "node ./js/script.js",
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "sass": "^1.79.3",
+        "vite": "^5.4.7"
+    },
+    "type": "module"
 }
