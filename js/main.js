@@ -1,3 +1,4 @@
+
 /** ----- PARTOUT OU IL Y A DES BOUCLES FOR OF ----- */
 
 /** ----- C EST PARCE QUE J AI FAIT 2 HTML ----- */
@@ -5,8 +6,6 @@
 /** ---UN POUR LE DESKTOP ET UN POUR LE MOBILE----- */
 
 /** ---TOUS LES BOUTONS SONT DONC EN DOUBLES MAIS DIFFERENTS-- */
-
-
 
 /*effet pour guider  sur  bouton nouvelle partie */
 document.addEventListener('DOMContentLoaded', () => {
@@ -34,8 +33,6 @@ for (btnNewGame of btnNewGameAll) {
         playSound('sound/new-game.wav', 0.8);
     });
 }
-
-
 
 /*----------------- LANCER LE JEU -------------------*/
 
@@ -101,7 +98,6 @@ btnStartNewGame.addEventListener('click', () => {
             player1.unactivePlayer();
             player2.activePlayer();
             playSound('sound/switch1.wav', 0.2);
-
         } else {
             player1.inGame = true;
             player2.inGame = false;
@@ -140,7 +136,6 @@ btnStartNewGame.addEventListener('click', () => {
                 nextPlayer();
                 playSound('sound/dieguy.wav', 0.2);
                 playSound('sound/dice-one.wav', 0.2);
-
 
                 /*  player 1 fait !=1*/
             } else if (player1.inGame && result !== 1) {

@@ -1,15 +1,19 @@
-@font-face {
-    font-family: 'Feast of Flesh BB';
-    src: url('../fonts/FEASFBI_.TTF') format('truetype'),
-        url('../fonts/FEASFBRG.TTF') format('truetype');
-}
 
-*,
-html {
-    box-sizing: border-box;
-    font-family: 'Feast of Flesh BB';
-    font-size: 62.5%;
-}
+/*
+  L'ordre des imports : 
+    - reset
+    - vendors
+    - pages
+    - themes
+    - layout
+    - components
+*/
+@use "base/_reset";
+@use "base/_animation";
+@use "components/_dice";
+
+
+
 
 body {
     min-height: 100vh;
@@ -20,19 +24,9 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     color: rgb(253, 253, 253);
-    padding-bottom: 2rem;
     overflow: hidden;
 }
 
-/*layout mobile caché*/
-.wrapper-mobile {
-    display: none;
-}
-
-.wrapper-desktop {
-    padding-top: 1%;
-    max-width: 1800px;
-}
 /*----------------- HEADER ---------------*/
 
 /*--------title -----*/

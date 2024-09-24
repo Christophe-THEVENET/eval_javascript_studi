@@ -1,0 +1,13 @@
+
+@font-face {
+    font-family: 'Feast of Flesh BB';
+    src: url('../fonts/FEASFBI_.TTF') format('truetype'),
+        url('../fonts/FEASFBRG.TTF') format('truetype');
+}
+
+*,
+html {
+    box-sizing: border-box;
+    font-family: 'Feast of Flesh BB';
+    font-size: 62.5%;
+}

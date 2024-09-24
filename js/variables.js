@@ -53,3 +53,4 @@ let videoBloc1 = document.getElementById('videoBloc1');
 let videoPlayer1 = document.getElementById('videoPlayer1');
 let videoBloc2 = document.getElementById('videoBloc2');
 let videoPlayer2 = document.getElementById('videoPlayer2');
+
