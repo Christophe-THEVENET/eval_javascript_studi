@@ -18,7 +18,6 @@ main {
     @include abstracts.adjustElement;
 }
 
-
 // ********** section player name & score ***********
 
 .nameScore {
@@ -162,9 +161,6 @@ main {
         }
     }
 }
-
-
-
 
 @media screen and (max-width: 765px) {
 

@@ -25,3 +25,9 @@ docker-compose up --build
 
 créer dossier src pour mettre les assets
 
+
+
+!!!!!! a faire !!!!!!!!!
+
+- bouton exit video victoire
+
