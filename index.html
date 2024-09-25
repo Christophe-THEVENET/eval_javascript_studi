@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./favicon.png" />
-   <!--  <link rel="stylesheet" href="./src/css/bootstrap.min.css"> -->
+    <!--  <link rel="stylesheet" href="./src/css/bootstrap.min.css"> -->
     <!-- <link rel="stylesheet" href="./src/css/animation.css"> -->
     <!-- <link rel="stylesheet" href="./src/css/dice.css"> -->
     <!-- <link rel="stylesheet" href="./src/css/main.scss"> -->
@@ -37,28 +37,14 @@
     </div>
 
 
-    <main class="wrapper-desktop container-fluid min-vh-100">
+    <main>
+
 
         <!---------------------------- HEADER ----------------------- -->
-        <header class="row">
-            <div class="col d-flex justify-content-center align-items-center">
-                <h1 id="title">dice fighter</h1>
-            </div>
+        <header class='header'>
+            <h1 id="title" class=' header__title'>dice fighter</h1>
         </header> <!------------------------------------------------- -->
 
-        <!---------------------------- MODAL NEW GAME --------------------- -->
-        <div class="new-game row">
-            <div class="col d-flex justify-content-center align-items-center">
-                <button type="button" id="btn-modal" class="anim-btn btn-rules btn-rules-js" data-toggle="modal"
-                    data-target="#exampleModal">regles</button>
-            </div>
-            <div class="col d-flex justify-content-center align-items-center">
-                <button type="button" class="anim-btn  btn-new-game">nouvelle partie</button>
-            </div>
-            <div class="col d-flex justify-content-center align-items-center">
-                <button type="button" id="btn-sound-desktop" class="anim-btn btn-sound">son (on)</button>
-            </div>
-        </div> <!---------------------------------------------------------- -->
 
         <!------------------------ PLAYER NAME AND SCORE -------------------- -->
         <div class="row pt-5">
@@ -161,9 +147,23 @@
             </div>
 
         </div>
+<!---------------------------- MODAL NEW GAME --------------------- -->
+<div class="new-game row">
+    <div class="col d-flex justify-content-center align-items-center">
+        <button type="button" id="btn-modal" class="anim-btn btn-rules btn-rules-js" data-toggle="modal"
+            data-target="#exampleModal">regles</button>
+    </div>
+    <div class="col d-flex justify-content-center align-items-center">
+        <button type="button" class="anim-btn  btn-new-game">nouvelle partie</button>
+    </div>
+    <div class="col d-flex justify-content-center align-items-center">
+        <button type="button" id="btn-sound-desktop" class="anim-btn btn-sound">son (on)</button>
+    </div>
+</div> <!---------------------------------------------------------- -->
+
     </main>
 
-<!---------------- HTML PROVISOIRE VERSION MOBILE----------- -->
+    <!---------------- HTML PROVISOIRE VERSION MOBILE----------- -->
 
 
     <!----------------MODALE REGLES----------------- -->
@@ -206,7 +206,7 @@
     <script src="./src/js/bootstrap.bundle.min.js"></script>
     <script src="./src/js/variables.js"></script>
     <script src="./src/js/functions.js"></script>
-    
+
 
 </body>
 

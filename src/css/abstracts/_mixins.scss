@@ -4,3 +4,9 @@
     align-items: center;
     overflow: hidden;
 }
+
+@mixin adjustElement {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}

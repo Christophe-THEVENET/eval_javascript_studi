@@ -10,5 +10,13 @@ body {
     background-repeat: no-repeat;
     color: rgb(253, 253, 253);
     @include abstracts.centerElement;
+   
     }
+
+main {
+    width: 95%;
+    height: 95%;
+    @include abstracts.adjustElement;
+    background-color: rgba(250, 235, 215, 0.208);
+}
 

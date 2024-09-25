@@ -298,6 +298,7 @@
     }
 }
 
+
 @media screen and (max-width: 765px) {
     .wrapper-mobile {
         display: block;
@@ -308,9 +309,9 @@
     .wrapper-desktop {
         display: none;
     }
-    header {
+    /* header {
         padding: 0 0 2rem;
-    }
+    } */
 
     .new-game-buttons-mobile {
         height: 10vh;
