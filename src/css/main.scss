@@ -29,59 +29,9 @@
     margin-bottom: 3rem;
 } */
 
-/*--------------- PLAYER NAME AND SCORE ------------*/
-
-.progress {
-    height: 1.3rem;
-    background-color: #ee380b;
-}
-
-.progress-bar {
-    background-color: #faeb18;
-}
-
-
-
-
-
-
-
-
 
 
 /*------------------ ACTION  -------------------*/
-
-.img {
-    height: 40vh;
-
-    width: 100%;
-    filter: grayscale(30%);
-    filter: brightness(70%);
-    transition: all 0.6s;
-    transform: scale(1);
-}
-
-/*----- joueur actif---*/
-.img-active {
-    filter: grayscale(0);
-    transform: scale(1.04);
-    filter: brightness(200%);
-    box-shadow: 0px 5px 15px 3px #faeb1860;
-}
-
-.action-player {
-    flex: 4;
-}
-
-/*container dé + boutons*/
-.action-button {
-    flex: 4;
-}
-
-/*container des boutons*/
-.action-button--roll {
-    flex: 5;
-}
 
 /* ------------------------ MODALE REGLES ----------------------*/
 

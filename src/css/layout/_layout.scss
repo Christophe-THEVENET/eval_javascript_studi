@@ -1,15 +1,12 @@
 @use "../abstracts/_all" as abstracts;
 
 body {
-    min-height: 100vh;
-
     background-image: url('../img/180755.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     color: rgb(253, 253, 253);
     @include abstracts.centerElement;
-
 }
 
 main {
@@ -17,6 +14,7 @@ main {
     width: 100%;
     min-height: 100vh;
     max-width: 1600px;
+    height: auto;
     @include abstracts.adjustElement;
 }
 
@@ -27,17 +25,15 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* background-color: rgba(255, 0, 0, 0.377); */
+    height: 15rem;
 
     &__player {
         margin-top: 3rem;
         flex: 2;
 
-
         &__name {
             display: flex;
             align-items: flex-end;
-
 
             .player-title-left {
                 font-size: 2.5vw;
@@ -46,7 +42,6 @@ main {
             }
 
             /*------player 2 bar right--------*/
-
             .player-title-right {
                 font-size: 2.5vw;
                 margin: 0;
@@ -61,12 +56,19 @@ main {
                 flex: 1;
             }
 
-
+            .text-score {
+                font-size: 3rem;
+                margin: 0;
+            }
         }
 
-        .text-score {
-            font-size: 3rem;
-            margin: 0;
+        &__progress {
+            height: 1.3rem;
+            background-color: #ee380b;
+
+            &--bar {
+                background-color: #faeb18;
+            }
         }
 
     }
@@ -116,15 +118,65 @@ main {
 
 }
 
+.actionPlayer {
+
+    display: flex;
+    height: calc(100vh - 40rem);
+
+    &__item {
+        flex: 8;
+        background-color: red;
+
+        .img {
+
+            height: 100%;
+            width: 100%;
+            filter: grayscale(30%);
+            filter: brightness(70%);
+            transition: all 0.6s;
+            transform: scale(1);
+        }
+    }
+
+    &__command {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        flex: 4;
+        height: 90%;
+
+        &--dice {
+            height: 40%;
+            @include abstracts.centerElement;
+            width: 100%;
+
+        }
+
+        &--roll {
+
+            @include abstracts.centerElement;
+            flex-direction: column;
+            width: 100%;
+
+        }
+    }
+}
+
+
+
+
 @media screen and (max-width: 765px) {
 
+    // ********** section player name & score ***********
     .nameScore {
 
+        height: 10rem;
         flex-direction: column;
-        min-height: 50vh;
+        margin-bottom: 10rem;
 
         &__player {
-            margin: 0;
+            margin-top: -1rem;
             width: 100%;
 
             .player-title-left,
@@ -139,9 +191,19 @@ main {
             .point-score {
                 font-size: 5rem;
             }
+
+            &__progress {
+                height: 0.5rem;
+            }
         }
 
         &__score {
+
+            margin-top: 2rem;
+            margin-bottom: -2rem;
+
+
+
             &__title {
                 font-size: 3vmax;
             }
@@ -152,5 +214,49 @@ main {
                 }
             }
         }
+    }
+
+    .actionPlayer {
+
+        display: flex;
+
+        &__command--roll button {
+            font-size: 3vmax;
+        }
+
+        .dice-all {
+            width: 14vw;
+            height: 14vw;
+           
+        }
+
+                .dice-all .side-1 {
+                    transform: translateZ(7vw);
+                }
+        
+                .dice-all .side-2 {
+                    transform: rotateX(-180deg) translateZ(7vw);
+                }
+        
+                .dice-all .side-3 {
+                    transform: rotateY(90deg) translateZ(7vw);
+                }
+        
+                .dice-all .side-4 {
+                    transform: rotateY(-90deg) translateZ(7vw);
+                }
+        
+                .dice-all .side-5 {
+                    transform: rotateX(90deg) translateZ(7vw);
+                }
+        
+                .dice-all .side-6 {
+                    transform: rotateX(-90deg) translateZ(7vw);
+                }
+
+
+
+
+
     }
 }
