@@ -2,8 +2,7 @@
 
 body {
     min-height: 100vh;
-    margin: 0;
-    padding: 0;
+   
     background-image: url('../img/180755.jpg');
     background-position: center;
     background-size: cover;
@@ -14,9 +13,11 @@ body {
     }
 
 main {
-    width: 95%;
-    height: 95%;
+    width: 100%;
+    min-height: 100vh;
+    max-width: 1600px;
     @include abstracts.adjustElement;
-    background-color: rgba(250, 235, 215, 0.208);
+    /* background-color: rgba(250, 235, 215, 0.208); */
 }
+
 

@@ -38,15 +38,30 @@
 
 
     <main>
-
-
-        <!---------------------------- HEADER ----------------------- -->
+        <!---------------------- HEADER --------------------- -->
         <header class='header'>
             <h1 id="title" class=' header__title'>dice fighter</h1>
-        </header> <!------------------------------------------------- -->
+        </header> <!----------------------------------------- -->
 
+        <!--------- NAV [RULES / NEW GAME / SOUND] ---------- -->
+        <nav class="nav">
+            <ul class='nav__list'>
+                <li class="nav__list__item">
+                    <button type="button" id="btn-modal" class="anim-btn btn-rules btn-rules-js" data-toggle="modal"
+                        data-target="#exampleModal">regles</button>
+                </li>
+                <li class="nav__list__item">
+                    <button type="button" class="anim-btn  btn-new-game">nouvelle partie</button>
+                </li>
+                <li class="nav__list__item">
+                    <button type="button" id="btn-sound-desktop" class="anim-btn btn-sound">son (on)</button>
+                </li>
 
-        <!------------------------ PLAYER NAME AND SCORE -------------------- -->
+            </ul>
+
+        </nav> <!---------------------------------------------------------- -->
+
+        <!------------- PLAYER NAME AND SCORE ----------------- -->
         <div class="row pt-5">
             <!-------player 1---progress bar1--left-------- -->
             <div class="col-5 pt-5 mb-4">
@@ -85,9 +100,9 @@
                     </div>
                 </div>
             </div>
-        </div> <!----------------------------------------------------------------- -->
+        </div> <!---------------------------------------------- -->
 
-        <!------------------------------- ACTION  ------------------------------- -->
+        <!------------------ ACTION  -------------------------- -->
         <div class="action row d-flex">
             <!-----container joueur 1---- -->
             <div class="action-player ">
@@ -147,24 +162,11 @@
             </div>
 
         </div>
-<!---------------------------- MODAL NEW GAME --------------------- -->
-<div class="new-game row">
-    <div class="col d-flex justify-content-center align-items-center">
-        <button type="button" id="btn-modal" class="anim-btn btn-rules btn-rules-js" data-toggle="modal"
-            data-target="#exampleModal">regles</button>
-    </div>
-    <div class="col d-flex justify-content-center align-items-center">
-        <button type="button" class="anim-btn  btn-new-game">nouvelle partie</button>
-    </div>
-    <div class="col d-flex justify-content-center align-items-center">
-        <button type="button" id="btn-sound-desktop" class="anim-btn btn-sound">son (on)</button>
-    </div>
-</div> <!---------------------------------------------------------- -->
+
 
     </main>
 
-    <!---------------- HTML PROVISOIRE VERSION MOBILE----------- -->
-
+  
 
     <!----------------MODALE REGLES----------------- -->
     <div class="rules-modal">

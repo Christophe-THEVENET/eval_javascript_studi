@@ -9,11 +9,13 @@
     - components
 */
 @use "base/_reset";
-@use "vendors/_bootstrap.min.scss";
+/* @use "vendors/_bootstrap.min.scss"; */
 @use "base/_animation";
 @use "layout/_layout";
 @use "layout/_header";
+@use "layout/_nav";
 @use "components/_dice";
+@use "components/_button";
 
 
 
@@ -22,10 +24,10 @@
 
 /*-----------------  NEW GAME  ---------------*/
 
-.new-game {
+/* .new-game {
     margin-top: -4rem;
     margin-bottom: 3rem;
-}
+} */
 
 /*--------------- PLAYER NAME AND SCORE ------------*/
 
@@ -300,15 +302,11 @@
 
 
 @media screen and (max-width: 765px) {
-    .wrapper-mobile {
-        display: block;
-    }
-    body {
+   
+    /* body {
         overflow: auto;
-    }
-    .wrapper-desktop {
-        display: none;
-    }
+    } */
+   
     /* header {
         padding: 0 0 2rem;
     } */

@@ -1,0 +1,18 @@
+@use "../abstracts/_all" as abstracts;
+
+
+.nav {
+
+    padding-top: 1rem;
+
+    &__list {
+        @include abstracts.centerElement;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style-type: none;
+
+        &__item {}
+    }
+
+
+}
