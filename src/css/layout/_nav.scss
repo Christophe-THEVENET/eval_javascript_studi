@@ -3,7 +3,7 @@
 
 .nav {
 
-    padding-top: 1rem;
+    padding-bottom: 3.5rem;
 
     &__list {
         @include abstracts.centerElement;
@@ -11,8 +11,10 @@
         justify-content: space-around;
         list-style-type: none;
 
-        &__item {}
+        &__item {
+            flex: 1;
+            @include abstracts.centerElement;
+        }
     }
-
 
 }

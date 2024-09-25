@@ -2,22 +2,155 @@
 
 body {
     min-height: 100vh;
-   
+
     background-image: url('../img/180755.jpg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     color: rgb(253, 253, 253);
     @include abstracts.centerElement;
-   
-    }
+
+}
 
 main {
+    padding: 1rem;
     width: 100%;
     min-height: 100vh;
     max-width: 1600px;
     @include abstracts.adjustElement;
-    /* background-color: rgba(250, 235, 215, 0.208); */
 }
 
 
+// ********** section player name & score ***********
+
+.nameScore {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: rgba(255, 0, 0, 0.377); */
+
+    &__player {
+        margin-top: 3rem;
+        flex: 2;
+
+
+        &__name {
+            display: flex;
+            align-items: flex-end;
+
+
+            .player-title-left {
+                font-size: 2.5vw;
+                margin: 0;
+                flex: 1;
+            }
+
+            /*------player 2 bar right--------*/
+
+            .player-title-right {
+                font-size: 2.5vw;
+                margin: 0;
+            }
+
+            .point-score {
+                font-size: 8rem;
+                margin: 0;
+            }
+
+            .text-score-right {
+                flex: 1;
+            }
+
+
+        }
+
+        .text-score {
+            font-size: 3rem;
+            margin: 0;
+        }
+
+    }
+
+    &__score {
+        margin-top: -3rem;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        /*----- custom-police  -----*/
+        .custom-police {
+            text-align: center;
+            /*couleur font degradée*/
+            background: linear-gradient(180deg, #faeb18 20%, #ee380b 80%);
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: -3px -4px 11px rgba(250, 235, 24, 0.37);
+            text-shadow: -3px 9px 11px rgba(238, 56, 11, 0.37);
+        }
+
+        &__title {
+            font-size: 2vmax;
+
+        }
+
+        &__result {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 1rem;
+
+            &__number {
+                font-size: 4vmax;
+                padding-right: 0.8rem;
+            }
+
+            &__slash {
+                font-size: 2rem;
+            }
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 765px) {
+
+    .nameScore {
+
+        flex-direction: column;
+        min-height: 50vh;
+
+        &__player {
+            margin: 0;
+            width: 100%;
+
+            .player-title-left,
+            .player-title-right {
+                font-size: 3vmax;
+            }
+
+            .text-score {
+                font-size: 3vmax;
+            }
+
+            .point-score {
+                font-size: 5rem;
+            }
+        }
+
+        &__score {
+            &__title {
+                font-size: 3vmax;
+            }
+
+            &__result {
+                &__number {
+                    font-size: 6vmax;
+                }
+            }
+        }
+    }
+}

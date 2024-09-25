@@ -2,14 +2,13 @@
 @use "../abstracts/_all" as abstracts;
 
 .header {
-
-    padding-top: 2rem;
+padding: 1rem 0 0 0;
 
     @include abstracts.centerElement;
     
     &__title {
         font-size: 6vmax;
-        padding: 1.5vw;
+        padding: 1.5rem;
         z-index: 1000;
         /*couleur font degradée*/
         background: linear-gradient(180deg, #faeb18 20%, #ee380b 80%);

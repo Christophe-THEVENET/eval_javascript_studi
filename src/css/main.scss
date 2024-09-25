@@ -40,65 +40,14 @@
     background-color: #faeb18;
 }
 
-/*----- score total -----*/
-.score-total p {
-    text-align: center;
-    /*couleur font degradée*/
-    background: linear-gradient(180deg, #faeb18 20%, #ee380b 80%);
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: -3px -4px 11px rgba(250, 235, 24, 0.37);
-    text-shadow: -3px 9px 11px rgba(238, 56, 11, 0.37);
-}
 
-.score-total--title {
-    font-size: 2vmax;
-    margin-top: -5rem;
-    margin-bottom: -1rem;
-}
 
-.score-total--number {
-    font-size: 5rem;
-}
 
-.score-total--slash {
-    font-size: 2rem;
-}
 
-/*------player 1 bar left--------*/
 
-.player-title-left {
-    font-size: 2.5vw;
-    margin: 0;
-    flex: 1;
-}
 
-.point-score-left {
-    font-size: 8rem;
-    margin: 0;
-}
 
-.text-score {
-    font-size: 3rem;
-    margin: 0;
-}
 
-/*------player 2 bar right--------*/
-
-.player-title-right {
-    font-size: 2.5vw;
-    margin: 0;
-}
-
-.point-score {
-    font-size: 8rem;
-    margin: 0;
-}
-
-.text-score-right {
-    flex: 1;
-}
 
 /*------------------ ACTION  -------------------*/
 
