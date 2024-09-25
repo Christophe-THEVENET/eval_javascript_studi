@@ -9,43 +9,16 @@
     - components
 */
 @use "base/_reset";
+@use "vendors/_bootstrap.min.scss";
 @use "base/_animation";
+@use "layout/_layout";
+@use "layout/_header";
 @use "components/_dice";
 
 
 
 
-body {
-    min-height: 100vh;
-    margin: 0;
-    padding: 0;
-    background-image: url('../img/180755.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    color: rgb(253, 253, 253);
-    overflow: hidden;
-}
 
-/*----------------- HEADER ---------------*/
-
-/*--------title -----*/
-
-header h1,
-header h2 {
-    font-size: 6vmax;
-    padding: 1.5rem;
-    width: 100%;
-    text-align: center;
-    z-index: 1000;
-    /*couleur font degradée*/
-    background: linear-gradient(180deg, #faeb18 20%, #ee380b 80%);
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    text-shadow: -3px -4px 11px rgba(250, 235, 24, 0.37);
-    text-shadow: -3px 9px 11px rgba(238, 56, 11, 0.37);
-}
 
 /*-----------------  NEW GAME  ---------------*/
 

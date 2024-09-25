@@ -6,12 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="./favicon.png" />
-    <link rel="stylesheet" href="./src/css/bootstrap.min.css">
+   <!--  <link rel="stylesheet" href="./src/css/bootstrap.min.css"> -->
     <!-- <link rel="stylesheet" href="./src/css/animation.css"> -->
     <!-- <link rel="stylesheet" href="./src/css/dice.css"> -->
-    <link rel="stylesheet" href="./src/css/main.scss">
+    <!-- <link rel="stylesheet" href="./src/css/main.scss"> -->
+    <link rel="preload" href="./src/css/main.scss" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="./src/css/main.scss">
+    </noscript>
     <!-- <script type="module" src="./js/main.js" defer></script> -->
     <title>Dice Fighter</title>
+    <script src="./src/js/main.js" defer></script>
 </head>
 
 <body>
@@ -158,6 +163,9 @@
         </div>
     </main>
 
+<!---------------- HTML PROVISOIRE VERSION MOBILE----------- -->
+
+
     <!----------------MODALE REGLES----------------- -->
     <div class="rules-modal">
         <h5>regles du dice fighter</h5>
@@ -198,7 +206,7 @@
     <script src="./src/js/bootstrap.bundle.min.js"></script>
     <script src="./src/js/variables.js"></script>
     <script src="./src/js/functions.js"></script>
-    <script src="./src/js/main.js"></script>
+    
 
 </body>
 

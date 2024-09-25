@@ -1,0 +1,14 @@
+@use "../abstracts/_all" as abstracts;
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('../img/180755.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(253, 253, 253);
+    @include abstracts.centerElement;
+    }
+
