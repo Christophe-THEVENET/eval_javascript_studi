@@ -19,6 +19,7 @@
     text-transform: uppercase;
     animation: blur-lose 1s ease-out;
 }
+
 @keyframes blur-lose {
     from {
         text-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 25px rgb(211, 26, 19),
@@ -55,6 +56,7 @@ btn-sound::before {
     color: #ee380b;
     transform: translateY(-3px);
 }
+
 .anim-btn:active {
     visibility: hidden;
 }
@@ -70,8 +72,7 @@ btn-sound::before {
     transform: translateY(3px);
 }
 
-.anim-btn:hover::before
- {
+.anim-btn:hover::before {
     opacity: 1;
 }
 
@@ -80,18 +81,15 @@ button:focus::before {
 }
 
 /* supprime une bordure apres click */
- .anim-btn:focus {
+.anim-btn:focus {
     opacity: 1;
-}  
+}
 
 /*anim guide user*/
 .btn-insist::after {
     content: '';
-    background-color: rgba(255, 0, 0, 0.205);
-   /*  width: 30px;
-    height: 30px; */
-    border-radius: 100%;
-    /* border: 2px solid #ee380b; */
+    background-color: rgba(255, 0, 0, 0.146);
+    border-radius: 10%;
     position: absolute;
     z-index: -1;
     top: 50%;
@@ -105,6 +103,7 @@ button:focus::after {
     animation: none;
     display: none;
 }
+
 /*reglage anim propose click*/
 @keyframes ring {
     0% {
@@ -112,20 +111,13 @@ button:focus::after {
         height: 50px;
         opacity: 0.7;
     }
+
     100% {
         width: 350px;
         height: 200px;
         opacity: 0;
     }
 }
-
-/*
-------------------------------------------------
-------------------------------------------------
------------------------MEDIA QUERRY--------------
-------------------------------------------------
---*/
-
 
 /*----- joueur actif---*/
 .img-active {
@@ -135,36 +127,31 @@ button:focus::after {
     box-shadow: 0px 5px 15px 3px #faeb1860;
 }
 
-
-
-
-
 @media screen and (max-width: 765px) {
 
-    .anim-btn:hover::before
- {
-    opacity: 0;
-}
+    .anim-btn:hover::before {
+        opacity: 0;
+    }
 
-.anim-btn:hover {
-    transform: none;
-}
+    .anim-btn:hover {
+        transform: none;
+    }
+
     @keyframes ring {
         0% {
             width: 150px;
             height: 50px;
             opacity: 0.7;
         }
+
         100% {
             width: 200px;
             height: 50px;
             opacity: 0;
         }
     }
-   
 
-    
-
+}
 
 @media screen and (max-width: 500px) {
     .anim-btn {
@@ -172,5 +159,3 @@ button:focus::after {
         min-height: 5rem;
     }
 }
-}
-
