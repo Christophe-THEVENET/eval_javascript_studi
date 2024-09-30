@@ -89,7 +89,7 @@ button:focus::before {
 .btn-insist::after {
     content: '';
     background-color: rgba(255, 0, 0, 0.295);
-    border-radius: 10%;
+    border-radius: 50%;
     position: absolute;
     z-index: -1;
     top: 50%;
@@ -107,14 +107,14 @@ button:focus::after {
 /*reglage anim propose click*/
 @keyframes ring {
     0% {
-        width: 250px;
+        width: 200px;
         height: 50px;
         opacity: 0.7;
     }
 
     100% {
-        width: 350px;
-        height: 200px;
+        width: 300px;
+        height: 50px;
         opacity: 0;
     }
 }
@@ -122,7 +122,7 @@ button:focus::after {
 /*----- joueur actif---*/
 .actionPlayer__item .img.img-active {
     filter: grayscale(0);
-    transform: scale(1.01); 
+    transform: scale(1.01);
     filter: brightness(200%);
     transition: 0.3s ease-in-out;
     /* box-shadow: 0px 5px 15px 3px #faeb1860;  */

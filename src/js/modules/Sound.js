@@ -1,7 +1,7 @@
 class Sound {
-    constructor(soundOn = true) {
+    constructor() {
         this.elSoundBtn = document.querySelector('.btn-sound');
-        this.soundOn = soundOn;
+        
 
         this.init();
     }
@@ -12,22 +12,22 @@ class Sound {
     // surveille le choix du son
     watchChoiceSoundOn() {
         this.elSoundBtn.addEventListener('click', () => {
-            if (this.soundOn === true) {
-                this.soundOn = false;
+            if (window.app.sound === true) {
+                window.app.sound = false;
                 this.elSoundBtn.textContent = 'son (off)';
             } else {
-                this.soundOn = true;
+                window.app.sound = true;
                 this.elSoundBtn.textContent = 'son (on)';
             }
             return;
         });
     }
 
-    // joue un son
+    // joue son
     playSound(soundName, volume = 0.3) {
         let sound = new Audio(`src/sound/${soundName}`);
 
-        if (this.soundOn === true) {
+        if (window.app.sound === true) {
             sound.play();
             sound.volume = volume;
         } else {

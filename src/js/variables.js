@@ -7,10 +7,10 @@ let newGameModal = document.querySelector('.new-game-modal'); */
 /* let btnRules = document.querySelector('.btn-rules-js');
 let btnCloseRules = document.querySelector('#btn-close-rules-modal');
 let btnNewGame = document.querySelector('.btn-new-game'); */
-let btnStartNewGame = document.querySelector('#btn-close-ng-modal');
+
 /* let btnSound = document.querySelector('.btn-sound'); */
 /*--------action--------*/
-let btnRoll = document.querySelector('.btn-roll-js');
+/* let btnRoll = document.querySelector('.btn-roll-js'); */
 let btnHold = document.querySelector('.btn-hold-js');
 
 /*----------------  HTML PLAYERS-SCORE-IMG-----------------*/
@@ -34,7 +34,7 @@ let player2ProgressBar = document.querySelector('.progress-bar-p2');
 /* desktop*/
 let player1NameOutput = document.querySelector('#player1-output');
 let player2NameOutput = document.querySelector('#player2-output');
-let scoreToWinOutput = document.querySelector('#win-score-output');
+/* let scoreToWinOutput = document.querySelector('#win-score-output'); */
 
 /*titre*/
 let title = document.querySelector('#title');
@@ -53,8 +53,8 @@ export {
     btnCloseRules, */
     /* btnSound, */
     /* btnNewGame, */
-    btnStartNewGame,
-    btnRoll,
+    /* btnStartNewGame, */
+   /*  btnRoll, */
     btnHold,
     player1RoundOutput,
     player2RoundOutput,
@@ -66,7 +66,7 @@ export {
     player2ProgressBar,
     player1NameOutput,
     player2NameOutput,
-    scoreToWinOutput,
+    /* scoreToWinOutput, */
     title,
     dice,
     videoBloc1,

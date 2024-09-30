@@ -3,10 +3,10 @@ import {
     btnNewGame,
     btnRoll,
     btnCloseRules, */
-    btnStartNewGame,
+    /* btnStartNewGame, */
     /*  rulesModal,
     newGameModal, */
-    scoreToWinOutput,
+    /* scoreToWinOutput, */
     player1Img,
     player2Img,
     player1NameOutput,
@@ -22,69 +22,53 @@ import {
 } from './variables.js';
 /* import { Sound } from './modules/Sound.js'; */
 import { Modal } from './modules/Modal.js';
+import { Game } from './modules/Game.js';
 
-/* window.sound = {
-    soundOn: true,
-    } */
-
-/* let sound = new Sound(); */
 
 import { Player } from './functions.js';
 
-/* new Sound(); */
+window.app = {
+    sound:true
+}
+
 new Modal();
-
-/*effet pour guider  sur  bouton nouvelle partie */
-/* document.addEventListener('DOMContentLoaded', () => {
-    btnNewGame.classList.add('btn-insist');
-});
-
- */
-
-/*-------------  GESTION DES MODALES --------------*/
-/*ouvrir la modale rules desktop et mobile*/
-/* btnRules.addEventListener('click', () => { */
-/* playSound('src/sound/select.wav', 0.3); */
-
-/*     sound.playSound('select.wav');
-    rulesModal.style.display = 'flex';
-}); */
-/*fermer la modale rules*/
-/* btnCloseRules.addEventListener('click', () => {
-    rulesModal.style.display = 'none';
-}); */
-/*ouvrir la modale newGame desktop et mobile*/
-/* btnNewGame.addEventListener('click', () => {
-    newGameModal.style.display = 'flex';
-    playSound('src/sound/new-game.wav', 0.8);
-}); */
 
 /*----------------- LANCER LE JEU -------------------*/
 
 // bouton jouer ds modale
-btnStartNewGame.addEventListener('click', () => {
+let elStartNewGameBtn = document.querySelector('#btn-close-ng-modal');
+elStartNewGameBtn.addEventListener('click', () => {
+    new Game();
     /*supprime le guide bouton nouvelle parties */
-    btnNewGame.classList.remove('btn-insist');
-    /*ajoute le guide bouton lancer */
-    btnRoll.classList.add('btn-insist');
-    /*ferme modale nouvelle partie */
-    newGameModal.style.display = 'none';
-    playSound('src/sound/intro.mp3', 0.2);
-    /*decalage du son round*/
-    setTimeout(() => {
-        playSound('src/sound/round.mp3', 0.2);
-    }, 500);
-    /*decalage du son fight*/
-    setTimeout(() => {
-        playSound('src/sound/fight.mp3', 0.2);
-    }, 1500);
+   /*  elStartNewGameBtn.classList.remove('btn-insist'); */
 
+    /*ajoute le guide bouton lancer */
+   /*  btnRoll.classList.add('btn-insist'); */
+    /*ferme modale nouvelle partie */
+
+   
+    /* newGameModal.style.display = 'none'; */
+   /*  playSound('src/sound/intro.mp3', 0.2); */
+    /*decalage du son round*/
+/*     setTimeout(() => {
+        playSound('src/sound/round.mp3', 0.2);
+    }, 500); */
+    /*decalage du son fight*/
+   /*  setTimeout(() => {
+        playSound('src/sound/fight.mp3', 0.2);
+    }, 1500); */
+
+
+     
     /*recupere les noms des joueurs*/
-    let player1NameInput = document.querySelector('#player1-input').value;
-    let player2NameInput = document.querySelector('#player2-input').value;
+   /*  let player1NameInput = document.querySelector('#player1-input').value;
+    let player2NameInput = document.querySelector('#player2-input').value; */
+    
     /*afficher score a atteindre*/
-    let scoreToWinInput = document.querySelector('#win-score-input').value;
-    scoreToWinOutput.textContent = `score a atteindre (${scoreToWinInput})`;
+   /*  let scoreToWinInput = document.querySelector('#win-score-input').value;
+    scoreToWinOutput.textContent = `score a atteindre (${scoreToWinInput})`; */
+
+    return;
 
     /*instance des nouveaux joueurs*/
     let player1 = new Player(player1NameInput, player1Img);
