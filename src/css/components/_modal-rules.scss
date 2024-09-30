@@ -8,8 +8,8 @@
     display: none;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 4rem;
+    align-items: flex-start;
+    padding: 6rem;
     z-index: 2000;
     width: 90%;
     max-width: 100rem;
@@ -17,7 +17,8 @@
 
 .rules-modal h5,
 .new-game-modal h5 {
-    padding: 1rem 3rem;
+    align-self: center;
+    padding: 2rem 3rem;
     border-radius: 20px;
     font-size: 5vmin;
     background: #000000;
@@ -49,6 +50,7 @@
     color: #ffffff;
     margin-top: 2rem;
     transition: all, 0.3s linear;
+    align-self: flex-end;
 }
 
 .btn-close-modal:hover {

@@ -1,50 +1,72 @@
+import {
+    /*  btnRules,
+    btnNewGame,
+    btnRoll,
+    btnCloseRules, */
+    btnStartNewGame,
+    /*  rulesModal,
+    newGameModal, */
+    scoreToWinOutput,
+    player1Img,
+    player2Img,
+    player1NameOutput,
+    player2NameOutput,
+    player1RoundOutput,
+    player2RoundOutput,
+    player1GlobalOutput,
+    player2GlobalOutput,
+    btnHold,
+    dice,
+    player1ProgressBar,
+    player2ProgressBar
+} from './variables.js';
+/* import { Sound } from './modules/Sound.js'; */
+import { Modal } from './modules/Modal.js';
 
-/** ----- PARTOUT OU IL Y A DES BOUCLES FOR OF ----- */
+/* window.sound = {
+    soundOn: true,
+    } */
 
-/** ----- C EST PARCE QUE J AI FAIT 2 HTML ----- */
+/* let sound = new Sound(); */
 
-/** ---UN POUR LE DESKTOP ET UN POUR LE MOBILE----- */
+import { Player } from './functions.js';
 
-/** ---TOUS LES BOUTONS SONT DONC EN DOUBLES MAIS DIFFERENTS-- */
+/* new Sound(); */
+new Modal();
 
 /*effet pour guider  sur  bouton nouvelle partie */
-document.addEventListener('DOMContentLoaded', () => {
-    for (btnNewGame of btnNewGameAll) {
-        btnNewGame.classList.add('btn-insist');
-    }
+/* document.addEventListener('DOMContentLoaded', () => {
+    btnNewGame.classList.add('btn-insist');
 });
+
+ */
 
 /*-------------  GESTION DES MODALES --------------*/
 /*ouvrir la modale rules desktop et mobile*/
-for (btnRules of btnRulesAll) {
-    btnRules.addEventListener('click', () => {
-        playSound('src/sound/select.wav', 0.3);
-        rulesModal.style.display = 'flex';
-    });
-}
+/* btnRules.addEventListener('click', () => { */
+/* playSound('src/sound/select.wav', 0.3); */
+
+/*     sound.playSound('select.wav');
+    rulesModal.style.display = 'flex';
+}); */
 /*fermer la modale rules*/
-btnCloseRules.addEventListener('click', () => {
+/* btnCloseRules.addEventListener('click', () => {
     rulesModal.style.display = 'none';
-});
+}); */
 /*ouvrir la modale newGame desktop et mobile*/
-for (btnNewGame of btnNewGameAll) {
-    btnNewGame.addEventListener('click', () => {
-        newGameModal.style.display = 'flex';
-        playSound('src/sound/new-game.wav', 0.8);
-    });
-}
+/* btnNewGame.addEventListener('click', () => {
+    newGameModal.style.display = 'flex';
+    playSound('src/sound/new-game.wav', 0.8);
+}); */
 
 /*----------------- LANCER LE JEU -------------------*/
 
+// bouton jouer ds modale
 btnStartNewGame.addEventListener('click', () => {
     /*supprime le guide bouton nouvelle parties */
-    for (btnNewGame of btnNewGameAll) {
-        btnNewGame.classList.remove('btn-insist');
-    }
+    btnNewGame.classList.remove('btn-insist');
     /*ajoute le guide bouton lancer */
-    for (btnRoll of rollBtnAll) {
-        btnRoll.classList.add('btn-insist');
-    }
+    btnRoll.classList.add('btn-insist');
     /*ferme modale nouvelle partie */
     newGameModal.style.display = 'none';
     playSound('src/sound/intro.mp3', 0.2);
@@ -62,16 +84,15 @@ btnStartNewGame.addEventListener('click', () => {
     let player2NameInput = document.querySelector('#player2-input').value;
     /*afficher score a atteindre*/
     let scoreToWinInput = document.querySelector('#win-score-input').value;
-    scoreToWinOutput.textContent = `total (${scoreToWinInput})`;
-    scoreToWinOutputMobile.textContent = `total ${scoreToWinInput}`;
+    scoreToWinOutput.textContent = `score a atteindre (${scoreToWinInput})`;
 
     /*instance des nouveaux joueurs*/
-    let player1 = new Player(player1NameInput, player1Img, player1ImgMobile);
-    let player2 = new Player(player2NameInput, player2Img, player2ImgMobile);
+    let player1 = new Player(player1NameInput, player1Img);
+    let player2 = new Player(player2NameInput, player2Img);
 
     /*affiche le nom des joueurs*/
-    player1.showPlayerName(player1NameOutput, player1NameOutputMobile);
-    player2.showPlayerName(player2NameOutput, player2NameOutputMobile);
+    player1.showPlayerName(player1NameOutput);
+    player2.showPlayerName(player2NameOutput);
 
     /*reset des scores*/
     player1.setRound0();
@@ -80,12 +101,8 @@ btnStartNewGame.addEventListener('click', () => {
     player2.setGlobal0();
     player1RoundOutput.textContent = player1.getRound();
     player2RoundOutput.textContent = player2.getRound();
-    player1RoundOutputMobile.textContent = player1.getRound();
-    player2RoundOutputMobile.textContent = player2.getRound();
     player1GlobalOutput.textContent = player1.getGlobal();
     player2GlobalOutput.textContent = player2.getGlobal();
-    player1GlobalOutputMobile.textContent = player1.getGlobal();
-    player2GlobalOutputMobile.textContent = player2.getGlobal();
 
     /**active le joueur 1 */
     player1.activePlayer();
@@ -108,128 +125,103 @@ btnStartNewGame.addEventListener('click', () => {
     };
 
     /*-----------  LANCER LE DE  -------------------*/
-    /**2 boutons lancer a cause du choix de 2 html desktop/mobile */
-    for (rollBtn of rollBtnAll) {
-        rollBtn.addEventListener('click', () => {
-            /**supprime le guide boutons lancer */
-            for (rollBtn of rollBtnAll) {
-                rollBtn.classList.remove('btn-insist');
-            }
-            /* lancer du dé*/
-            let result = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
-            /**2 dés a cause du choix de 2 html desktop/mobile */
-            for (dice of diceAll) {
-                dice.dataset.side = result;
-                dice.classList.toggle('reRoll');
-            }
-            /* son lancer du dé*/
-            playSound('src/sound/dice.mp3', 0.7);
-            /*  player 1 fait 1*/
-            if (player1.inGame && result === 1) {
-                player1.setRound0();
-                player1RoundOutput.textContent = player1.getRound();
-                player1RoundOutputMobile.textContent = player1.getRound();
-                player1.flashLose(player1RoundOutput);
-                player1.flashLose(player1RoundOutputMobile);
-                player1.flashLose(title);
-                player1.flashLose(titleMobile);
-                nextPlayer();
-                playSound('src/sound/dieguy.wav', 0.2);
-                playSound('src/sound/dice-one.wav', 0.2);
+    btnRoll.addEventListener('click', () => {
+        /**supprime le guide boutons lancer */
+        btnRoll.classList.remove('btn-insist');
+        /* lancer du dé*/
+        let result = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+        dice.dataset.side = result;
+        dice.classList.toggle('reRoll');
+        /* son lancer du dé*/
+        playSound('src/sound/dice.mp3', 0.7);
+        /*  player 1 fait 1*/
+        if (player1.inGame && result === 1) {
+            player1.setRound0();
+            player1RoundOutput.textContent = player1.getRound();
+            player1.flashLose(player1RoundOutput);
+            player1.flashLose(title);
+            nextPlayer();
+            playSound('src/sound/dieguy.wav', 0.2);
+            playSound('src/sound/dice-one.wav', 0.2);
 
-                /*  player 1 fait !=1*/
-            } else if (player1.inGame && result !== 1) {
-                player1.setRound(result);
-                player1RoundOutput.textContent = player1.getRound();
-                player1RoundOutputMobile.textContent = player1.getRound();
-                player1.flashWin(player1RoundOutput);
-                player1.flashWin(player1RoundOutputMobile);
-                playSound('src/sound/ryuken-hadooken.mp3', 0.1);
+            /*  player 1 fait !=1*/
+        } else if (player1.inGame && result !== 1) {
+            player1.setRound(result);
+            player1RoundOutput.textContent = player1.getRound();
+            player1.flashWin(player1RoundOutput);
+            playSound('src/sound/ryuken-hadooken.mp3', 0.1);
 
-                /*  player 2 fait 1*/
-            } else if (player2.inGame && result === 1) {
-                player2.setRound0();
-                player2RoundOutput.textContent = player2.getRound();
-                player2RoundOutputMobile.textContent = player2.getRound();
-                player2.flashLose(player2RoundOutput);
-                player2.flashLose(player2RoundOutputMobile);
-                player2.flashLose(title);
-                player2.flashLose(titleMobile);
-                nextPlayer();
-                playSound('src/sound/diegirl.wav', 0.2);
-                playSound('src/sound/dice-one.wav', 0.2);
+            /*  player 2 fait 1*/
+        } else if (player2.inGame && result === 1) {
+            player2.setRound0();
+            player2RoundOutput.textContent = player2.getRound();
+            player2.flashLose(player2RoundOutput);
+            player2.flashLose(title);
+            nextPlayer();
+            playSound('src/sound/diegirl.wav', 0.2);
+            playSound('src/sound/dice-one.wav', 0.2);
 
-                /*  player 2 fait !=1*/
-            } else if (player2.inGame && result !== 1) {
-                player2.setRound(result);
-                player2RoundOutput.textContent = player2.getRound();
-                player2RoundOutputMobile.textContent = player2.getRound();
-                player2.flashWin(player2RoundOutput);
-                player2.flashWin(player2RoundOutputMobile);
-                playSound('src/sound/chun-li-yap.mp3', 0.1);
-            }
-        });
-    }
+            /*  player 2 fait !=1*/
+        } else if (player2.inGame && result !== 1) {
+            player2.setRound(result);
+            player2RoundOutput.textContent = player2.getRound();
+            player2.flashWin(player2RoundOutput);
+            playSound('src/sound/chun-li-yap.mp3', 0.1);
+        }
+    });
     /*-----------  GARDER LE SCORE  -------------------*/
 
-    for (holdBtn of holdBtnAll) {
-        holdBtn.addEventListener('click', () => {
-            /*--------  joueur 1 hold -----------*/
-            if (player1.inGame) {
-                playSound('src/sound/ryuken-kick.mp3', 0.1);
-                player1.setGlobal(player1.getRound());
-                player1.setRound0();
-                player1GlobalOutput.textContent = player1.getGlobal();
-                player1GlobalOutputMobile.textContent = player1.getGlobal();
-                player1RoundOutput.textContent = player1.getRound();
-                player1RoundOutputMobile.textContent = player1.getRound();
-                player1.flashWin(player1GlobalOutput);
-                player1.flashWin(player1GlobalOutputMobile);
-                player1.progressBar(player1.getGlobal(), player1ProgressBar);
-                nextPlayer();
-                /*-----------  VICTOIRE player 1 -------------------*/
-                if (player1.getGlobal() >= scoreToWinInput) {
-                    setTimeout(() => {
-                        playSound('src/sound/ryuken-shoryuken.mp3', 0.1);
-                    }, 500);
-                    playSound('src/sound/Street Fighter II Music - Guile - HQ.mp3', 0.5);
-                    player2.unactivePlayer();
-                    player1.activePlayer();
-                    player1.flash();
-                    videoBloc1.style.display = 'flex';
-                    videoPlayer1.play();
-                    title.textContent = `${player1NameInput}  bravo!`;
-                    titleMobile.textContent = `${player1NameInput}  bravo!`;
-                }
-            } else {
-                /*--------  joueur 2 hold -----------*/
-                playSound('src/sound/chun-li-laugh.mp3', 0.1);
-                player2.setGlobal(player2.getRound());
-                player2.setRound0();
-                player2GlobalOutput.textContent = player2.getGlobal();
-                player2GlobalOutputMobile.textContent = player2.getGlobal();
-                player2RoundOutput.textContent = player2.getRound();
-                player2RoundOutputMobile.textContent = player2.getRound();
-                player2.flashWin(player2GlobalOutput);
-                player2.flashWin(player2GlobalOutputMobile);
-                player2.progressBar(player2.getGlobal(), player2ProgressBar);
-
-                nextPlayer();
-                /*-----------  VICTOIRE player 2 -------------------*/
-                if (player2.getGlobal() >= scoreToWinInput) {
-                    setTimeout(() => {
-                        playSound('src/sound/chun-li-kick.mp3', 0.1);
-                    }, 500);
-                    playSound('src/sound/Street Fighter II Music - Guile - HQ.mp3', 0.5);
-                    player1.unactivePlayer();
-                    player2.activePlayer();
-                    player2.flash();
-                    videoBloc2.style.display = 'flex';
-                    videoPlayer2.play();
-                    title.textContent = `${player2NameInput}  bravo!`;
-                    titleMobile.textContent = `${player2NameInput}  bravo!`;
-                }
+    btnHold.addEventListener('click', () => {
+        /*--------  joueur 1 hold -----------*/
+        if (player1.inGame) {
+            playSound('src/sound/ryuken-kick.mp3', 0.1);
+            player1.setGlobal(player1.getRound());
+            player1.setRound0();
+            player1GlobalOutput.textContent = player1.getGlobal();
+            player1RoundOutput.textContent = player1.getRound();
+            player1.flashWin(player1GlobalOutput);
+            player1.progressBar(player1.getGlobal(), player1ProgressBar);
+            nextPlayer();
+            /*-----------  VICTOIRE player 1 -------------------*/
+            if (player1.getGlobal() >= scoreToWinInput) {
+                setTimeout(() => {
+                    playSound('src/sound/ryuken-shoryuken.mp3', 0.1);
+                }, 500);
+                playSound('src/sound/Street Fighter II Music - Guile - HQ.mp3', 0.5);
+                player2.unactivePlayer();
+                player1.activePlayer();
+                player1.flash();
+                videoBloc1.style.display = 'flex';
+                videoPlayer1.play();
+                title.textContent = `${player1NameInput}  bravo!`;
             }
-        });
-    }
+        } else {
+            /*--------  joueur 2 hold -----------*/
+            playSound('src/sound/chun-li-laugh.mp3', 0.1);
+            player2.setGlobal(player2.getRound());
+            player2.setRound0();
+            player2GlobalOutput.textContent = player2.getGlobal();
+
+            player2RoundOutput.textContent = player2.getRound();
+
+            player2.flashWin(player2GlobalOutput);
+
+            player2.progressBar(player2.getGlobal(), player2ProgressBar);
+
+            nextPlayer();
+            /*-----------  VICTOIRE player 2 -------------------*/
+            if (player2.getGlobal() >= scoreToWinInput) {
+                setTimeout(() => {
+                    playSound('src/sound/chun-li-kick.mp3', 0.1);
+                }, 500);
+                playSound('src/sound/Street Fighter II Music - Guile - HQ.mp3', 0.5);
+                player1.unactivePlayer();
+                player2.activePlayer();
+                player2.flash();
+                videoBloc2.style.display = 'flex';
+                videoPlayer2.play();
+                title.textContent = `${player2NameInput}  bravo!`;
+            }
+        }
+    });
 });

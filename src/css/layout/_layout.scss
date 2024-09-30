@@ -10,12 +10,12 @@ body {
 }
 
 main {
-    padding: 1rem;
+    padding: 2rem;
     width: 100%;
-    min-height: 100vh;
+    height: 100vh;
     max-width: 1600px;
-    height: auto;
     @include abstracts.adjustElement;
+    justify-content: space-evenly;
 }
 
 // ********** section player name & score ***********
@@ -33,6 +33,7 @@ main {
         &__name {
             display: flex;
             align-items: flex-end;
+            flex: 4;
 
             .player-title-left {
                 font-size: 2.5vw;
@@ -74,10 +75,10 @@ main {
 
     &__score {
         margin-top: -3rem;
-        flex: 1;
         display: flex;
         flex-direction: column;
         align-items: center;
+        flex: 1;
 
         /*----- custom-police  -----*/
         .custom-police {
@@ -93,6 +94,7 @@ main {
 
         &__title {
             font-size: 2vmax;
+            padding: 0.5rem 1rem; 
 
         }
 
@@ -121,15 +123,17 @@ main {
 
     display: flex;
     height: calc(100vh - 40rem);
+    max-height: 70rem;
 
     &__item {
-        flex: 8;
-        background-color: red;
+        flex: 4;
+        @include abstracts.centerElement;
 
         .img {
 
             height: 100%;
             width: 100%;
+            max-width: 40rem;
             filter: grayscale(30%);
             filter: brightness(70%);
             transition: all 0.6s;
@@ -142,11 +146,11 @@ main {
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        flex: 4;
         height: 90%;
+        flex: 2;
 
         &--dice {
-            height: 40%;
+            height: 60%;
             @include abstracts.centerElement;
             width: 100%;
 
@@ -163,6 +167,10 @@ main {
 }
 
 @media screen and (max-width: 765px) {
+
+    main {
+        padding: 1rem;
+    }
 
     // ********** section player name & score ***********
     .nameScore {
@@ -185,7 +193,8 @@ main {
             }
 
             .point-score {
-                font-size: 5rem;
+                font-size: 4rem;
+                margin-right: 0.2rem;
             }
 
             &__progress {
@@ -197,8 +206,6 @@ main {
 
             margin-top: 2rem;
             margin-bottom: -2rem;
-
-
 
             &__title {
                 font-size: 3vmax;
@@ -223,36 +230,41 @@ main {
         .dice-all {
             width: 14vw;
             height: 14vw;
-           
+
         }
 
-                .dice-all .side-1 {
-                    transform: translateZ(7vw);
-                }
-        
-                .dice-all .side-2 {
-                    transform: rotateX(-180deg) translateZ(7vw);
-                }
-        
-                .dice-all .side-3 {
-                    transform: rotateY(90deg) translateZ(7vw);
-                }
-        
-                .dice-all .side-4 {
-                    transform: rotateY(-90deg) translateZ(7vw);
-                }
-        
-                .dice-all .side-5 {
-                    transform: rotateX(90deg) translateZ(7vw);
-                }
-        
-                .dice-all .side-6 {
-                    transform: rotateX(-90deg) translateZ(7vw);
-                }
+        .dice-all .side-1 {
+            transform: translateZ(7vw);
+        }
 
+        .dice-all .side-2 {
+            transform: rotateX(-180deg) translateZ(7vw);
+        }
 
+        .dice-all .side-3 {
+            transform: rotateY(90deg) translateZ(7vw);
+        }
 
+        .dice-all .side-4 {
+            transform: rotateY(-90deg) translateZ(7vw);
+        }
 
+        .dice-all .side-5 {
+            transform: rotateX(90deg) translateZ(7vw);
+        }
 
+        .dice-all .side-6 {
+            transform: rotateX(-90deg) translateZ(7vw);
+        }
     }
+}
+
+@media screen and (min-width: 1200px) {
+    .nameScore__score__result__number {
+        padding-right: 1.4rem;
+    }
+
+        .nameScore__score__title {
+            font-size: 1.4vmax;
+        }
 }
