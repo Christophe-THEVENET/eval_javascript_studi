@@ -1,4 +1,5 @@
 import { Sound } from './Sound.js';
+import { Game } from './Game.js';
 
 class Modal {
     constructor() {
@@ -23,7 +24,6 @@ class Modal {
         this.watchNewGameModal();
     }
 
-   
     watchRulesModal() {
         this.elOpenRulesModalBtn.addEventListener('click', () => {
             this.sound.playSound('select.wav');
@@ -36,15 +36,24 @@ class Modal {
     }
 
     watchNewGameModal() {
-        this.elOpenNewGameModalBtn.addEventListener('click', () => {
-            this.sound.playSound('new-game.wav', 0.8);
-            this.elNewGameModal.style.display = 'flex';
-        });
+       
+       
+            this.elOpenNewGameModalBtn.addEventListener('click', () => {
+                 if (window.app.gameStarted === false) {
+                this.sound.playSound('new-game.wav', 0.8);
+                this.elNewGameModal.style.display = 'flex';
+                }
+            });
 
-         this.elStartNewGameBtn.addEventListener('click', () => {
-             this.elNewGameModal.style.display = 'none';
-             this.elOpenNewGameModalBtn.classList.remove('btn-insist');
-         });
+            this.elStartNewGameBtn.addEventListener('click', () => {
+                this.elNewGameModal.style.display = 'none';
+                this.elOpenNewGameModalBtn.classList.remove('btn-insist');
+                
+                new Game();
+                new Sound();
+                
+            });
+        
     }
 }
 

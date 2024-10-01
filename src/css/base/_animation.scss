@@ -6,11 +6,11 @@
 
 @keyframes blur-win {
     from {
-        text-shadow: 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff,
-            0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff, 0px 0px 25px #fff,
-            0px 0px 50px #fff, 0px 0px 50px #fff, 0px 0px 50px #7b96b8, 0px 0px 150px #7b96b8,
-            0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8,
-            0px 10px 100px #7b96b8, 0px -10px 100px #7b96b8, 0px -10px 100px #7b96b8;
+        text-shadow: 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff,
+            0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff,
+            0px 0px 13px #fff, 0px 0px 13px #fff, 0px 0px 13px #7b96b8, 0px 0px 13px #7b96b8,
+            0px 10px 16px #7b96b8, 0px 10px 16px #7b96b8, 0px 10px 10px #7b96b8,
+            0px 10px 10px #7b96b8, 0px -10px 10px #7b96b8, 0px -10px 10px #7b96b8;
     }
 }
 
@@ -22,11 +22,11 @@
 
 @keyframes blur-lose {
     from {
-        text-shadow: 0px 0px 10px red, 0px 0px 10px red, 0px 0px 25px rgb(211, 26, 19),
-            0px 0px 25px red, 0px 0px 25px red, 0px 0px 25px red, 0px 0px 25px red, 0px 0px 25px red,
-            0px 0px 50px #fff, 0px 0px 50px #fff, 0px 0px 50px #7b96b8, 0px 0px 150px #7b96b8,
-            0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8, 0px 10px 100px #7b96b8,
-            0px 10px 100px #7b96b8, 0px -10px 100px #7b96b8, 0px -10px 100px #7b96b8;
+        text-shadow: 0px 0px 5px red, 0px 0px 5px red, 0px 0px 10px rgb(211, 26, 19),
+            0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red,
+            0px 0px 13px #fff, 0px 0px 13px #fff, 0px 0px 13px #7b96b8, 0px 0px 13px #7b96b8,
+            0px 10px 16px #7b96b8, 0px 10px 16px #7b96b8, 0px 10px 10px #7b96b8,
+            0px 10px 10px #7b96b8, 0px -10px 10px #7b96b8, 0px -10px 10px #7b96b8;
     }
 }
 
@@ -89,7 +89,7 @@ button:focus::before {
 .btn-insist::after {
     content: '';
     background-color: rgba(255, 0, 0, 0.295);
-    border-radius: 50%;
+    border-radius:30%;
     position: absolute;
     z-index: -1;
     top: 50%;
@@ -107,14 +107,14 @@ button:focus::after {
 /*reglage anim propose click*/
 @keyframes ring {
     0% {
-        width: 200px;
-        height: 50px;
-        opacity: 0.7;
+        width: 70%;
+        height: 30%;
+        opacity: 0.8;
     }
 
     100% {
-        width: 300px;
-        height: 50px;
+        width: 130%;
+        height: 70%;
         opacity: 0;
     }
 }

@@ -19,7 +19,7 @@ class Sound {
                 window.app.sound = true;
                 this.elSoundBtn.textContent = 'son (on)';
             }
-            return;
+            
         });
     }
 
