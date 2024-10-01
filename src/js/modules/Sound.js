@@ -25,7 +25,7 @@ class Sound {
 
     // joue son
     playSound(soundName, volume = 0.3) {
-        let sound = new Audio(`src/sound/${soundName}`);
+        let sound = new Audio(`/sound/${soundName}`);
 
         if (window.app.sound === true) {
             sound.play();
