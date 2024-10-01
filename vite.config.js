@@ -31,5 +31,17 @@ export default defineConfig({
                 ]
             }
         }
-    }
+    },
+    build: {
+        rollupOptions: {
+            input: {
+                main: 'index.html'
+                // Ajoutez d'autres entrées si nécessaire
+            },
+            output: {
+                // Configuration de sortie
+            }
+        }
+    },
+    publicDir: 'public' // Assurez-vous que vos fichiers audio sont dans ce dossier
 });
