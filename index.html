@@ -158,41 +158,44 @@
     </main>
 
     <!----------------MODALE REGLES-------------------- -->
-    <div class="rules-modal">
-        <h5>regles du dice fighter</h5>
-        <p>Le premier joueur qui atteint les 100 points a gagne !</p>
-        <p>chaque joueur a un score temporaire et un score total</p>
-        <p>a chaque tour, vous lancez le de autant de fois que vous le souhaitez.</p>
-        <p>Quand vous souhaitez securiser votre score temporaire, cliquez sur 'garder' pour ajouter votre score
-            temporaire
-            au total. Cela donnera la main a votre adversaire</p>
-        <p>!!! attention !!! si votre de tombe sur 1 vous perdez votre score temporaire, et, vous passez la main. </p>
-        <button type="button" id="btn-close-rules-modal" class="btn-close-modal">fermer</button>
-    </div><!------------------------------------------- -->
-
+    <div id="overlay" class="modal-overlay mor-js">
+        <div class="rules-modal">
+            <h5>regles du dice fighter</h5>
+            <p>Le premier joueur qui atteint les 100 points a gagne !</p>
+            <p>chaque joueur a un score temporaire et un score total</p>
+            <p>a chaque tour, vous lancez le de autant de fois que vous le souhaitez.</p>
+            <p>Quand vous souhaitez securiser votre score temporaire, cliquez sur 'garder' pour ajouter votre score
+                temporaire
+                au total. Cela donnera la main a votre adversaire</p>
+            <p>!!! attention !!! si votre de tombe sur 1 vous perdez votre score temporaire, et, vous passez la main.
+            </p>
+            <button type="button" id="btn-close-rules-modal" class="btn-close-modal">fermer</button>
+        </div><!------------------------------------------- -->
+    </div>
     <!----------------MODALE NOUVELLE PARTIE---------- -->
-    <div class="new-game-modal">
-        <h5>nouvelle partie</h5>
-        <form>
-            <div class="player-bloc  mb-5">
-                <label for="player1">joueur 1</label>
-                <input type="text" name="player1" id="player1-input" maxlength="12" class="form-control"
-                    placeholder="pseudo" autocomplete="off">
-            </div>
-            <div class="player-bloc mb-5">
-                <label for="player2">joueur 2</label>
-                <input type="text" name="player2" id="player2-input" maxlength="12" class="form-control"
-                    placeholder="Pseudo" autocomplete="off">
-            </div>
-            <div class="player-bloc mb-5">
-                <label for="win-score-input">score a atteindre</label>
-                <input type="number" id="win-score-input" name="win-score" min="10" max="100" step="10"
-                    placeholder="choix de 10 à 100">
-            </div>
-            <button id="btn-close-ng-modal" class="btn-close-ng-modal" type="button">Jouer !</button>
-        </form>
-    </div><!------------------------------------------ -->
-
+    <div id="overlay" class="modal-overlay mong-js">
+        <div class="new-game-modal">
+            <h5>nouvelle partie</h5>
+            <form>
+                <div class="player-bloc  mb-5">
+                    <label for="player1">joueur 1</label>
+                    <input type="text" name="player1" id="player1-input" maxlength="12" class="form-control"
+                        placeholder="pseudo" autocomplete="off">
+                </div>
+                <div class="player-bloc mb-5">
+                    <label for="player2">joueur 2</label>
+                    <input type="text" name="player2" id="player2-input" maxlength="12" class="form-control"
+                        placeholder="Pseudo" autocomplete="off">
+                </div>
+                <div class="player-bloc mb-5">
+                    <label for="win-score-input">score a atteindre</label>
+                    <input type="number" id="win-score-input" name="win-score" min="10" max="100" step="10"
+                        placeholder="choix de 10 à 100">
+                </div>
+                <button id="btn-close-ng-modal" class="btn-close-ng-modal" type="button">Jouer !</button>
+            </form>
+        </div><!------------------------------------------ -->
+    </div>
 </body>
 
 </html>

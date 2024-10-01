@@ -1,3 +1,54 @@
+/* Animation pour l'apparition de la modale */
+@keyframes modalIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.7);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Animation pour la fermeture de la modale */
+@keyframes modalOut {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.7);
+    }
+}
+
+/* Styles pour l'arrière-plan */
+.modal-overlay {
+    display: none;
+    /* Masquer par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2000;
+}
+
+/* Classe pour afficher l'arrière-plan */
+.modal-overlay.show {
+    display: block;
+    opacity: 1;
+}
+
 /*animation flash  gagnant*/
 .flash-win {
     text-transform: uppercase;
@@ -160,3 +211,4 @@ button:focus::after {
         min-height: 5rem;
     }
 }
+

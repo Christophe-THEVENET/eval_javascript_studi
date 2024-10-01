@@ -4,6 +4,7 @@ import { Player } from './Player.js';
 class Game {
     constructor() {
         window.app.gameStarted = true;
+        
         // inputs form new game
         this.player1Name = document.querySelector('#player1-input').value;
         this.player2Name = document.querySelector('#player2-input').value;

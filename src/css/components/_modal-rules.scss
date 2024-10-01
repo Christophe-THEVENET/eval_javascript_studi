@@ -1,9 +1,9 @@
 .rules-modal {
     background-color: #ffffff;
     position: fixed;
-    top: 40%;
+    top: 50%;
     left: 50%;
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -50%) scale(0.7);
     border-radius: 15px;
     display: none;
     flex-direction: column;
@@ -13,6 +13,20 @@
     z-index: 2000;
     width: 90%;
     max-width: 100rem;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.rules-modal.show {
+    display: flex;
+    z-index: 2000;
+    opacity: 1;
+    animation: modalIn 0.5s forwards;
+}
+
+.rules-modal.hide {
+    animation: modalOut 0.5s forwards;
+    display: none;
 }
 
 .rules-modal h5,
