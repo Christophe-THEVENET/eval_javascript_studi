@@ -6,4 +6,5 @@ window.app = {
     sound: true,
     gameStarted: false
 };
+
 new Modal();
