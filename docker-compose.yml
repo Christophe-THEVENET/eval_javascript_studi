@@ -1,0 +1,17 @@
+#version: '4'
+
+services:
+    dicefighter-app:
+        container_name: dicefighter-container
+        build: .
+        ports:
+            - '3000:3000'
+        volumes:
+            - .:/app
+            - /app/node_modules
+        working_dir: /app
+        environment:
+            - NODE_ENV=development
+        command: npm run dev
+
+# docker-compose up --build

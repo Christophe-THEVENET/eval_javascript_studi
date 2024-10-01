@@ -1,0 +1,47 @@
+/*----------------- HEADER ---------------*/
+@use "../abstracts/_all" as abstracts;
+
+.header {
+    padding: 1rem 0 0 0;
+    height: 10rem;
+
+    @include abstracts.centerElement;
+
+    &__title {
+        padding:    1rem;
+        font-size: 6vmax;
+        padding: 1.5rem;
+        z-index: 1000;
+        /*couleur font degradée*/
+        background: linear-gradient(180deg, #faeb18 20%, #ee380b 80%);
+        background-clip: border-box;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-shadow: -3px -4px 11px rgba(250, 235, 24, 0.37);
+        text-shadow: -3px 9px 11px rgba(238, 56, 11, 0.37);
+    }
+}
+
+@media screen and (max-width: 765px) {
+
+    .header {
+        height: 5rem;
+        padding: 1.5rem;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    .header {
+        height: 15rem;
+
+        &__title {
+            font-size: 6vmax;
+            padding: 4rem;
+        }
+
+    }
+
+
+}

@@ -1,0 +1,270 @@
+@use "../abstracts/_all" as abstracts;
+
+body {
+    background-image: url('../img/180755.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(253, 253, 253);
+    @include abstracts.centerElement;
+}
+
+main {
+    padding: 2rem;
+    width: 100%;
+    height: 100vh;
+    max-width: 1600px;
+    @include abstracts.adjustElement;
+    justify-content: space-evenly;
+}
+
+// ********** section player name & score ***********
+
+.nameScore {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 15rem;
+
+    &__player {
+        margin-top: 3rem;
+        flex: 2;
+
+        &__name {
+            display: flex;
+            align-items: flex-end;
+            flex: 4;
+
+            .player-title-left {
+                font-size: 2.5vw;
+                margin: 0;
+                flex: 1;
+            }
+
+            /*------player 2 bar right--------*/
+            .player-title-right {
+                font-size: 2.5vw;
+                margin: 0;
+            }
+
+            .point-score {
+                font-size: 8rem;
+                margin: 0;
+            }
+
+            .text-score-right {
+                flex: 1;
+            }
+
+            .text-score {
+                font-size: 3rem;
+                margin: 0;
+            }
+        }
+
+        &__progress {
+            height: 1.3rem;
+            background-color: #ee380b;
+
+            &--bar {
+                background-color: #faeb18;
+            }
+        }
+
+    }
+
+    &__score {
+        margin-top: -3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+
+        /*----- custom-police  -----*/
+        .custom-police {
+            text-align: center;
+            /*couleur font degradée*/
+            background: linear-gradient(180deg, #faeb18 20%, #ee380b 80%);
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: -3px -4px 11px rgba(250, 235, 24, 0.37);
+            text-shadow: -3px 9px 11px rgba(238, 56, 11, 0.37);
+        }
+
+        &__title {
+            font-size: 2vmax;
+            padding: 0.5rem 1rem;
+
+        }
+
+        &__result {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 1rem;
+
+            &__number {
+                font-size: 4vmax;
+                padding-right: 0.8rem;
+            }
+
+            &__slash {
+                font-size: 2rem;
+            }
+        }
+
+    }
+
+}
+
+.actionPlayer {
+
+    display: flex;
+    height: calc(100vh - 40rem);
+    max-height: 70rem;
+
+    &__item {
+        flex: 4;
+        @include abstracts.centerElement;
+
+        .img {
+
+            height: 100%;
+            width: 100%;
+            max-width: 40rem;
+            filter: grayscale(30%);
+            filter: brightness(70%);
+            transition: all 0.6s;
+            transform: scale(1);
+        }
+    }
+
+    &__command {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 90%;
+        flex: 2;
+
+        &--dice {
+            height: 60%;
+            @include abstracts.centerElement;
+            width: 100%;
+
+        }
+
+        &--roll {
+
+            @include abstracts.centerElement;
+            flex-direction: column;
+            width: 100%;
+
+        }
+    }
+}
+
+@media screen and (max-width: 765px) {
+
+    main {
+        padding: 1rem;
+    }
+
+    // ********** section player name & score ***********
+    .nameScore {
+
+        height: 10rem;
+        flex-direction: column;
+        margin-bottom: 10rem;
+
+        &__player {
+            margin-top: -1rem;
+            width: 100%;
+
+            .player-title-left,
+            .player-title-right {
+                font-size: 3vmax;
+            }
+
+            .text-score {
+                font-size: 3vmax;
+            }
+
+            .point-score {
+                font-size: 4rem;
+                margin-right: 0.2rem;
+            }
+
+            &__progress {
+                height: 0.5rem;
+            }
+        }
+
+        &__score {
+
+            margin-top: 2rem;
+            margin-bottom: -2rem;
+
+            &__title {
+                font-size: 3vmax;
+            }
+
+            &__result {
+                &__number {
+                    font-size: 6vmax;
+                }
+            }
+        }
+    }
+
+    .actionPlayer {
+
+        display: flex;
+
+        &__command--roll button {
+            font-size: 3vmax;
+        }
+
+        .dice-all {
+            width: 14vw;
+            height: 14vw;
+
+        }
+
+        .dice-all .side-1 {
+            transform: translateZ(7vw);
+        }
+
+        .dice-all .side-2 {
+            transform: rotateX(-180deg) translateZ(7vw);
+        }
+
+        .dice-all .side-3 {
+            transform: rotateY(90deg) translateZ(7vw);
+        }
+
+        .dice-all .side-4 {
+            transform: rotateY(-90deg) translateZ(7vw);
+        }
+
+        .dice-all .side-5 {
+            transform: rotateX(90deg) translateZ(7vw);
+        }
+
+        .dice-all .side-6 {
+            transform: rotateX(-90deg) translateZ(7vw);
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .nameScore__score__result__number {
+        padding-right: 1.4rem;
+    }
+
+    .nameScore__score__title {
+        font-size: 1.4vmax;
+    }
+}

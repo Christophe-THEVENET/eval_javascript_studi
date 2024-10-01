@@ -1,0 +1,32 @@
+@use "../abstracts/_all" as abstracts;
+
+
+.nav {
+
+    margin-bottom: 3rem;
+    padding-top: 2rem;
+    height: 10rem;
+
+    &__list {
+        @include abstracts.centerElement;
+        flex-direction: row;
+        justify-content: space-around;
+        list-style-type: none;
+
+        &__item {
+            flex: 1;
+            @include abstracts.centerElement;
+        }
+    }
+
+}
+
+@media screen and (max-width: 765px) {
+
+
+.nav {
+    height: 7rem;
+    padding-top: 1rem;
+}
+
+}

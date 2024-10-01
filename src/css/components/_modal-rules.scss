@@ -1,0 +1,100 @@
+.rules-modal {
+    background-color: #ffffff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.7);
+    border-radius: 15px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 6rem;
+    z-index: 2000;
+    width: 90%;
+    max-width: 100rem;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.rules-modal.show {
+    display: flex;
+    z-index: 2000;
+    opacity: 1;
+    animation: modalIn 0.5s forwards;
+}
+
+.rules-modal.hide {
+    animation: modalOut 0.5s forwards;
+    display: none;
+}
+
+.rules-modal h5,
+.new-game-modal h5 {
+    align-self: center;
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    font-size: 5vmin;
+    background: #000000;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: -3px -4px 11px rgba(250, 235, 24, 0.37);
+    text-shadow: -3px 9px 11px rgba(238, 56, 11, 0.37);
+}
+
+.rules-modal p {
+    padding: 1rem;
+    text-align: justify;
+    background: #fa8518;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: -3px -4px 11px rgba(250, 235, 24, 0.37);
+    text-shadow: -3px 9px 11px rgba(238, 56, 11, 0.37);
+    font-size: 3.2vmin;
+}
+
+.btn-close-modal {
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+    font-size: 3.2vmin;
+    border: none;
+    background: #000000;
+    color: #ffffff;
+    margin-top: 2rem;
+    transition: all, 0.3s linear;
+    align-self: flex-end;
+}
+
+.btn-close-modal:hover {
+    background: #fa8518;
+    box-shadow: 1px 2px 6px 2px rgb(46, 5, 5);
+}
+
+@media screen and (max-width: 765px) {
+
+    .rules-modal {
+        width: 95%;
+        padding: 2rem 0.5rem;
+        font-size: 8vmin;
+
+        h5 {
+            width: 95%;
+            padding: 1rem 0.2rem;
+            text-align: center;
+            font-size: 9.2vmin;
+        }
+
+        p {
+            width: 95%;
+            padding: 0.2rem;
+            font-size: 5vmin;
+        }
+
+        .btn-close-modal {
+            font-size: 6vmin;
+        }
+    }
+
+}

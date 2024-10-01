@@ -1,0 +1,214 @@
+/* Animation pour l'apparition de la modale */
+@keyframes modalIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.7);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* Animation pour la fermeture de la modale */
+@keyframes modalOut {
+    0% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.7);
+    }
+}
+
+/* Styles pour l'arrière-plan */
+.modal-overlay {
+    display: none;
+    /* Masquer par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 2000;
+}
+
+/* Classe pour afficher l'arrière-plan */
+.modal-overlay.show {
+    display: block;
+    opacity: 1;
+}
+
+/*animation flash  gagnant*/
+.flash-win {
+    text-transform: uppercase;
+    animation: blur-win 1s ease-out;
+}
+
+@keyframes blur-win {
+    from {
+        text-shadow: 0px 0px 5px #fff, 0px 0px 5px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff,
+            0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff, 0px 0px 10px #fff,
+            0px 0px 13px #fff, 0px 0px 13px #fff, 0px 0px 13px #7b96b8, 0px 0px 13px #7b96b8,
+            0px 10px 16px #7b96b8, 0px 10px 16px #7b96b8, 0px 10px 10px #7b96b8,
+            0px 10px 10px #7b96b8, 0px -10px 10px #7b96b8, 0px -10px 10px #7b96b8;
+    }
+}
+
+/*animation flash  perdant*/
+.flash-lose {
+    text-transform: uppercase;
+    animation: blur-lose 1s ease-out;
+}
+
+@keyframes blur-lose {
+    from {
+        text-shadow: 0px 0px 5px red, 0px 0px 5px red, 0px 0px 10px rgb(211, 26, 19),
+            0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red, 0px 0px 10px red,
+            0px 0px 13px #fff, 0px 0px 13px #fff, 0px 0px 13px #7b96b8, 0px 0px 13px #7b96b8,
+            0px 10px 16px #7b96b8, 0px 10px 16px #7b96b8, 0px 10px 10px #7b96b8,
+            0px 10px 10px #7b96b8, 0px -10px 10px #7b96b8, 0px -10px 10px #7b96b8;
+    }
+}
+
+/* anim bouton hover*/
+.anim-btn::before {
+    content: '';
+    border-radius: 1000px;
+    width: 100%;
+    height: 50%;
+    border: 1px solid #ee380b;
+    box-shadow: 0 0 20px #ee380b;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+/*taille aniv hover btn regles et son*/
+btn-rules::before,
+btn-sound::before {
+    min-width: calc(150px + 12px);
+}
+
+.anim-btn:hover {
+    color: #ee380b;
+    transform: translateY(-3px);
+}
+
+.anim-btn:active {
+    visibility: hidden;
+}
+
+/*hover boutons lancer / garder*/
+.btn-roll:hover,
+.btn-roll:focus {
+    transform: translateY(3px);
+}
+
+.btn-hold:hover,
+.btn-hold:focus {
+    transform: translateY(3px);
+}
+
+.anim-btn:hover::before {
+    opacity: 1;
+}
+
+button:focus::before {
+    opacity: 0;
+}
+
+/* supprime une bordure apres click */
+.anim-btn:focus {
+    opacity: 1;
+}
+
+/*anim guide user*/
+.btn-insist::after {
+    content: '';
+    background-color: rgba(255, 0, 0, 0.295);
+    border-radius:30%;
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: ring 1.5s infinite;
+}
+
+.anim-btn:hover::after,
+button:focus::after {
+    animation: none;
+    display: none;
+}
+
+/*reglage anim propose click*/
+@keyframes ring {
+    0% {
+        width: 80%;
+        height: 30%;
+        opacity: 0.8;
+    }
+
+    100% {
+        width: 130%;
+        height: 70%;
+        opacity: 0;
+    }
+}
+
+/*----- joueur actif---*/
+.actionPlayer__item .img.img-active {
+    filter: grayscale(0);
+    transform: scale(1.01);
+    filter: brightness(200%);
+    transition: 0.3s ease-in-out;
+    /* box-shadow: 0px 5px 15px 3px #faeb1860;  */
+}
+
+@media screen and (max-width: 765px) {
+
+    .anim-btn:hover::before {
+        opacity: 0;
+    }
+
+    .anim-btn:hover {
+        transform: none;
+    }
+
+    @keyframes ring {
+        0% {
+            width: 150px;
+            height: 50px;
+            opacity: 0.7;
+        }
+
+        100% {
+            width: 200px;
+            height: 50px;
+            opacity: 0;
+        }
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .anim-btn {
+        min-width: 1rem;
+        min-height: 5rem;
+    }
+}
+

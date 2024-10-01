@@ -2,373 +2,200 @@
 <html lang="fr">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/png" href="./favicon.png" />
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/animation.css">
-  <link rel="stylesheet" href="./css/dice.css">
-  <link rel="stylesheet" href="./css/syle.css">
-  <title>Dice Fighter</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="preload" href="./src/css/main.scss" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="./src/css/main.scss">
+    </noscript>
+    <title>Dice Fighter</title>
+    <script type="module" src="./src/js/main.js" defer></script>
 </head>
 
 <body>
-
-  <!---------------- VIDEO PLAYER 1 WIN----------- -->
-  <div class="videoBloc" id="videoBloc1">
-    <video id="videoPlayer1" class="video" muted>
-      <source src="./video/ryu.mp4" type="video/mp4">
-      Sorry, your browser does not support HTML5 video.
-    </video>
-  </div>
-  <!---------------- VIDEO PLAYER 2 WIN----------- -->
-  <div class="videoBloc" id="videoBloc2">
-    <video id="videoPlayer2" class="video" muted>
-      <source src="./video/chunli.mp4" type="video/mp4">
-      Sorry, your browser does not support HTML5 video.
-    </video>
-  </div>
-
-
-
-
-
-
-  <!--------------------------------FORMAT DESKTOP------------------------------ -->
-
-  <main class="wrapper-desktop container-fluid min-vh-100">
-
-    <!---------------------------- HEADER ----------------------- -->
-
-    <header class="row">
-      <div class="col d-flex justify-content-center align-items-center">
-        <h1 id="title">dice fighter</h1>
-      </div>
-    </header>
-
-    <!---------------------------- NEW GAME --------------------- -->
-
-    <div class="new-game row">
-      <div class="col d-flex justify-content-center align-items-center">
-        <button type="button" id="btn-modal" class="anim-btn btn-rules btn-rules-js" data-toggle="modal"
-          data-target="#exampleModal">regles</button>
-      </div>
-      <div class="col d-flex justify-content-center align-items-center">
-        <button type="button" class="anim-btn  btn-new-game">nouvelle partie</button>
-      </div>
-      <div class="col d-flex justify-content-center align-items-center">
-        <button type="button" id="btn-sound-desktop" class="anim-btn btn-sound">son (on)</button>
-      </div>
+    <!---------------- VIDEO PLAYER 1 WIN----------- -->
+    <div class="videoBloc" id="videoBloc1">
+        <a href="/" class='home-button anim-btn btn-rules'>Retour</a>
+        <video id="videoPlayer1" class="video" muted>
+            <source src="./src/video/ryu.mp4" type="video/mp4">
+            Sorry, your browser does not support HTML5 video.
+        </video>
+    </div>
+    <!---------------- VIDEO PLAYER 2 WIN----------- -->
+    <div class="videoBloc" id="videoBloc2">
+        <a href="/" class='home-button anim-btn btn-rules'>Retour</a>
+        <video id="videoPlayer2" class="video" muted>
+            <source src="./src/video/chunli.mp4" type="video/mp4">
+            Sorry, your browser does not support HTML5 video.
+        </video>
     </div>
 
-    <!------------------------ PLAYER NAME AND SCORE -------------------- -->
+    <main>
+        <!------------------- HEADER ------------------- -->
+        <header class='header'>
+            <h1 id="title" class=' header__title'>dice fighter</h1>
+        </header> <!------------------------------------ -->
 
-    <div class="row pt-5">
-      <!-------player 1---progress bar1--left-------- -->
-      <div class="col-5 pt-5 mb-4">
-        <div class=" d-flex justify-content-start align-items-end">
-          <h2 class="player-title-left" id="player1-output">joueur 1</h2>
-          <h3 class="point-score" id="player1-round">0</h3>
-          <h3 class="text-score">points</h3>
-        </div>
-        <div class="progress col-12">
-          <div class="progress-bar  progress-bar-p1" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-          </div>
-        </div>
-      </div>
+        <!------ NAV [RULES / NEW GAME / SOUND] ------- -->
+        <nav class="nav">
+            <ul class='nav__list'>
+                <li class="nav__list__item">
+                    <button type="button" id="btn-modal" class="anim-btn btn-rules btn-rules-js" data-toggle="modal"
+                        data-target="#exampleModal">regles</button>
+                </li>
+                <li class="nav__list__item">
+                    <button type="button" class="anim-btn  btn-new-game">nouvelle partie</button>
+                </li>
+                <li class="nav__list__item">
+                    <button type="button" id="btn-sound-desktop" class="anim-btn btn-sound">son (on)</button>
+                </li>
 
-      <!-------score total ---- -->
-      <div class="score-total col-2 ">
-        <p class="score-total--title col-12 " id="win-score-output">score total</p>
-        <div class="col-12 d-flex justify-content-center align-items-center">
-          <p class="score-total--number col-5 " id="player1-global">0</p>
-          <p class="score-total--slash col-2 ">/</p>
-          <p class="score-total--number col-5 " id="player2-global">0</p>
-        </div>
-      </div>
+            </ul>
 
-      <!-------player 2---progress bar 2--right-------- -->
-      <div class="col-5 pt-5 mb-4">
-        <div class=" d-flex justify-content-start align-items-end">
-          <h3 class="point-score" id="player2-round">0</h3>
-          <h3 class="text-score text-score-right">points</h3>
-          <h2 class="player-title-right" id="player2-output">joueur 2</h2>
-        </div>
-        <div class="progress col-12">
-          <div class="progress-bar progress-bar-p2" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-          </div>
-        </div>
-      </div>
+        </nav> <!-------------------------------------- -->
+
+        <!---- SECTION PLAYER NAME AND SCORE ---------- -->
+        <section class="nameScore">
+            <!-------player 1---progress bar1--left-------- -->
+            <div class="nameScore__player">
+                <div class="nameScore__player__name">
+                    <h2 class="player-title-left" id="player1-output">joueur 1</h2>
+                    <h3 class="point-score" id="player1-round">0</h3>
+                    <h3 class="text-score">points</h3>
+                </div>
+                <div class="nameScore__player__progress">
+                    <div class="nameScore__player__progress--bar  progress-bar-p1" role="progressbar" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100">
+                    </div>
+                </div>
+            </div>
+            <!-------score total ---- -->
+            <div class="nameScore__score">
+                <p class="nameScore__score__title custom-police" id="win-score-output">score a atteindre
+                </p>
+                <div class="nameScore__score__result">
+                    <p class="nameScore__score__result__number custom-police nsrnl" id="player1-global">0</p>
+                    <p class="nameScore__score__result__slash custom-police">/</p>
+                    <p class="nameScore__score__result__number custom-police nsrnr" id="player2-global">0</p>
+                </div>
+            </div>
+            <!-------player 2---progress bar 2--right-------- -->
+            <div class="nameScore__player">
+                <div class="nameScore__player__name">
+                    <h3 class="point-score" id="player2-round">0</h3>
+                    <h3 class="text-score text-score-right">points</h3>
+                    <h2 class="player-title-right" id="player2-output">joueur 2</h2>
+                </div>
+                <div class="nameScore__player__progress">
+                    <div class="nameScore__player__progress--bar progress-bar-p2" role="progressbar" aria-valuenow="75"
+                        aria-valuemin="0" aria-valuemax="100">
+                    </div>
+                </div>
+            </div>
+        </section> <!---------------------------------- -->
+
+        <!-------------- ACTION  ---------------------- -->
+        <div class="actionPlayer">
+            <!-----container joueur 1---- -->
+            <div class="actionPlayer__item">
+                <img class="img" src="./src/img/man.jpg" id="player1-img" alt="photo joueur 1">
+            </div>
+            <!-----container dé + boutons ---- -->
+            <div class="actionPlayer__command">
+                <!-----container dé----- -->
+                <div class="actionPlayer__command--dice ">
+                    <!-------emplacement du dé------- -->
+                    <div class="dice-all" data-side="1">
+                        <div class="sides side-1">
+                            <span class="dot dot-1"></span>
+                        </div>
+                        <div class="sides side-2">
+                            <span class="dot dot-1"></span>
+                            <span class="dot dot-2"></span>
+                        </div>
+                        <div class="sides side-3">
+                            <span class="dot dot-1"></span>
+                            <span class="dot dot-2"></span>
+                            <span class="dot dot-3"></span>
+                        </div>
+                        <div class="sides side-4">
+                            <span class="dot dot-1"></span>
+                            <span class="dot dot-2"></span>
+                            <span class="dot dot-3"></span>
+                            <span class="dot dot-4"></span>
+                        </div>
+                        <div class="sides side-5">
+                            <span class="dot dot-1"></span>
+                            <span class="dot dot-2"></span>
+                            <span class="dot dot-3"></span>
+                            <span class="dot dot-4"></span>
+                            <span class="dot dot-5"></span>
+                        </div>
+                        <div class="sides side-6">
+                            <span class="dot dot-1"></span>
+                            <span class="dot dot-2"></span>
+                            <span class="dot dot-3"></span>
+                            <span class="dot dot-4"></span>
+                            <span class="dot dot-5"></span>
+                            <span class="dot dot-6"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-----container boutons----- -->
+                <div class="actionPlayer__command--roll">
+                    <button type="button" id="roll" class="anim-btn btn-rules btn-roll btn-roll-js">LANCER</button>
+                    <button type="button" id="hold" class="anim-btn btn-rules btn-hold btn-hold-js">GARDER</button>
+                </div>
+            </div>
+            <!-----container joueur 2---- -->
+            <div class="actionPlayer__item">
+                <img class="img" id="player2-img" src="./src/img/girl.jpg" alt="photo joueur 2">
+            </div>
+        </div> <!-------------------------------------- -->
+
+    </main>
+
+    <!----------------MODALE REGLES-------------------- -->
+    <div id="overlay" class="modal-overlay mor-js">
+        <div class="rules-modal">
+            <h5>regles du dice fighter</h5>
+            <p>Le premier joueur qui atteint les 100 points a gagne !</p>
+            <p>chaque joueur a un score temporaire et un score total</p>
+            <p>a chaque tour, vous lancez le de autant de fois que vous le souhaitez.</p>
+            <p>Quand vous souhaitez securiser votre score temporaire, cliquez sur 'garder' pour ajouter votre score
+                temporaire
+                au total. Cela donnera la main a votre adversaire</p>
+            <p>!!! attention !!! si votre de tombe sur 1 vous perdez votre score temporaire, et, vous passez la main.
+            </p>
+            <button type="button" id="btn-close-rules-modal" class="btn-close-modal">fermer</button>
+        </div><!------------------------------------------- -->
     </div>
-
-    <!------------------------- ACTION  ---------------------------- -->
-
-    <div class="action row d-flex">
-      <!-----container joueur 1---- -->
-      <div class="action-player ">
-        <img class="img img-fluid  " src="./img/man.jpg" id="player1-img" alt="photo joueur 1">
-      </div>
-      <!-----container dé + boutons ---- -->
-      <div class="action-button d-flex flex-column
-      justify-content-start align-items-center">
-        <!-----container dé----- -->
-        <div class="action-button--dice ">
-          <!-------emplacement du dé------- -->
-          <div class="dice-all" data-side="1">
-            <div class="sides side-1">
-              <span class="dot dot-1"></span>
-            </div>
-            <div class="sides side-2">
-              <span class="dot dot-1"></span>
-              <span class="dot dot-2"></span>
-            </div>
-            <div class="sides side-3">
-              <span class="dot dot-1"></span>
-              <span class="dot dot-2"></span>
-              <span class="dot dot-3"></span>
-            </div>
-            <div class="sides side-4">
-              <span class="dot dot-1"></span>
-              <span class="dot dot-2"></span>
-              <span class="dot dot-3"></span>
-              <span class="dot dot-4"></span>
-            </div>
-            <div class="sides side-5">
-              <span class="dot dot-1"></span>
-              <span class="dot dot-2"></span>
-              <span class="dot dot-3"></span>
-              <span class="dot dot-4"></span>
-              <span class="dot dot-5"></span>
-            </div>
-            <div class="sides side-6">
-              <span class="dot dot-1"></span>
-              <span class="dot dot-2"></span>
-              <span class="dot dot-3"></span>
-              <span class="dot dot-4"></span>
-              <span class="dot dot-5"></span>
-              <span class="dot dot-6"></span>
-            </div>
-          </div>
-        </div>
-        <!-----container boutons----- -->
-        <div class="action-button--roll d-flex flex-column justify-content-around">
-          <button type="button" id="roll" class="anim-btn btn-rules btn-roll btn-roll-js">LANCER</button>
-          <button type="button" id="hold" class="anim-btn btn-rules btn-hold btn-hold-js">GARDER</button>
-        </div>
-      </div>
-      <!-----container joueur 2---- -->
-      <div class="action-player ">
-        <img class="img img-fluid " id="player2-img" src="./img/girl.jpg" alt="photo joueur 2">
-      </div>
-
+    <!----------------MODALE NOUVELLE PARTIE---------- -->
+    <div id="overlay" class="modal-overlay mong-js">
+        <div class="new-game-modal">
+            <h5>nouvelle partie</h5>
+            <form>
+                <div class="player-bloc  mb-5">
+                    <label for="player1">joueur 1</label>
+                    <input type="text" name="player1" id="player1-input" maxlength="12" class="form-control"
+                        placeholder="pseudo" autocomplete="off">
+                </div>
+                <div class="player-bloc mb-5">
+                    <label for="player2">joueur 2</label>
+                    <input type="text" name="player2" id="player2-input" maxlength="12" class="form-control"
+                        placeholder="Pseudo" autocomplete="off">
+                </div>
+                <div class="player-bloc mb-5">
+                    <label for="win-score-input">score a atteindre</label>
+                    <input type="number" id="win-score-input" name="win-score" min="10" max="100" step="10"
+                        placeholder="choix de 10 à 100">
+                </div>
+                <button id="btn-close-ng-modal" class="btn-close-ng-modal" type="button">Jouer !</button>
+            </form>
+        </div><!------------------------------------------ -->
     </div>
-  </main>
-
-
-
-
-
-
-
-
-
-
-
-
-
-  <!--------------------------------FORMAT MOBILE------------------------------ -->
-
-  <section class="wrapper-mobile container-fluid">
-
-    <!---------------------------- HEADER ----------------------- -->
-
-    <header class="row">
-      <div class="col d-flex justify-content-center align-items-center">
-        <h2 id="title-mobile">dice fighter</h2>
-      </div>
-    </header>
-
-    <!---------------------------- NEW GAME --------------------- -->
-
-    <div class="new-game row">
-      <div class="new-game-buttons-mobile  col d-flex justify-content-center align-items-center">
-        <button type="button" id="btn-modal-mobile" class="anim-btn btn-rules btn-rules-js">regles</button>
-      </div>
-      <div class="new-game-buttons-mobile  col d-flex justify-content-center align-items-center">
-        <button type="button" class="anim-btn btn-sound">son (on)</button>
-      </div>
-      <div class="game-button-mobile new-game-buttons-mobile col-12 d-flex justify-content-center align-items-center">
-        <button type="button" id="btn-modal-ng-mobile" class="anim-btn  btn-new-game">nouvelle partie</button>
-      </div>
-    </div>
-
-    <!------------------------ SCORE TOTAL -------------------- -->
-
-    <div class="row">
-      <!-------score total ---- -->
-      <div class="score-total col-12 d-flex  flex-column justify-content-center align-items-center">
-        <p class="score-total--title col-12 " id="win-score-output-mobile">score total</p>
-        <div class="col-6 d-flex justify-content-center align-items-center">
-          <p class="score-total--number col-5" id="player1-global-mobile">0</p>
-          <p class="score-total--slash col-2 ">/</p>
-          <p class="score-total--number col-5 " id="player2-global-mobile">0</p>
-        </div>
-      </div>
-    </div>
-
-    <!------------------------ PLAYER 1 -------------------- -->
-
-    <div class="row">
-      <div class="col-12 d-flex">
-        <!-------player 1 points------ -->
-        <div class="col-6 d-flex flex-column justify-content-center  align-items-center p-3">
-          <!-------player 1---progress bar------- -->
-          <div class="progress progress-mobile  col-9 m-auto mb-5">
-            <div class="progress-bar  progress-bar-p1" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-          <h2 class="player-title-mobile " id="player1-output-mobile">joueur 1</h2>
-          <div class="d-flex align-items-center">
-            <h3 class="point-score-mobile flash-win player1-round" id="player1-round-mobile">0</h3>
-            <h3 class=" text-score-mobile">points</h3>
-          </div>
-        </div>
-        <!-------player 1 image------ -->
-        <div class="col-6 action-player">
-          <img class="img-mobile  img" id="player1-img-mobile" src="./img/man.jpg" alt="photo joueur 1">
-        </div>
-      </div>
-    </div>
-
-    <!------------------------- ACTION  ---------------------------- -->
-
-    <div class="row">
-      <div class="col-12  d-flex  justify-content-center align-items-center">
-        <!------roll hold bloc------ -->
-        <div class="col-4 action-button-roll-mobile d-flex justify-content-center flex-column">
-          <button type="button" class="roll anim-btn btn-roll-js">LANCER</button>
-        </div>
-        <!------dice bloc------ -->
-        <div class="col-4 action-button-dice-mobile d-flex justify-content-center align-items-center">
-
-          <!-------emplacement du dé------- -->
-
-          <div class="dice-all" data-side="1">
-            <div class="sides side-1">
-              <span class="dot dot-1"></span>
-            </div>
-            <div class="sides side-2">
-              <span class="dot dot-1"></span>
-              <span class="dot dot-2"></span>
-            </div>
-            <div class="sides side-3">
-              <span class="dot dot-1"></span>
-              <span class="dot dot-2"></span>
-              <span class="dot dot-3"></span>
-            </div>
-            <div class="sides side-4">
-              <span class="dot dot-1"></span>
-              <span class="dot dot-2"></span>
-              <span class="dot dot-3"></span>
-              <span class="dot dot-4"></span>
-            </div>
-            <div class="sides side-5">
-              <span class="dot dot-1"></span>
-              <span class="dot dot-2"></span>
-              <span class="dot dot-3"></span>
-              <span class="dot dot-4"></span>
-              <span class="dot dot-5"></span>
-            </div>
-            <div class="sides side-6">
-              <span class="dot dot-1"></span>
-              <span class="dot dot-2"></span>
-              <span class="dot dot-3"></span>
-              <span class="dot dot-4"></span>
-              <span class="dot dot-5"></span>
-              <span class="dot dot-6"></span>
-            </div>
-          </div>
-
-        </div>
-        <!------roll hold bloc------ -->
-        <div class="col-4 action-button-roll-mobile d-flex justify-content-center flex-column">
-          <button type="button" id="hold-mobile" class="anim-btn btn-roll-mobile btn-hold-js">GARDER</button>
-        </div>
-      </div>
-    </div>
-
-    <!------------------------ PLAYER 2 -------------------- -->
-
-    <div class="row">
-      <div class="col-12 d-flex">
-        <!-------player 1 points------ -->
-        <div class="col-6 d-flex flex-column justify-content-center  align-items-center p-3">
-          <!-------player 2---progress bar------- -->
-          <div class="progress progress-mobile  col-9 m-auto mb-5">
-            <div class="progress-bar  progress-bar-p2" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-            </div>
-          </div>
-          <h2 class="player-title-mobile " id="player2-output-mobile">joueur 2</h2>
-          <div class="d-flex align-items-center">
-            <h3 class="point-score-mobile flash-win" id="player2-round-mobile">0</h3>
-            <h3 class=" text-score-mobile">points</h3>
-          </div>
-        </div>
-        <!-------player 1 image------ -->
-        <div class="col-6 action-player">
-          <img class="img-mobile img " id="player2-img-mobile" src="./img/girl.jpg" alt="photo joueur 1">
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!----------------MODALE REGLES----------------- -->
-
-  <div class="rules-modal">
-    <h5>regles du dice fighter</h5>
-    <p>Le premier joueur qui atteint les 100 points a gagne !</p>
-    <p>chaque joueur a un score temporaire et un score total</p>
-    <p>a chaque tour, vous lancez le de autant de fois que vous le souhaitez.</p>
-    <p>Quand vous souhaitez securiser votre score temporaire, cliquez sur 'garder' pour ajouter votre score temporaire
-      au total. Cela donnera la main a votre adversaire</p>
-    <p>!!! attention !!! si votre de tombe sur 1 vous perdez votre score temporaire, et, vous passez la main. </p>
-    <button type="button" id="btn-close-rules-modal" class="btn-close-modal">fermer</button>
-  </div>
-
-
-  <!----------------MODALE NOUVELLE PARTIE---------------- -->
-
-  <div class="new-game-modal">
-    <h5>nouvelle partie</h5>
-    <form>
-      <div class="player-bloc  mb-5">
-        <label for="player1">joueur 1</label>
-        <input type="text" name="player1" id="player1-input" maxlength="12" class="form-control" placeholder="pseudo"
-          autocomplete="off">
-      </div>
-      <div class="player-bloc mb-5">
-        <label for="player2">joueur 2</label>
-        <input type="text" name="player2" id="player2-input" maxlength="12" class="form-control" placeholder="Pseudo"
-          autocomplete="off">
-      </div>
-      <div class="player-bloc mb-5">
-        <label for="win-score-input">score a atteindre</label>
-        <input type="number" id="win-score-input" name="win-score" min="10" max="100" step="10"
-          placeholder="choix de 10 à 100">
-      </div>
-      <button id="btn-close-ng-modal" class="btn-close-ng-modal" type="button">Jouer !</button>
-    </form>
-  </div>
-
-
-
-  <script src="./js/jquery-3.6.0.min.js"></script>
-  <script src="./js/bootstrap.bundle.min.js"></script>
-  <script src="./js/variables.js"></script>
-  <script src="./js/functions.js"></script>
-  <script src="./js/script.js"></script>
 </body>
 
 </html>

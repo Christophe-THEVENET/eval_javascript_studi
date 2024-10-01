@@ -1,0 +1,20 @@
+/*
+  L'ordre des imports : 
+    - reset
+    - vendors
+    - pages
+    - themes
+    - layout
+    - components
+*/
+@use "base/_reset";
+@use "base/_animation";
+@use "layout/_layout";
+@use "layout/_header";
+@use "layout/_nav";
+@use "components/_dice";
+@use "components/_button";
+@use "components/_modal-rules";
+@use "components/_modal-new-game";
+@use "components/_video-win";
+
